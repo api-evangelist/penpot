@@ -1,0 +1,49 @@
+name: Penpot Rate Limits
+description: >
+  Rate limit information for the Penpot API. Penpot's public documentation does
+  not publish explicit rate limit values for its RPC API. Limits may vary based
+  on deployment type (cloud vs. self-hosted) and are enforced at the server
+  level. Self-hosted deployments allow administrators to configure their own
+  limits through server configuration.
+specificationVersion: "0.1"
+url: https://help.penpot.app/technical-guide/integration/
+created: "2026-06-12"
+modified: "2026-06-12"
+
+notes:
+  - Penpot does not publicly document specific rate limit thresholds for its RPC API.
+  - Cloud-hosted rate limits are enforced server-side and may be applied per token or per IP.
+  - Self-hosted instances have no imposed rate limits by default; administrators
+    configure limits through their own infrastructure (reverse proxy, etc.).
+  - For enterprise plans, rate limit concerns should be addressed with Penpot's
+    enterprise support team.
+  - The plugin API (doc.plugins.penpot.app) operates client-side within the
+    editor and is not subject to server-side rate limiting in the traditional sense.
+
+rateLimits:
+  - scope: API (Cloud)
+    type: requests
+    documented: false
+    notes: >
+      Specific request-per-minute or request-per-hour limits are not publicly
+      documented. Penpot cloud enforces fair-use limits at the infrastructure
+      level. Contact Penpot for enterprise rate limit guarantees.
+    contact: https://penpot.app/pricing
+
+  - scope: Webhooks (Cloud)
+    type: delivery
+    documented: false
+    notes: >
+      Webhook delivery frequency is event-driven and not subject to a
+      configurable rate limit. All backend RPC calls marked as WEBHOOK
+      trigger outbound calls automatically. High-volume events may be
+      subject to queue-based throttling.
+
+  - scope: API (Self-Hosted)
+    type: requests
+    documented: false
+    notes: >
+      Self-hosted deployments impose no built-in rate limits on the RPC API.
+      Administrators are responsible for configuring rate limiting at the
+      infrastructure level (e.g., nginx or Traefik reverse proxy configuration).
+    referenceURL: https://help.penpot.app/technical-guide/configuration/

@@ -1,0 +1,114 @@
+name: Penpot FinOps
+description: >
+  FinOps Framework 1.0 FOCUS-aligned cost and usage data for Penpot API
+  consumption and platform deployment. Covers cloud-hosted SaaS plans and
+  self-hosted deployment cost considerations.
+specificationVersion: "1.0"
+url: https://penpot.app/pricing
+created: "2026-06-12"
+modified: "2026-06-12"
+
+provider: Penpot
+providerURL: https://penpot.app/
+
+billingModel:
+  type: per-user-per-month
+  notes: >
+    Cloud plans bill per active user per month with optional bill caps on the
+    Unlimited plan. Enterprise plans have a minimum monthly commitment of $950.
+    Self-hosted Professional is free; self-hosted Enterprise is billed per user
+    per month with a $950/month minimum. Private Server is billed annually at
+    $50,000/year.
+
+costDimensions:
+  - name: Cloud Professional
+    unit: user/month
+    price: 0.00
+    currency: USD
+    notes: Free for up to 8 team members. No credit card required.
+
+  - name: Cloud Unlimited
+    unit: user/month
+    price: 7.00
+    currency: USD
+    cappedMonthlyBill: 175.00
+    notes: >
+      Billed at $7/user/month with a maximum bill of $175/month regardless
+      of team size beyond the cap threshold.
+
+  - name: Cloud Enterprise
+    unit: user/month
+    price: 25.00
+    currency: USD
+    minimumMonthlyBill: 950.00
+    notes: >
+      Minimum commitment of $950/month. Includes SSO, SCIM, audit logs,
+      admin console, and advanced permissions.
+
+  - name: Self-Hosted Professional
+    unit: deployment
+    price: 0.00
+    currency: USD
+    notes: >
+      Free open-source deployment. Infrastructure costs (servers, bandwidth,
+      storage) are borne by the organization. Requires Linux server and
+      Docker operational knowledge.
+
+  - name: Self-Hosted Enterprise
+    unit: user/month
+    price: 25.00
+    currency: USD
+    minimumMonthlyBill: 950.00
+    notes: >
+      Adds enterprise governance features (SSO, SCIM, audit logs) on top of
+      self-hosted infrastructure. Minimum $950/month applies.
+
+  - name: Private Server
+    unit: deployment/year
+    price: 50000.00
+    currency: USD
+    billingPeriod: annual
+    notes: >
+      Dedicated infrastructure with custom hosting region, IP whitelisting,
+      air-gapped deployment, and guaranteed SLA response times.
+
+costOptimization:
+  - strategy: Use the free Professional cloud plan for small teams (up to 8 members)
+    impact: Eliminates subscription cost entirely for small teams.
+
+  - strategy: Self-host the open-source Professional edition for larger teams
+    impact: >
+      Eliminates per-user SaaS costs for organizations with the infrastructure
+      capability. Ongoing costs are server, storage, and operational overhead only.
+
+  - strategy: Use the Unlimited plan bill cap
+    impact: >
+      The $175/month cap on the Unlimited plan makes costs predictable for
+      teams larger than 25 users ($7 × 25 = $175).
+
+  - strategy: Negotiate Enterprise pricing for large teams
+    impact: >
+      At $25/user/month with a $950/month minimum, Enterprise becomes more
+      cost-efficient per user as team size grows beyond 38 users.
+
+  - strategy: Pre-order self-hosted Enterprise before July 31 deadline
+    impact: 50% discount available on self-hosted Enterprise plans pre-ordered before July 31, 2026.
+
+costAllocation:
+  tags:
+    - team
+    - project
+    - deployment-type
+  notes: >
+    Cost allocation is primarily driven by user count on cloud plans. For
+    self-hosted deployments, infrastructure costs should be tagged by team
+    or business unit consuming the service.
+
+focus:
+  schema: FOCUS 1.0
+  resourceType: SaaS Design Platform
+  serviceCategory: Design and Prototyping
+  provider: Penpot (Kaleidos)
+  billedCurrency: USD
+  pricingCurrency: USD
+  commitmentDiscountType: Volume cap (Unlimited plan); Annual contract (Private Server)

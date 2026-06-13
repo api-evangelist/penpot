@@ -1,0 +1,160 @@
+name: Penpot Plans and Pricing
+description: Pricing plans for Penpot cloud-hosted and self-hosted deployment options
+specificationVersion: "0.1"
+url: https://penpot.app/pricing
+created: "2026-06-12"
+modified: "2026-06-12"
+
+plans:
+  - name: Professional (Cloud)
+    description: >
+      Free cloud plan for individuals and small teams. Includes all core design
+      and prototyping capabilities with unlimited files and teams.
+    type: free
+    url: https://penpot.app/pricing
+    price:
+      amount: 0
+      currency: USD
+      period: monthly
+      per: user
+    limits:
+      users: 8
+      storage: 10 GB
+      versionHistory: 7 days
+      fileRecovery: 7 days
+    features:
+      - Unlimited design files
+      - Unlimited teams
+      - Plugins support
+      - Open-source codebase
+      - Multiplayer editing
+      - Comments
+      - API access
+      - Design systems support
+      - Community support
+
+  - name: Unlimited (Cloud)
+    description: >
+      Paid cloud plan for growing teams needing more storage, longer version
+      history, and a capped monthly maximum bill regardless of team size.
+    type: paid
+    url: https://penpot.app/pricing
+    price:
+      amount: 7
+      currency: USD
+      period: monthly
+      per: user
+      cappedBill:
+        amount: 175
+        currency: USD
+        period: monthly
+    limits:
+      storage: 25 GB
+      versionHistory: 30 days
+      fileRecovery: 30 days
+    features:
+      - Everything in Professional
+      - Early feature access
+      - 50% discount on events and merchandise
+
+  - name: Enterprise (Cloud)
+    description: >
+      Enterprise cloud plan for organizations requiring advanced governance,
+      compliance, SSO, SCIM, audit logs, and unlimited storage. Billed at
+      minimum $950/month.
+    type: enterprise
+    url: https://penpot.app/pricing
+    price:
+      amount: 25
+      currency: USD
+      period: monthly
+      per: user
+      minimumBill:
+        amount: 950
+        currency: USD
+        period: monthly
+    limits:
+      storage: Unlimited
+      versionHistory: 180 days
+      fileRecovery: 180 days
+    features:
+      - Everything in Unlimited
+      - Admin console
+      - SSO (Single Sign-On)
+      - SCIM provisioning
+      - Audit logs
+      - Plugins allowlist
+      - Agentic AI support
+      - Advanced permissions
+      - Multi-organization management
+
+  - name: Professional (Self-Hosted)
+    description: >
+      Free self-hosted deployment for individuals and teams with technical
+      infrastructure knowledge. Requires a Linux server and Docker expertise.
+      Full control over data and infrastructure with unlimited users.
+    type: free
+    url: https://penpot.app/pricing/self-host
+    price:
+      amount: 0
+      currency: USD
+      period: monthly
+    limits:
+      users: Unlimited
+      storage: Unlimited
+    features:
+      - Complete data control
+      - Unlimited users
+      - Unlimited teams and files
+      - All design and prototyping capabilities
+      - 100% open-source codebase
+      - Community support
+
+  - name: Enterprise (Self-Hosted)
+    description: >
+      Enterprise self-hosted plan for organizations needing advanced governance,
+      compliance, SSO, and dedicated support. Minimum $950/month.
+    type: enterprise
+    url: https://penpot.app/pricing/self-host
+    price:
+      amount: 25
+      currency: USD
+      period: monthly
+      per: user
+      minimumBill:
+        amount: 950
+        currency: USD
+        period: monthly
+    features:
+      - Everything in Self-Hosted Professional
+      - Centralized admin console
+      - SSO and SCIM
+      - Audit logs
+      - Plugin allowlist
+      - Agentic AI support
+      - Advanced permissions
+      - 180-day version history and file recovery
+      - Early feature access
+      - Priority support
+
+  - name: Private Server
+    description: >
+      Fully dedicated private server infrastructure with enterprise-grade
+      compliance, IP whitelisting, choice of hosting region, and guaranteed
+      response times. Annual contract.
+    type: enterprise
+    url: https://penpot.app/pricing/self-host
+    price:
+      amount: 50000
+      currency: USD
+      period: annual
+    features:
+      - Dedicated infrastructure
+      - Enterprise SSO
+      - SCIM provisioning
+      - IP whitelisting
+      - Choice of hosting region
+      - Guaranteed response times
+      - Exclusive early access to features
+      - Air-gapped deployment support
+      - SOC2/HIPAA compliance support

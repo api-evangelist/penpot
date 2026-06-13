@@ -1,0 +1,118 @@
+aid: penpot
+name: Penpot
+description: >
+  Penpot is an open-source design and prototyping platform built for design
+  and code collaboration, offering a self-hostable alternative to Figma. It
+  provides a REST RPC API that enables developers to programmatically access
+  and manage projects, files, pages, components, and design assets. Authentication
+  is handled via personal access tokens, and the platform supports outbound
+  webhooks for event-driven integrations triggered by file changes, comments,
+  and other workspace activity. Penpot also offers a plugin system and an MCP
+  server for AI-assisted design-to-code workflows, making it a flexible
+  integration target for modern development toolchains.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/penpot/refs/heads/main/apis.yml
+created: "2026-06-12"
+modified: "2026-06-12"
+specificationVersion: "0.19"
+tags:
+  - Design
+  - Prototyping
+  - Open Source
+  - Self-Hosted
+  - Figma Alternative
+  - UI Design
+  - Collaboration
+  - Design Systems
+apis:
+  - name: Penpot RPC API
+    description: >
+      Penpot's internal RPC-style REST API provides programmatic access to
+      projects, files, pages, components, and design assets. Developers
+      authenticate with personal access tokens and can query the auto-generated
+      API documentation at the /api/_doc endpoint on any Penpot instance.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://penpot.app/integrations-api
+    baseURL: https://design.penpot.app/api/rpc/command/
+    tags:
+      - Design
+      - Prototyping
+      - Projects
+      - Files
+      - Components
+    properties:
+      - type: Documentation
+        url: https://help.penpot.app/technical-guide/integration/
+      - type: OpenAPI
+        url: https://design.penpot.app/api/_doc
+    contact:
+      - FN: Penpot Support
+        url: https://community.penpot.app/
+
+  - name: Penpot Webhooks
+    description: >
+      Penpot supports outbound webhooks configured at the team level, delivering
+      JSON or Transit-formatted event payloads when actions occur such as file
+      creation, file updates, and new comments. All backend RPC calls marked as
+      WEBHOOK automatically trigger notifications to registered endpoints.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://help.penpot.app/technical-guide/integration/
+    baseURL: https://design.penpot.app/api/rpc/command/
+    tags:
+      - Webhooks
+      - Events
+      - Automation
+    properties:
+      - type: Documentation
+        url: https://help.penpot.app/technical-guide/integration/
+    contact:
+      - FN: Penpot Support
+        url: https://community.penpot.app/
+
+  - name: Penpot Plugin API
+    description: >
+      Penpot's Plugin API allows developers to build and publish custom
+      extensions that extend the Penpot design editor. The plugin system
+      provides extensive access to design objects and properties, enabling
+      external rendering, workflow automation, and enhanced application
+      functionality directly within the Penpot UI.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://doc.plugins.penpot.app/
+    baseURL: https://doc.plugins.penpot.app/
+    tags:
+      - Plugins
+      - Extensions
+      - Design
+    properties:
+      - type: Documentation
+        url: https://doc.plugins.penpot.app/
+    contact:
+      - FN: Penpot Support
+        url: https://community.penpot.app/
+
+common:
+  - type: Website
+    url: https://penpot.app/
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: GitHubOrg
+    url: https://github.com/penpot
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/penpotdesign
+  - type: Blog
+    url: https://penpot.app/blog
+  - type: Pricing
+    url: https://penpot.app/pricing
+  - type: X
+    url: https://x.com/penpotapp
+  - type: Plans
+    url: plans/penpot-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/penpot-rate-limits.yml
+  - type: FinOps
+    url: finops/penpot-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
