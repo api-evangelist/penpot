@@ -46,6 +46,16 @@ apis:
         url: https://help.penpot.app/technical-guide/integration/
       - type: OpenAPI
         url: https://design.penpot.app/api/_doc
+      - type: OpenAPI
+        url: openapi/penpot-rpc-openapi.yml
+      - type: JSONSchema
+        url: json-schema/penpot-schemas.json
+      - type: Examples
+        url: examples/penpot-request-examples.json
+      - type: Vocabulary
+        url: vocabulary/penpot-vocabulary.yml
+      - type: JSONLd
+        url: json-ld/penpot-context.jsonld
     contact:
       - FN: Penpot Support
         url: https://community.penpot.app/
@@ -102,6 +112,10 @@ common:
     url: https://www.linkedin.com/company/penpotdesign
   - type: Blog
     url: https://penpot.app/blog
+  - type: BlogRSS
+    url: https://penpot.app/blog/rss/
+  - type: BlogFeed
+    url: blogs/blogs.json
   - type: Pricing
     url: https://penpot.app/pricing
   - type: X

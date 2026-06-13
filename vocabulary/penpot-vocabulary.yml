@@ -1,0 +1,630 @@
+id: penpot-vocabulary
+name: Penpot API Vocabulary
+description: Controlled vocabulary of terms, operations, and schema types from the Penpot RPC API.
+url: https://raw.githubusercontent.com/api-evangelist/penpot/main/vocabulary/penpot-vocabulary.yml
+tags:
+- Design
+- Prototyping
+- RPC
+- Open Source
+terms:
+  get-file-data-for-thumbnail:
+    label: Get File Data For Thumbnail
+    description: Retrieves the data for generate the thumbnail of the file. Used
+    type: operation
+  delete-file-object-thumbnail:
+    label: Delete File Object Thumbnail
+    description: ''
+    type: operation
+  remove-team-from-org:
+    label: Remove Team From Org
+    description: ''
+    type: operation
+  move-project:
+    label: Move Project
+    description: Move projects between teams
+    type: operation
+  delete-team:
+    label: Delete Team
+    description: ''
+    type: operation
+  get-page:
+    label: Get Page
+    description: Retrieves the page data from file and returns it. If no page-id is
+    type: operation
+  delete-share-link:
+    label: Delete Share Link
+    description: ''
+    type: operation
+  restore-deleted-team-files:
+    label: Restore Deleted Team Files
+    description: Removes the deletion mark from the specified files (and respective
+    type: operation
+  login-with-ldap:
+    label: Login With Ldap
+    description: Performs the authentication using LDAP backend. Only works if LDAP
+    type: operation
+  get-project:
+    label: Get Project
+    description: ''
+    type: operation
+  update-profile-notifications:
+    label: Update Profile Notifications
+    description: ''
+    type: operation
+  duplicate-file:
+    label: Duplicate File
+    description: Duplicate a single file in the same team.
+    type: operation
+  get-file-object-thumbnails:
+    label: Get File Object Thumbnails
+    description: Retrieve a file object thumbnails.
+    type: operation
+  get-font-variants:
+    label: Get Font Variants
+    description: ''
+    type: operation
+  get-team-invitation-token:
+    label: Get Team Invitation Token
+    description: ''
+    type: operation
+  upload-file-media-object:
+    label: Upload File Media Object
+    description: ''
+    type: operation
+  add-team-to-organization:
+    label: Add Team To Organization
+    description: ''
+    type: operation
+  create-file-snapshot:
+    label: Create File Snapshot
+    description: ''
+    type: operation
+  get-file-snapshots:
+    label: Get File Snapshots
+    description: ''
+    type: operation
+  delete-file:
+    label: Delete File
+    description: ''
+    type: operation
+  update-font:
+    label: Update Font
+    description: ''
+    type: operation
+  create-project:
+    label: Create Project
+    description: ''
+    type: operation
+  create-comment:
+    label: Create Comment
+    description: ''
+    type: operation
+  move-files:
+    label: Move Files
+    description: Move a set of files from one project to other.
+    type: operation
+  delete-file-snapshot:
+    label: Delete File Snapshot
+    description: ''
+    type: operation
+  delete-font-variant:
+    label: Delete Font Variant
+    description: ''
+    type: operation
+  request-email-change:
+    label: Request Email Change
+    description: ''
+    type: operation
+  duplicate-project:
+    label: Duplicate Project
+    description: Duplicate an entire project with all the files
+    type: operation
+  update-profile-props:
+    label: Update Profile Props
+    description: ''
+    type: operation
+  create-font-variant:
+    label: Create Font Variant
+    description: Upload a font variant.  Font data may be provided either as a
+    type: operation
+  delete-project:
+    label: Delete Project
+    description: ''
+    type: operation
+  delete-comment-thread:
+    label: Delete Comment Thread
+    description: ''
+    type: operation
+  get-file-snapshot:
+    label: Get File Snapshot
+    description: Retrieve a file bundle with data from a specific snapshot for
+    type: operation
+  create-file-object-thumbnail:
+    label: Create File Object Thumbnail
+    description: ''
+    type: operation
+  update-team-invitation-role:
+    label: Update Team Invitation Role
+    description: ''
+    type: operation
+  mark-all-threads-as-read:
+    label: Mark All Threads As Read
+    description: ''
+    type: operation
+  update-comment-thread-status:
+    label: Update Comment Thread Status
+    description: ''
+    type: operation
+  export-binfile:
+    label: Export Binfile
+    description: Export a penpot file in a binary format.
+    type: operation
+  import-binfile:
+    label: Import Binfile
+    description: Import a penpot file in a binary format. If `file-id` is provided,
+    type: operation
+  get-project-files:
+    label: Get Project Files
+    description: Get all files for the specified project.
+    type: operation
+  create-team-access-request:
+    label: Create Team Access Request
+    description: A rpc call that allow to request for an invitations to join the team.
+    type: operation
+  get-team-shared-files:
+    label: Get Team Shared Files
+    description: Get all file (libraries) for the specified team.
+    type: operation
+  push-audit-events:
+    label: Push Audit Events
+    description: ''
+    type: operation
+  get-nitrate-connectivity:
+    label: Get Nitrate Connectivity
+    description: ''
+    type: operation
+  update-team:
+    label: Update Team
+    description: ''
+    type: operation
+  get-profile:
+    label: Get Profile
+    description: ''
+    type: operation
+  get-file-summary:
+    label: Get File Summary
+    description: Retrieve a file summary by its ID. Only authenticated users.
+    type: operation
+  get-comments:
+    label: Get Comments
+    description: ''
+    type: operation
+  get-profiles-for-file-comments:
+    label: Get Profiles For File Comments
+    description: Retrieves a list of profiles with limited set of properties of all
+    type: operation
+  permanently-delete-team-files:
+    label: Permanently Delete Team Files
+    description: Mark the specified files to be deleted immediatelly on the
+    type: operation
+  set-file-shared:
+    label: Set File Shared
+    description: ''
+    type: operation
+  get-projects:
+    label: Get Projects
+    description: ''
+    type: operation
+  get-owned-teams:
+    label: Get Owned Teams
+    description: ''
+    type: operation
+  verify-token:
+    label: Verify Token
+    description: ''
+    type: operation
+  update-team-member-role:
+    label: Update Team Member Role
+    description: ''
+    type: operation
+  clone-file-media-object:
+    label: Clone File Media Object
+    description: ''
+    type: operation
+  get-team-recent-files:
+    label: Get Team Recent Files
+    description: ''
+    type: operation
+  get-library-file-references:
+    label: Get Library File References
+    description: Returns all the file references that use specified file (library) id.
+    type: operation
+  update-file:
+    label: Update File
+    description: ''
+    type: operation
+  get-team-users:
+    label: Get Team Users
+    description: Get team users by team-id or by file-id
+    type: operation
+  get-comment-thread:
+    label: Get Comment Thread
+    description: ''
+    type: operation
+  update-comment-thread:
+    label: Update Comment Thread
+    description: ''
+    type: operation
+  leave-org:
+    label: Leave Org
+    description: ''
+    type: operation
+  update-profile-photo:
+    label: Update Profile Photo
+    description: ''
+    type: operation
+  leave-team:
+    label: Leave Team
+    description: ''
+    type: operation
+  update-file-snapshot:
+    label: Update File Snapshot
+    description: ''
+    type: operation
+  prepare-register-profile:
+    label: Prepare Register Profile
+    description: ''
+    type: operation
+  get-file:
+    label: Get File
+    description: Retrieve a file by its ID. Only authenticated users.
+    type: operation
+  create-share-link:
+    label: Create Share Link
+    description: Creates a share-link object.
+    type: operation
+  create-team:
+    label: Create Team
+    description: ''
+    type: operation
+  clone-template:
+    label: Clone Template
+    description: Clone into the specified project the template by its id.
+    type: operation
+  update-comment-thread-frame:
+    label: Update Comment Thread Frame
+    description: ''
+    type: operation
+  get-file-libraries:
+    label: Get File Libraries
+    description: Get libraries used by the specified file.
+    type: operation
+  get-current-mcp-token:
+    label: Get Current Mcp Token
+    description: ''
+    type: operation
+  update-team-photo:
+    label: Update Team Photo
+    description: ''
+    type: operation
+  search-files:
+    label: Search Files
+    description: ''
+    type: operation
+  get-view-only-bundle:
+    label: Get View Only Bundle
+    description: ''
+    type: operation
+  download-font-family:
+    label: Download Font Family
+    description: Download the entire font family as a zip file. Returns the zip
+    type: operation
+  update-webhook:
+    label: Update Webhook
+    description: ''
+    type: operation
+  get-team-info:
+    label: Get Team Info
+    description: Retrieve minimal team info by its ID.
+    type: operation
+  update-comment:
+    label: Update Comment
+    description: ''
+    type: operation
+  assemble-file-media-object:
+    label: Assemble File Media Object
+    description: ''
+    type: operation
+  rename-file:
+    label: Rename File
+    description: ''
+    type: operation
+  get-team-invitations:
+    label: Get Team Invitations
+    description: ''
+    type: operation
+  lock-file-snapshot:
+    label: Lock File Snapshot
+    description: ''
+    type: operation
+  get-unread-comment-threads:
+    label: Get Unread Comment Threads
+    description: ''
+    type: operation
+  create-comment-thread:
+    label: Create Comment Thread
+    description: ''
+    type: operation
+  get-all-projects:
+    label: Get All Projects
+    description: ''
+    type: operation
+  get-access-tokens:
+    label: Get Access Tokens
+    description: ''
+    type: operation
+  get-file-stats:
+    label: Get File Stats
+    description: 'Return aggregate statistics for a single file: page count, shape'
+    type: operation
+  has-file-libraries:
+    label: Has File Libraries
+    description: Checks if the file has libraries. Returns a boolean
+    type: operation
+  ignore-file-library-sync-status:
+    label: Ignore File Library Sync Status
+    description: Ignore updates in linked files
+    type: operation
+  delete-font:
+    label: Delete Font
+    description: ''
+    type: operation
+  link-file-to-library:
+    label: Link File To Library
+    description: Link a file to a library. Returns the recursive list of libraries used by that library
+    type: operation
+  create-file:
+    label: Create File
+    description: ''
+    type: operation
+  get-file-fragment:
+    label: Get File Fragment
+    description: Retrieve a file fragment by its ID. Only authenticated users.
+    type: operation
+  request-profile-recovery:
+    label: Request Profile Recovery
+    description: ''
+    type: operation
+  delete-team-invitation:
+    label: Delete Team Invitation
+    description: ''
+    type: operation
+  update-profile-password:
+    label: Update Profile Password
+    description: ''
+    type: operation
+  recover-profile:
+    label: Recover Profile
+    description: ''
+    type: operation
+  restore-file-snapshot:
+    label: Restore File Snapshot
+    description: ''
+    type: operation
+  unlink-file-from-library:
+    label: Unlink File From Library
+    description: ''
+    type: operation
+  delete-access-token:
+    label: Delete Access Token
+    description: ''
+    type: operation
+  delete-webhook:
+    label: Delete Webhook
+    description: ''
+    type: operation
+  create-upload-session:
+    label: Create Upload Session
+    description: ''
+    type: operation
+  delete-team-member:
+    label: Delete Team Member
+    description: ''
+    type: operation
+  update-file-library-sync-status:
+    label: Update File Library Sync Status
+    description: Update the synchronization status of a file->library link
+    type: operation
+  send-user-feedback:
+    label: Send User Feedback
+    description: ''
+    type: operation
+  get-team-deleted-files:
+    label: Get Team Deleted Files
+    description: ''
+    type: operation
+  create-webhook:
+    label: Create Webhook
+    description: ''
+    type: operation
+  get-webhooks:
+    label: Get Webhooks
+    description: ''
+    type: operation
+  create-team-invitations:
+    label: Create Team Invitations
+    description: A rpc call that allows to send single or multiple invitations to join the team.
+    type: operation
+  download-font:
+    label: Download Font
+    description: Download the font file. Returns a http redirect to the asset resource uri.
+    type: operation
+  create-access-token:
+    label: Create Access Token
+    description: ''
+    type: operation
+  logout:
+    label: Logout
+    description: Clears the authentication cookie and logout the current session.
+    type: operation
+  get-library-usage:
+    label: Get Library Usage
+    description: Gets the number of files that use the specified library.
+    type: operation
+  get-team:
+    label: Get Team
+    description: ''
+    type: operation
+  redeem-nitrate-activation-code:
+    label: Redeem Nitrate Activation Code
+    description: ''
+    type: operation
+  register-profile:
+    label: Register Profile
+    description: ''
+    type: operation
+  get-team-members:
+    label: Get Team Members
+    description: ''
+    type: operation
+  update-comment-thread-position:
+    label: Update Comment Thread Position
+    description: ''
+    type: operation
+  create-file-thumbnail:
+    label: Create File Thumbnail
+    description: Creates or updates the file thumbnail. Mainly used for paint the
+    type: operation
+  get-comment-threads:
+    label: Get Comment Threads
+    description: ''
+    type: operation
+  rename-project:
+    label: Rename Project
+    description: ''
+    type: operation
+  login-with-password:
+    label: Login With Password
+    description: Performs authentication using penpot password.
+    type: operation
+  create-file-media-object-from-url:
+    label: Create File Media Object From Url
+    description: ''
+    type: operation
+  create-team-with-invitations:
+    label: Create Team With Invitations
+    description: ''
+    type: operation
+  get-sso-provider:
+    label: Get Sso Provider
+    description: ''
+    type: operation
+  update-project-pin:
+    label: Update Project Pin
+    description: ''
+    type: operation
+  get-team-stats:
+    label: Get Team Stats
+    description: ''
+    type: operation
+  get-teams:
+    label: Get Teams
+    description: ''
+    type: operation
+  delete-comment:
+    label: Delete Comment
+    description: ''
+    type: operation
+  upload-chunk:
+    label: Upload Chunk
+    description: ''
+    type: operation
+  get-file-info:
+    label: Get File Info
+    description: Retrieve minimal file info by its ID.
+    type: operation
+  update-profile:
+    label: Update Profile
+    description: ''
+    type: operation
+  unlock-file-snapshot:
+    label: Unlock File Snapshot
+    description: ''
+    type: operation
+  delete-profile-photo:
+    label: Delete Profile Photo
+    description: ''
+    type: operation
+  GeomMatrix:
+    label: GeomMatrix
+    description: Matrix instance
+    type: schema
+  Inst:
+    label: Inst
+    description: 'Schema type: Inst'
+    type: schema
+  SafeInt:
+    label: SafeInt
+    description: integer
+    type: schema
+  Email:
+    label: Email
+    description: string with valid email address
+    type: schema
+  Uri:
+    label: Uri
+    description: URI formatted string
+    type: schema
+  GeomRect:
+    label: GeomRect
+    description: 'Schema type: GeomRect'
+    type: schema
+  GeomPoint:
+    label: GeomPoint
+    description: Point
+    type: schema
+  Uuid:
+    label: Uuid
+    description: UUID formatted string
+    type: schema
+  Any:
+    label: Any
+    description: Any Value
+    type: schema
+  Bytes:
+    label: Bytes
+    description: bytes array
+    type: schema
+  Duration:
+    label: Duration
+    description: 'Schema type: Duration'
+    type: schema
+  Int:
+    label: Int
+    description: integer
+    type: schema
+  SafeNumber:
+    label: SafeNumber
+    description: number
+    type: schema
+  Text:
+    label: Text
+    description: not whitespace string
+    type: schema
+  FilesystemPath:
+    label: FilesystemPath
+    description: filesystem path
+    type: schema
+  WordString:
+    label: WordString
+    description: string
+    type: schema
+  Features:
+    label: Features
+    description: Set of Strings
+    type: schema
+  Boolean:
+    label: Boolean
+    description: boolean
+    type: schema

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Penpot API Request Examples",
+  "description": "Example requests for key Penpot RPC API endpoints.",
+  "examples": {
+    "get-project": {
+      "summary": "",
+      "request": {
+        "method": "POST",
+        "url": "https://design.penpot.app/api/main/methods/get-project",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Token YOUR_PERSONAL_ACCESS_TOKEN"
+        },
+        "body": {
+          "id": "<id>"
+        }
+      }
+    },
+    "get-page": {
+      "summary": "Retrieves the page data from file and returns it. If no page-id is",
+      "request": {
+        "method": "POST",
+        "url": "https://design.penpot.app/api/main/methods/get-page",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Token YOUR_PERSONAL_ACCESS_TOKEN"
+        },
+        "body": {
+          "fileId": "<fileId>"
+        }
+      }
+    },
+    "duplicate-file": {
+      "summary": "Duplicate a single file in the same team.",
+      "request": {
+        "method": "POST",
+        "url": "https://design.penpot.app/api/main/methods/duplicate-file",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Token YOUR_PERSONAL_ACCESS_TOKEN"
+        },
+        "body": {
+          "fileId": "<fileId>"
+        }
+      }
+    },
+    "delete-file": {
+      "summary": "",
+      "request": {
+        "method": "POST",
+        "url": "https://design.penpot.app/api/main/methods/delete-file",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Token YOUR_PERSONAL_ACCESS_TOKEN"
+        },
+        "body": {
+          "id": "<id>"
+        }
+      }
+    },
+    "get-font-variants": {
+      "summary": "",
+      "request": {
+        "method": "POST",
+        "url": "https://design.penpot.app/api/main/methods/get-font-variants",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Token YOUR_PERSONAL_ACCESS_TOKEN"
+        },
+        "body": {}
+      }
+    }
+  }
+}

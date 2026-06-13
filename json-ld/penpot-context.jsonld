@@ -1,0 +1,93 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "penpot": "https://penpot.app/vocab#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:version",
+    "Project": "penpot:Project",
+    "File": "penpot:File",
+    "Page": "penpot:Page",
+    "Component": "penpot:Component",
+    "Team": "penpot:Team",
+    "Profile": "penpot:Profile",
+    "Webhook": "penpot:Webhook",
+    "Plugin": "penpot:Plugin",
+    "FontVariant": "penpot:FontVariant",
+    "MediaObject": "penpot:MediaObject",
+    "ShareLink": "penpot:ShareLink",
+    "Snapshot": "penpot:Snapshot",
+    "Invitation": "penpot:Invitation",
+    "Organization": "penpot:Organization",
+    "Comment": "penpot:Comment",
+    "Thumbnail": "penpot:Thumbnail",
+    "fileId": {
+      "@id": "penpot:fileId",
+      "@type": "xsd:string"
+    },
+    "projectId": {
+      "@id": "penpot:projectId",
+      "@type": "xsd:string"
+    },
+    "teamId": {
+      "@id": "penpot:teamId",
+      "@type": "xsd:string"
+    },
+    "pageId": {
+      "@id": "penpot:pageId",
+      "@type": "xsd:string"
+    },
+    "objectId": {
+      "@id": "penpot:objectId",
+      "@type": "xsd:string"
+    },
+    "profileId": {
+      "@id": "penpot:profileId",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "modifiedAt": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "isShared": {
+      "@id": "penpot:isShared",
+      "@type": "xsd:boolean"
+    },
+    "revn": {
+      "@id": "penpot:revn",
+      "@type": "xsd:integer"
+    },
+    "features": {
+      "@id": "penpot:features",
+      "@container": "@set"
+    },
+    "GeomRect": "penpot:GeomRect",
+    "GeomPoint": "penpot:GeomPoint",
+    "GeomMatrix": "penpot:GeomMatrix"
+  },
+  "@graph": [
+    {
+      "@id": "penpot:PenpotAPI",
+      "@type": "schema:WebAPI",
+      "name": "Penpot RPC API",
+      "description": "Open-source design and prototyping platform REST RPC API for managing projects, files, pages, and design assets.",
+      "url": "https://penpot.app/integrations-api",
+      "version": "2.16",
+      "schema:documentation": "https://help.penpot.app/technical-guide/integration/",
+      "schema:provider": {
+        "@type": "schema:Organization",
+        "name": "Penpot",
+        "url": "https://penpot.app"
+      },
+      "schema:termsOfService": "https://penpot.app/terms",
+      "schema:license": "https://github.com/penpot/penpot/blob/main/LICENSE"
+    }
+  ]
+}

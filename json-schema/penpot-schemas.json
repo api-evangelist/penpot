@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/penpot/main/json-schema/penpot-schemas.json",
+  "title": "Penpot API Schemas",
+  "description": "JSON Schema definitions extracted from the Penpot RPC API OpenAPI specification.",
+  "$defs": {
+    "GeomMatrix": {
+      "title": "matrix",
+      "description": "Matrix instance",
+      "type": "string",
+      "format": "matrix"
+    },
+    "Inst": {
+      "title": "instant",
+      "type": "string",
+      "format": "iso"
+    },
+    "SafeInt": {
+      "title": "integer",
+      "description": "integer",
+      "type": "integer",
+      "minimum": -2147483648,
+      "maximum": 2147483647
+    },
+    "Email": {
+      "title": "email",
+      "description": "string with valid email address",
+      "type": "string",
+      "format": "email"
+    },
+    "Uri": {
+      "title": "uri",
+      "description": "URI formatted string",
+      "type": "string",
+      "format": "uri"
+    },
+    "GeomRect": {
+      "allOf": [
+        {
+          "title": "RectAttrs",
+          "type": "object",
+          "properties": {
+            "x": {
+              "$ref": "#/components/schemas/SafeNumber"
+            },
+            "y": {
+              "$ref": "#/components/schemas/SafeNumber"
+            },
+            "width": {
+              "$ref": "#/components/schemas/SafeNumber"
+            },
+            "height": {
+              "$ref": "#/components/schemas/SafeNumber"
+            },
+            "x1": {
+              "$ref": "#/components/schemas/SafeNumber"
+            },
+            "y1": {
+              "$ref": "#/components/schemas/SafeNumber"
+            },
+            "x2": {
+              "$ref": "#/components/schemas/SafeNumber"
+            },
+            "y2": {
+              "$ref": "#/components/schemas/SafeNumber"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height",
+            "x1",
+            "y1",
+            "x2",
+            "y2"
+          ]
+        }
+      ]
+    },
+    "GeomPoint": {
+      "title": "point",
+      "description": "Point",
+      "type": "string",
+      "format": "point"
+    },
+    "Uuid": {
+      "title": "uuid",
+      "description": "UUID formatted string",
+      "type": "string",
+      "format": "uuid"
+    },
+    "Any": {
+      "description": "Any Value"
+    },
+    "Bytes": {
+      "title": "bytes",
+      "description": "bytes array"
+    },
+    "Duration": {
+      "title": "duration",
+      "type": "string",
+      "format": "duration"
+    },
+    "Int": {
+      "title": "integer",
+      "description": "integer",
+      "type": "integer"
+    },
+    "SafeNumber": {
+      "title": "number",
+      "description": "number",
+      "type": "number"
+    },
+    "Text": {
+      "title": "string",
+      "description": "not whitespace string",
+      "type": "string"
+    },
+    "FilesystemPath": {
+      "title": "path",
+      "description": "filesystem path",
+      "type": "string",
+      "format": "unix-path"
+    },
+    "WordString": {
+      "title": "string",
+      "description": "string",
+      "type": "string",
+      "format": "string"
+    },
+    "Features": {
+      "title": "set",
+      "description": "Set of Strings",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "Boolean": {
+      "title": "boolean",
+      "description": "boolean",
+      "type": "boolean"
+    }
+  }
+}
