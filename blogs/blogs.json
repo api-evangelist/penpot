@@ -2,5 +2,28 @@
   "url": "https://penpot.app/blog",
   "rss": "https://penpot.app/blog/rss/",
   "lastFetched": null,
-  "posts": []
+  "posts": [],
+  "repo": "penpot",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/penpotdesign",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://penpot.app/blog",
+      "feed_url": "https://penpot.app/blog/rss/",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    },
+    {
+      "source": "https://penpot.app/blog/rss/",
+      "feed_url": "https://penpot.app/blog/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-06-14T20:42:17Z"
 }
