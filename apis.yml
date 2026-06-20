@@ -11,7 +11,7 @@ description: >
   server for AI-assisted design-to-code workflows, making it a flexible
   integration target for modern development toolchains.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/penpot/refs/heads/main/apis.yml
 created: "2026-06-12"
 modified: "2026-06-12"
@@ -32,7 +32,7 @@ apis:
       projects, files, pages, components, and design assets. Developers
       authenticate with personal access tokens and can query the auto-generated
       API documentation at the /api/_doc endpoint on any Penpot instance.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://penpot.app/integrations-api
     baseURL: https://design.penpot.app/api/rpc/command/
     tags:
@@ -66,7 +66,7 @@ apis:
       JSON or Transit-formatted event payloads when actions occur such as file
       creation, file updates, and new comments. All backend RPC calls marked as
       WEBHOOK automatically trigger notifications to registered endpoints.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://help.penpot.app/technical-guide/integration/
     baseURL: https://design.penpot.app/api/rpc/command/
     tags:
@@ -87,7 +87,7 @@ apis:
       provides extensive access to design objects and properties, enabling
       external rendering, workflow automation, and enhanced application
       functionality directly within the Penpot UI.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://doc.plugins.penpot.app/
     baseURL: https://doc.plugins.penpot.app/
     tags:
