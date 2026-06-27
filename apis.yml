@@ -54,7 +54,7 @@ apis:
         url: examples/penpot-request-examples.json
       - type: Vocabulary
         url: vocabulary/penpot-vocabulary.yml
-      - type: JSONLd
+      - type: JSONLD
         url: json-ld/penpot-context.jsonld
     contact:
       - FN: Penpot Support

@@ -1,10 +1,13 @@
 {
-  "url": "https://penpot.app/blog",
-  "rss": "https://penpot.app/blog/rss/",
-  "lastFetched": null,
-  "posts": [],
   "repo": "penpot",
   "feeds": [
+    {
+      "source": "https://penpot.app/blog/rss/",
+      "feed_url": "https://penpot.app/blog/rss/",
+      "title": "",
+      "saved": 2,
+      "method": "feed"
+    },
     {
       "source": "https://www.linkedin.com/company/penpotdesign",
       "error": "HTTPError"
@@ -13,17 +16,10 @@
       "source": "https://penpot.app/blog",
       "feed_url": "https://penpot.app/blog/rss/",
       "title": "",
-      "saved": 1,
-      "method": "discovered"
-    },
-    {
-      "source": "https://penpot.app/blog/rss/",
-      "feed_url": "https://penpot.app/blog/rss/",
-      "title": "",
       "saved": 0,
-      "method": "feed"
+      "method": "discovered"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:03:07Z",
+  "post_count": 5
 }
