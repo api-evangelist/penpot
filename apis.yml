@@ -102,6 +102,8 @@ apis:
         url: https://community.penpot.app/
 
 common:
+  - type: DomainSecurity
+    url: security/penpot-domain-security.yml
   - type: Website
     url: https://penpot.app/
   - type: Documentation
