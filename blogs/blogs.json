@@ -5,12 +5,15 @@
       "source": "https://penpot.app/blog/rss/",
       "feed_url": "https://penpot.app/blog/rss/",
       "title": "",
-      "saved": 2,
+      "saved": 0,
       "method": "feed"
     },
     {
       "source": "https://www.linkedin.com/company/penpotdesign",
-      "error": "HTTPError"
+      "feed_url": "https://www.linkedin.com/company/penpotdesign",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     },
     {
       "source": "https://penpot.app/blog",
@@ -20,6 +23,6 @@
       "method": "discovered"
     }
   ],
-  "fetched": "2026-06-27T12:03:07Z",
-  "post_count": 5
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 15
 }
