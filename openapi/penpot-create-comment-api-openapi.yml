@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create Comment API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create Comment
+paths:
+  create-comment:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-comment
+              type: object
+              properties:
+                threadId:
+                  $ref: '#/components/schemas/Uuid'
+                content:
+                  type: string
+                  maxLength: 750
+                shareId:
+                  $ref: '#/components/schemas/Uuid'
+                  nullable: true
+                mentions:
+                  title: set
+                  description: Set of Strings
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Uuid'
+                  uniqueItems: true
+              required:
+              - threadId
+              - content
+            example: '{"threadId":"5ab5eb30-5b3a-81d5-8008-2a395e0f62f3","content":"5Uz3HEWT17srFSAf74m2oma10G8db14ugftes5N1mS6DvsoPH6Y6hqxoNm3d1DlP5RWn4CUu6JjoSWcs90eEDdeLKu87wiv6W6pt132ZG1YDW4588OK2gs73f26isTLd3c2TQ9M1rbmc9Yi7l6z004zcls1S12Y7VfM53U3OQsDdUPjKd9pc1YT50aZQ16uYj21CVez1LFl0C136j03zNnosF09cHfBF5","shareId":null,"mentions":["5ab5eb30-5b3a-81d5-8008-2a395e0f6303","5ab5eb30-5b3a-81d5-8008-2a395e0f62fb","5ab5eb30-5b3a-81d5-8008-2a395e0f62f9","5ab5eb30-5b3a-81d5-8008-2a395e0f6300","5ab5eb30-5b3a-81d5-8008-2a395e0f62fe","5ab5eb30-5b3a-81d5-8008-2a395e0f6304","5ab5eb30-5b3a-81d5-8008-2a395e0f62ff","5ab5eb30-5b3a-81d5-8008-2a395e0f6305","5ab5eb30-5b3a-81d5-8008-2a395e0f62f4","5ab5eb30-5b3a-81d5-8008-2a395e0f62fa","5ab5eb30-5b3a-81d5-8008-2a395e0f62f7","5ab5eb30-5b3a-81d5-8008-2a395e0f62fc","5ab5eb30-5b3a-81d5-8008-2a395e0f62f5","5ab5eb30-5b3a-81d5-8008-2a395e0f62fd","5ab5eb30-5b3a-81d5-8008-2a395e0f6306","5ab5eb30-5b3a-81d5-8008-2a395e0f62f8","5ab5eb30-5b3a-81d5-8008-2a395e0f6302","5ab5eb30-5b3a-81d5-8008-2a395e0f62f6","5ab5eb30-5b3a-81d5-8008-2a395e0f6301"]}'
+      tags:
+      - Create Comment
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

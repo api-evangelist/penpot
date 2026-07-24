@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get Library Usage API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get Library Usage
+paths:
+  get-library-usage:
+    post:
+      description: Gets the number of files that use the specified library.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-library-usage
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - fileId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c56fd91"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Int'
+              example: '-142621'
+      tags:
+      - Get Library Usage
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

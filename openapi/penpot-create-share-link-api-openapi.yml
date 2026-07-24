@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create Share Link API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create Share Link
+paths:
+  create-share-link:
+    post:
+      description: 'Creates a share-link object.
+
+
+        Share links are resources that allows external users access to specific
+
+        pages of a file with specific permissions (who-comment and who-inspect).'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-share-link
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                whoComment:
+                  type: string
+                  maxLength: 250
+                whoInspect:
+                  type: string
+                  maxLength: 250
+                pages:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Uuid'
+                  uniqueItems: true
+              required:
+              - fileId
+              - whoComment
+              - whoInspect
+              - pages
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c71bcff","whoComment":"","whoInspect":"2Ue7X3VmLXWU2BXDj0VshPA8BM2pDc12c1Al8JgHHI65Afs79u991S71k5egwGpqFJ6H2tbIuC21Rg4VQ8aY6C01J577yqS02dw","pages":["5ab5eb30-5b3a-81d5-8008-2a395c71c032","5ab5eb30-5b3a-81d5-8008-2a395c71c03e","5ab5eb30-5b3a-81d5-8008-2a395c71c03a","5ab5eb30-5b3a-81d5-8008-2a395c71c040","5ab5eb30-5b3a-81d5-8008-2a395c71c033","5ab5eb30-5b3a-81d5-8008-2a395c71c03b","5ab5eb30-5b3a-81d5-8008-2a395c71c039","5ab5eb30-5b3a-81d5-8008-2a395c71c03f","5ab5eb30-5b3a-81d5-8008-2a395c71c041","5ab5eb30-5b3a-81d5-8008-2a395c71c036","5ab5eb30-5b3a-81d5-8008-2a395c71c03c","5ab5eb30-5b3a-81d5-8008-2a395c71c03d","5ab5eb30-5b3a-81d5-8008-2a395c71c034","5ab5eb30-5b3a-81d5-8008-2a395c71c038","5ab5eb30-5b3a-81d5-8008-2a395c71c037","5ab5eb30-5b3a-81d5-8008-2a395c71c035"]}'
+      tags:
+      - Create Share Link
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

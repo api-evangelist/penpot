@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create Webhook API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create Webhook
+paths:
+  create-webhook:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-webhook
+              type: object
+              properties:
+                teamId:
+                  $ref: '#/components/schemas/Uuid'
+                uri:
+                  $ref: '#/components/schemas/Uri'
+                mtype:
+                  title: enum
+                  type: string
+                  enum:
+                  - application/json
+                  - application/transit+json
+              required:
+              - teamId
+              - uri
+              - mtype
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395c741a86","uri":"https:\/\/svqare.net","mtype":"application\/transit+json"}'
+      tags:
+      - Create Webhook
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Uri:
+      title: uri
+      description: URI formatted string
+      type: string
+      format: uri

@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Clone File Media Object API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Clone File Media Object
+paths:
+  clone-file-media-object:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: clone-file-media-object
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                isLocal:
+                  $ref: '#/components/schemas/Boolean'
+                id:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - fileId
+              - isLocal
+              - id
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395e0faab3","isLocal":false,"id":"5ab5eb30-5b3a-81d5-8008-2a395e0faab4"}'
+      tags:
+      - Clone File Media Object
+components:
+  schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

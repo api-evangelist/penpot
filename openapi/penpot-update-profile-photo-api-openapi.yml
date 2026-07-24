@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Update Profile Photo API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Update Profile Photo
+paths:
+  update-profile-photo:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: update-profile-photo
+              type: object
+              properties:
+                file:
+                  title: Upload
+                  type: object
+                  properties:
+                    filename:
+                      type: string
+                    size:
+                      $ref: '#/components/schemas/Int'
+                    path:
+                      $ref: '#/components/schemas/FilesystemPath'
+                    mtype:
+                      type: string
+                    headers:
+                      type: object
+                      additionalProperties:
+                        type: string
+                  required:
+                  - filename
+                  - size
+                  - path
+              required:
+              - file
+            example: '{"file":{"filename":"4LcY8jP8AfVXO29M689C6","size":-754,"path":"","headers":{"Ja0":"s6t1Y04JX473EA18rP2","1FR":"vfsQ84151A384iFRcgo","3LMA44qj8rTk0h0oBhI23":"kGEE08s8jloxjd953714J","4QY7vF5igC38dqEw16r6ikO9":"XZQ1kjk1P0Ql6jm0J2ufmih6C9Ma","TLjwW5GyAFizNwTmy":"QLGkl4xcB","1ZySl4MxUylSNF175QXi876GhpCjau":"A35G7d5oNwhVKltILY","Cm4olZw6D8L387q8p7X8d3H2e3SX":"KdF2t63R5Z5EPsd0SUqccI0t","QPC8In06DIpGJ693nEF8":"C7c0RQ2Y04db4kIm3Qw8X2B","9gTQH1WjA8BA":"YM3K27YZT97w","CVwLa":"aYdioWIIsZ","ckBiLv83eL6Z7s93sM0xd0DzY4T0":"6geY4x5S0","kcznRE2s3504XZ":"krw4o348","PI5I7XHnVZ845W414NoSptE6Kpwm1":"I71QGS","O415L8406":"xE2xj17fCv0pFm38JghNn08XX06","7zQ":"WuDAm5l15H7SkGrsqwxRXeM","cvsQVhY":"KKR7g3iaYq","TnJFWnxduXg0DCoOQ6l":"Z3dzzwvg1911ZLh7cs7QudE","4N0RV0kpiJYFgwkgUc8leXD":"POGLtZ6biIP418Tz","ba83Mm3sKn":"qeXN8O1ryRFiK3PG5ioCtm8Q0v7","0TZbxGy2":"Cr42","UtZEWKm5":"LA8","S7p28niTS6zr1P8a9RX6":"40fywoAZTUPEw9dBuO93DzEYD4mc7","2G9I55X1Cc69":"FzM9I51","MmxNyx9SoZ0j3q4K2z":"0od03OQe7WBbFy2I8U37Fa24","2m4EyU1Qi0ew7n1dRwH0":"GZ9","4PLWs":"W50v2N9oDbjzYgvjixzWMCym6A1t","8PHL9Pv9bmAn819xUiJu12T5L":"pQAX4mg","3B821TVZuuYgJ5T02":"A5wkxH208mr09818"}}}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                type: 'null'
+              example: 'null'
+      tags:
+      - Update Profile Photo
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path

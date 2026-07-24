@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get Profiles For File Comments API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get Profiles For File Comments
+paths:
+  get-profiles-for-file-comments:
+    post:
+      description: 'Retrieves a list of profiles with limited set of properties of all
+
+        participants on comment threads of the file.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-profiles-for-file-comments
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                shareId:
+                  $ref: '#/components/schemas/Uuid'
+                  nullable: true
+              required:
+              - fileId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c60a2c1"}'
+      tags:
+      - Get Profiles For File Comments
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

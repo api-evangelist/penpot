@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Push Audit Events API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Push Audit Events
+paths:
+  push-audit-events:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: push-audit-events
+              type: object
+              properties:
+                events:
+                  type: array
+                  items:
+                    title: Event
+                    type: object
+                    properties:
+                      name:
+                        allOf:
+                        - type: string
+                          maxLength: 250
+                        - type: string
+                          pattern: '[\d\w-]{1,50}'
+                      type:
+                        allOf:
+                        - type: string
+                          maxLength: 250
+                        - title: enum
+                          type: string
+                          enum:
+                          - identify
+                          - action
+                          - trigger
+                      props:
+                        type: object
+                        additionalProperties:
+                          $ref: '#/components/schemas/Any'
+                      timestamp:
+                        $ref: '#/components/schemas/Inst'
+                      context:
+                        type: object
+                        additionalProperties:
+                          $ref: '#/components/schemas/Any'
+                    required:
+                    - name
+                    - type
+                    - props
+                    - timestamp
+              required:
+              - events
+            example: '{"events":[{"name":"get-profile","type":"action","props":{"-An_:z":"cddg","N*5eR":"vwjntgu","LM_1":true,"kap?:-ws":false,"!":0.05,"X2_Tr":"ctepx","+o":"wpzqaq","Y_4l":69,"DBf?U-":0.14,"dnOk":0.24,"W*.?8e_":"hsucd","pJ4FgbA2":true,"g8":"jfhh",".I":false,"cIFKo+Y":"uoil","_a":0.03,"N1A":-4,"!A3rr:*+":"bakpw","S4":"eevaxf","bzy6!G+":true},"timestamp":"2026-06-12T12:36:02.496326610Z","context":{"?!a":"ncncr","FS-3!":"qbqtht","z":-63,"VcY":-60,"g+2V":58,".YPE7_":"jksc","HQc_-_.":"xmhl","Um+5":52,"x":"xfcw","Kc_8-1":"vzzl","*1s":54,"*3pO8":52,"J5r-+3._":"clmnl","uRU_CP_G":true,"B":true,"!3*G?":"nlol","_":"hpgd","alE":true,"Z+0!":false,"*V1":0.0,"e7r":"fsnj",".?2!":true,"Ul5:3!":-37,"ak52H":"cojz","U.-?H":80,"_11-:XO":"ojugg"}},{"name":"get-profile","type":"identify","props":{".0.?+":true,"wx-?b21":true,"kc7:k":55,"Uz.":"wiak","e":19.76,"*-I":"waigb","M":"qykpj","*vYI":0,"?4*6":true,"j?D-86":true,"KX":true,"!G*!":-53.06,"o_:*H":-64,"S+E0.zs":-31,"V3x":"ucmti","c2-1n-":0.03,".":-0.18,"-WC.*i!":"sntioc","WK?":false,"Ld!":"tsgabp","t:J67!B":"ezcemqf","T:noq:+":"dffao","??p":-85,"X*d5L":6,"+":true,"D":false,"hl":true,"+!":"kbmx","C-lQ6":0.01},"timestamp":"2026-06-12T12:36:02.589883686Z","context":{"ww":false,"t*+rT":true,"O5EJ8d":"ksrjncu","i*vU_?*":"zeakpl","_4:e-CV4":true,"ABm8P4Va2":58.9,"--*":false,"y0.GS":"ixuhh","L+_8":65.1,"+!-":"qcnpklk","S":92,"J:s?d?":"hged","wu9Sl64u":"nyyg","x--:?0Z":"rkgvo","D?-_2!":true,"d-r:2*?":"hakt","u+-_":61,"po.:uv":"dboaych","?7D":true,"+":"jqhq","ks":"etsm"}},{"name":"get-profile","type":"identify","props":{"fRL":"szdeer","j+-":"cleks","s3VUT":true,"*x":2,"+-Emcyl1":true,"M4*Hq":-0.01,".P?IQ1-H":"jvir","-":"jcyeqyy","G":-0.01,"Y":true,"H":"yoxw","W:Q":88,"*-S":"tqxq","B":false,"F*+-":"vedgtu","L++*7B":"elnoc","-?":-88,"Y?":false,".*17":"fnpqr","Mo-:J":87,"Sy:H!:1":"inqhh","sz_RO":"eets","WMi!qLH":"glzbdz"},"timestamp":"2026-06-12T12:36:02.546106854Z"},{"name":"update-file","type":"action","props":{"!3+7:q:9":0.37},"timestamp":"2026-06-12T12:36:02.529401072Z"},{"name":"update-file","type":"trigger","props":{"F!u0_!eg":true,"_F2Wl+":5.93,"mr8xZp":0.01,"*4vs7T":"otzbm","_-dV!Y":"egjazm","YW_.":false,"-":-88,"ce+70":-0.02,"?w":"lnefh","?":"enkd","Sa:+":"hfugm","rgA86":54,"s?q?1RA":"iduw","!H":"eeuc","d+M8U":true,"VK3_:U_":true,"o":"nseyqvyhg","nAL":"iywfkf","?qi-":-76},"timestamp":"2026-06-12T12:36:02.561579777Z"},{"name":"get-profile","type":"trigger","props":{"Q.TS":"miiu","m?qP8":"kvpl"},"timestamp":"2026-06-12T12:36:02.545186846Z"},{"name":"update-file","type":"action","props":{"R8:dV**":-85},"timestamp":"2026-06-12T12:36:02.552417754Z"},{"name":"update-file","type":"identify","props":{"RJ_L-g5":"ftbtifp","xoA*EM+":false,"SA0R":"ntse","s-AH_!d":false,"s__":"aqav","wc3-+R":-0.01,"_jU.Va*":false,"F4t":-75,"G+":53,"!XQit":0.24,"d5?":"zkmrtzw","_0":0.0},"timestamp":"2026-06-12T12:36:02.522191359Z"},{"name":"update-file","type":"identify","props":{"qDXXw*bQ":"zvpn","?":-2,"N!7?..6g":-8.59,"__KW":true,"R!p5sFhw":"xqkl",".y5-+2-":100,"bb3P:s":10,"*_k":-92,"AwZ*W":"qkul","_Y+":48.0,"gq0":30},"timestamp":"2026-06-12T12:36:02.552895859Z","context":{"vuu":0,"!C?F+*S":0.0,"La":"zjyi","gn+:0.!":62,".Yr75MA?":-4.57,"a":"vusccms","*.-5xR0f":false,"+jZfW":"fzqx","qtu5":true,".dMlO_":1.06,"?S":"rqfs","kOOj":true,"_.?2q-d":true}},{"name":"get-profile","type":"action","props":{"q":"rdswa","x":"hgfn"},"timestamp":"2026-06-12T12:36:02.563533965Z"},{"name":"update-file","type":"identify","props":{"?:WR:J!3":-0.4,"+Y2._":false,"V+5V*Cd":false,"-n*":1.47,"!AA":-2,"zI80049":10.0,"+q":1.41,"Qo":"ygol","c":-5.84},"timestamp":"2026-06-12T12:36:02.588802233Z","context":{"*02":"xplgj","*+j":"ittci","yx":"ddom","D9aoRrE5":"fszndgx","SdU?":"kyaqnnm","L:+":"wszgc","YN+an":-97,"wO6_J*":"lzyy","M!H":"otutv","Lm2?3":true,"-p.oq45":"axedl","v0M6D++":"hvoq","c-_dl.-":"ksjw"}},{"name":"get-profile","type":"identify","props":{"b:6":"aljok","_89?":-2,"qg":0.35,"L:+?:?:o":"bkys","v?w":true,"ds":-58,"uKqcy+.R":"otts","uQk+":-0.01},"timestamp":"2026-06-12T12:36:02.569915209Z","context":{"Z-wDgA":false,"QQY*+":0,"y3":false,"*U23":"nbnu","Gc5":"sgbok","q!":"nzol","t-7D8":55,"Y":"udork","oPfi*.??":"ehgm","F?n!XDWE":33.34,"B":false,"Z:9+":93,"v-3+":96,"?-6K":"seyu","hn+E":"byxfm","Z?":20.08,"t2388*5":-62,"C*!*":false,"V-F2I-j":true,"*1+275":true,"W":83,"+h9:!n.9":"mwdqb","+":0.04,"+PA":0.09,"d5b9*":0.13}},{"name":"get-profile","type":"identify","props":{"!":false,"*.-+":"ctye","JaL8*.":-0.13,"F+":false,"Z8?K?":true,"p4:Y":true,"nS":86,"Y-G__-b!":-0.06,"p:.P.:O":0.0,"B1:c+s1L":"jvxlvzuc"},"timestamp":"2026-06-12T12:36:02.533609387Z"},{"name":"update-file","type":"action","props":{"-.9Ra1-":0.57,"w1sfaN+6":false},"timestamp":"2026-06-12T12:36:02.566041926Z"}]}'
+      tags:
+      - Push Audit Events
+components:
+  schemas:
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    Any:
+      description: Any Value

@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Update Team Photo API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Update Team Photo
+paths:
+  update-team-photo:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: update-team-photo
+              type: object
+              properties:
+                teamId:
+                  $ref: '#/components/schemas/Uuid'
+                file:
+                  title: Upload
+                  type: object
+                  properties:
+                    filename:
+                      type: string
+                    size:
+                      $ref: '#/components/schemas/Int'
+                    path:
+                      $ref: '#/components/schemas/FilesystemPath'
+                    mtype:
+                      type: string
+                    headers:
+                      type: object
+                      additionalProperties:
+                        type: string
+                  required:
+                  - filename
+                  - size
+                  - path
+              required:
+              - teamId
+              - file
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395c727eb0","file":{"filename":"p616V4Z4cbViVaEX2Ht3q","size":-1163260,"path":"pGD7ehpJ6823","headers":{"":"mZa9OD1zlpRoVfC6Bl0","m7":"6s69HTa5zd50PeeAVcX4G71e4VXL","4BlTB2H6b3Iv9306H4":"D6cs","75GEU706L":"4Fn3FBQED0XjsDa9Hk0eF4vgnMYdqnM","I3M3xm7":"1qzFs5h79JY83ET0uhA","k7mnV608sx7b277":"7kiw6rS2MbneqvGjkgQqy2tP5","3G28nnUm1uKaGUq":"9AQ0Z8iPdH87150Dv925zv3","jiFwp0IpR8nV6JSoKZOfeo5":"M1QJGkj1J0","LUg4nRojJFrbSO":"UqWb2cH6","C6LFwz15WwBx2":"ejDo","e00T054iV19nK0vm8dexUXqpNcvM1":"AT1nOaoEgtU936X9VdKR","H3L5Z25fTH0sQZ0Sd64n1D8o1h0":"7X5j5X2Kuf2TVb2XVvThYB2","lN3HSR2bXbe038Un4O6Q6eLR":"19AKis363t020u0YTjl9HVc9hEVPa","IOIieMa020LK83R5B":"8zBQUyEN","7GZg2CbD":"S1Bo83SRA4wclv0Vw3V9","I3TABi3jEg11NYdTTJsEepd":"4Z0BceR3S8672dr78f204el","0":"3D34F61wn36SyZC0E","QmgHiFU8079F1XgWwl152oE":"oqV18nkT4XS8L2IY829mlP","DZfzSdVDO6a3ll6":"d","dz6D3Ea2lHaG3KL8":"2Vc1I","5iWO3rX3xrtyfz2HZynuPO":"47VnQBw3is75stIjVvp9","f4Z2sg7KaAw24kf":"8v4Y0GO51f2IiK9","emkzGbgq":"5o72a5","4R81EXfYo58n6I":"KWEbX9raFqA4HG","Cnk1S7l56ziwIa8Wq534NA7N7":"R3NolhI22azlaiCD","U61khn176DN":"0IcBmM5Fr"}}}'
+      tags:
+      - Update Team Photo
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

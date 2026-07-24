@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create Access Token API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create Access Token
+paths:
+  create-access-token:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-access-token
+              type: object
+              properties:
+                name:
+                  type: string
+                  minLength: 1
+                  maxLength: 250
+                expiration:
+                  $ref: '#/components/schemas/Duration'
+                type:
+                  type: string
+              required:
+              - name
+            example: '{"name":"b49wk7PxYe7kTE304578C1pJLT4xvZg9J00S40pMfcKzA68rtoYA5Zr0OPpYIsJW7F039r92RDuDC4pb6k1jJy2hfXGm3WYj8xqNlb0288c1o1M6BFpi82S8x1aQx3h133qFNGucMscHf7K4ElU1noHsm6sNm8C7pxK7wtAYR0anbj04XIwUn4L8Bb8OR0ns2UmLFMefdo1RtIyEf3U6B0u7yvv","expiration":"0.094s"}'
+      tags:
+      - Create Access Token
+components:
+  schemas:
+    Duration:
+      title: duration
+      type: string
+      format: duration

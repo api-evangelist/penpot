@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Update Team Invitation Role API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Update Team Invitation Role
+paths:
+  update-team-invitation-role:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: update-team-invitation-role
+              type: object
+              properties:
+                teamId:
+                  $ref: '#/components/schemas/Uuid'
+                email:
+                  $ref: '#/components/schemas/Email'
+                role:
+                  title: TeamRole
+                  type: string
+                  enum:
+                  - viewer
+                  - admin
+                  - editor
+                  - owner
+              required:
+              - teamId
+              - email
+              - role
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395c616fbf","email":"rgovtb@example.net","role":"editor"}'
+      tags:
+      - Update Team Invitation Role
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Email:
+      title: email
+      description: string with valid email address
+      type: string
+      format: email

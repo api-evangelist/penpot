@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Redeem Nitrate Activation Code API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Redeem Nitrate Activation Code
+paths:
+  redeem-nitrate-activation-code:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: RedeemActivationCodeParams
+              type: object
+              properties:
+                activationCode:
+                  $ref: '#/components/schemas/Text'
+              required:
+              - activationCode
+            example: '{"activationCode":"afad"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                title: RedeemActivationCodeResult
+                type: object
+                properties:
+                  cancelAt:
+                    title: instant
+                    type: string
+                    format: iso
+                    nullable: true
+                required:
+                - cancelAt
+              example: '{"cancelAt":"2026-06-12T12:36:04.278614142Z"}'
+      tags:
+      - Redeem Nitrate Activation Code
+components:
+  schemas:
+    Text:
+      title: string
+      description: not whitespace string
+      type: string

@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Export Binfile API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Export Binfile
+paths:
+  export-binfile:
+    post:
+      description: Export a penpot file in a binary format.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: export-binfile
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                includeLibraries:
+                  $ref: '#/components/schemas/Boolean'
+                embedAssets:
+                  $ref: '#/components/schemas/Boolean'
+              required:
+              - fileId
+              - includeLibraries
+              - embedAssets
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c616fbe","includeLibraries":false,"embedAssets":true}'
+      tags:
+      - Export Binfile
+components:
+  schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Ignore File Library Sync Status API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Ignore File Library Sync Status
+paths:
+  ignore-file-library-sync-status:
+    post:
+      description: Ignore updates in linked files
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: ignore-file-library-sync-status
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                date:
+                  $ref: '#/components/schemas/Inst'
+              required:
+              - fileId
+              - date
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c761cee","date":"2026-06-12T12:36:02.639835545Z"}'
+      tags:
+      - Ignore File Library Sync Status
+components:
+  schemas:
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

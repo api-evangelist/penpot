@@ -1,0 +1,92 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Upload Chunk API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Upload Chunk
+paths:
+  upload-chunk:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: upload-chunk
+              type: object
+              properties:
+                sessionId:
+                  $ref: '#/components/schemas/Uuid'
+                index:
+                  $ref: '#/components/schemas/Int'
+                content:
+                  title: Upload
+                  type: object
+                  properties:
+                    filename:
+                      type: string
+                    size:
+                      $ref: '#/components/schemas/Int'
+                    path:
+                      $ref: '#/components/schemas/FilesystemPath'
+                    mtype:
+                      type: string
+                    headers:
+                      type: object
+                      additionalProperties:
+                        type: string
+                  required:
+                  - filename
+                  - size
+                  - path
+              required:
+              - sessionId
+              - index
+              - content
+            example: '{"sessionId":"5ab5eb30-5b3a-81d5-8008-2a395c720d89","index":119,"content":{"filename":"4h53x5fm1g9nq","size":-6,"path":"9LL0Fx684x6YH7reOQ"}}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                title: upload-chunk-result
+                type: object
+                properties:
+                  sessionId:
+                    $ref: '#/components/schemas/Uuid'
+                  index:
+                    $ref: '#/components/schemas/Int'
+                required:
+                - sessionId
+                - index
+              example: '{"sessionId":"5ab5eb30-5b3a-81d5-8008-2a395c727eaf","index":-114}'
+      tags:
+      - Upload Chunk
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

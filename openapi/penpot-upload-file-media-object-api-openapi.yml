@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Upload File Media Object API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Upload File Media Object
+paths:
+  upload-file-media-object:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: upload-file-media-object
+              type: object
+              properties:
+                id:
+                  $ref: '#/components/schemas/Uuid'
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                isLocal:
+                  $ref: '#/components/schemas/Boolean'
+                name:
+                  type: string
+                  maxLength: 250
+                content:
+                  title: Upload
+                  type: object
+                  properties:
+                    filename:
+                      type: string
+                    size:
+                      $ref: '#/components/schemas/Int'
+                    path:
+                      $ref: '#/components/schemas/FilesystemPath'
+                    mtype:
+                      type: string
+                    headers:
+                      type: object
+                      additionalProperties:
+                        type: string
+                  required:
+                  - filename
+                  - size
+                  - path
+              required:
+              - fileId
+              - isLocal
+              - name
+              - content
+            example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c60da80","fileId":"5ab5eb30-5b3a-81d5-8008-2a395c60da81","isLocal":true,"name":"","content":{"filename":"94P29r10XSRdD6jOt6s36W3WZm4n","size":17610424,"path":"6LM56dV8kmi1r36631CPLF6","mtype":"w8xmknGU33xL0TH1xyhPJ4B","headers":{"4585972l3a3g381s87GE6mJBV0vLPw":"h9rnK","AM3E2Px":"3ii7Y","tvV2pFal5TPc":"7cpRlUmI3oMq334V7Mmfofpz3ML1","PI4ozWq76rUKxQKKCL4N9s2":"859F16a967","NZeO":"TRH"}}}'
+      tags:
+      - Upload File Media Object
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

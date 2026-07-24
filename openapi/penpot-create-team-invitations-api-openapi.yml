@@ -1,0 +1,88 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create Team Invitations API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create Team Invitations
+paths:
+  create-team-invitations:
+    post:
+      description: 'A rpc call that allows to send single or multiple invitations to join the team.
+
+
+        Supports two parameter formats:
+
+        1. emails (set) + role (single role for all emails)
+
+        2. invitations (vector of {:email :role} maps for individual roles)'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+              - title: create-team-invitations
+                type: object
+                properties:
+                  teamId:
+                    $ref: '#/components/schemas/Uuid'
+                  emails:
+                    title: set
+                    description: Set of Strings
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Email'
+                    uniqueItems: true
+                  role:
+                    title: TeamRole
+                    type: string
+                    enum:
+                    - viewer
+                    - admin
+                    - editor
+                    - owner
+                  invitations:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        email:
+                          $ref: '#/components/schemas/Email'
+                        role:
+                          title: TeamRole
+                          type: string
+                          enum:
+                          - viewer
+                          - admin
+                          - editor
+                          - owner
+                      required:
+                      - email
+                      - role
+                required:
+                - teamId
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395e0e0fb0","invitations":[{"email":"dfjb@example.net","role":"admin"},{"email":"uwzl@example.net","role":"owner"},{"email":"kknc@example.net","role":"viewer"},{"email":"dabx@example.net","role":"owner"},{"email":"ahzd@example.net","role":"viewer"},{"email":"hbpaz@example.net","role":"owner"},{"email":"fcmkek@example.net","role":"editor"},{"email":"qqey@example.net","role":"viewer"},{"email":"jyblgn@example.net","role":"editor"},{"email":"ktnuu@example.net","role":"admin"},{"email":"ttigq@example.net","role":"editor"},{"email":"zafighq@example.net","role":"viewer"},{"email":"etvi@example.net","role":"editor"},{"email":"qkwng@example.net","role":"admin"},{"email":"hyhnrvc@example.net","role":"viewer"},{"email":"arnn@example.net","role":"owner"},{"email":"fscx@example.net","role":"editor"},{"email":"uvfp@example.net","role":"editor"},{"email":"vmqn@example.net","role":"viewer"},{"email":"sqqx@example.net","role":"editor"},{"email":"ukvid@example.net","role":"editor"},{"email":"hmlcv@example.net","role":"editor"},{"email":"zeki@example.net","role":"editor"},{"email":"ggawz@example.net","role":"admin"},{"email":"gcdsc@example.net","role":"viewer"},{"email":"deuw@example.net","role":"editor"},{"email":"oamehmuc@example.net","role":"owner"},{"email":"ksidj@example.net","role":"owner"},{"email":"xnye@example.net","role":"viewer"}]}'
+      tags:
+      - Create Team Invitations
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Email:
+      title: email
+      description: string with valid email address
+      type: string
+      format: email

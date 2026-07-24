@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Delete File Object Thumbnail API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Delete File Object Thumbnail
+paths:
+  delete-file-object-thumbnail:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: delete-file-object-thumbnail
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                objectId:
+                  type: string
+                  maxLength: 250
+              required:
+              - fileId
+              - objectId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395e1a52c4","objectId":"m1MtMHe"}'
+      tags:
+      - Delete File Object Thumbnail
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

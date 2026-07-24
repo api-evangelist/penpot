@@ -1,0 +1,99 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create Font Variant API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create Font Variant
+paths:
+  create-font-variant:
+    post:
+      description: 'Upload a font variant.  Font data may be provided either as a
+
+        Transit-encoded `:data` map (keyed by mime-type) for small fonts, or
+
+        as an `:uploads` map (keyed by mime-type, values are upload-session
+
+        UUIDs from the chunked-upload API) for large fonts.  Exactly one of
+
+        the two must be present.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+              - title: create-font-variant
+                type: object
+                properties:
+                  teamId:
+                    $ref: '#/components/schemas/Uuid'
+                  fontId:
+                    $ref: '#/components/schemas/Uuid'
+                  fontFamily:
+                    allOf:
+                    - title: string
+                      description: not whitespace string
+                      type: string
+                  fontWeight:
+                    title: enum
+                    type: string
+                    enum:
+                    - '950'
+                    - '300'
+                    - '600'
+                    - '500'
+                    - '100'
+                    - '800'
+                    - '200'
+                    - '900'
+                    - '700'
+                    - '400'
+                  fontStyle:
+                    title: enum
+                    type: string
+                    enum:
+                    - normal
+                    - italic
+                  data:
+                    type: object
+                    additionalProperties:
+                      anyOf:
+                      - $ref: '#/components/schemas/Bytes'
+                      - title: set
+                        description: Set of Strings
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Bytes'
+                  uploads:
+                    type: object
+                    additionalProperties:
+                      $ref: '#/components/schemas/Uuid'
+                required:
+                - teamId
+                - fontId
+                - fontFamily
+                - fontWeight
+                - fontStyle
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395e18f71d","fontId":"5ab5eb30-5b3a-81d5-8008-2a395e18f71e","fontFamily":"jeni","fontWeight":500,"fontStyle":"normal","data":{"qzwa":null,"gdlbj":[-48,-128,126,12,123,-111,78,77,1,-46,119,-64,-92,112,69,-34,22,9,90,95,-63,81,-95,-3,-79],"fybybvq":[75,93,64,45,71,115,94],"usisbf":[69,-102,73,5,-101,15,8,15,74,-47,47,-16,-84,56,104,80,60,16,-95,-97,-38,-50,102,22],"fyei":[-75,-39,67,107,-79,-39,32,5,106],"oehjwdx":[-13,26,-38,75,72,109,-7,-108],"vxojo":[-4,-33,-72,-122,105,88,-82,-63,90,-22,-51,79,-110],"avcfnh":[-80,71,41,-99,84,-120,-111,-29,30,67,111,123,2,27,-125,67,124,104],"odlc":[-76,-104,-16,33,86,-77,-7,-86,-55,-123,-77,115,-27,105,114],"nfoo":[54,-117,-6,-121,54,-92,28,35,-11,-84,24,69,26,64,-109,-88,-107,-92,-36,-111,22,4,108,121,-125,71,56,-92],"fmcwh":[71,-40,-28,-40,20,37,109],"znbl":[-127,106,-101,-75,-89,102,-101,-5,-92,74,-14,76,39,-54,-106,-123,28,66],"cpexe":[-26,111,-12,-111,99],"apyqo":[-101,-108,-6,-48,52],"ckjhsv":[-94,-47,-90,44,-55,11,123,-102,123,-43,44,61,99,68,53,-31,95,-96,51,-32,69,61,-6,-19,95],"vorx":[-16,-35,29,-106,-101,80,-52,-39,32,-15,58,3,29,116,-109,-32,-6,55,59,-58,6,-109,-114,-4,123,81],"lvgu":[56,109,2,-53,-23,-97,125,63,-45,22]},"uploads":{"buqls":"5ab5eb30-5b3a-81d5-8008-2a395e19535b","ivitu":"5ab5eb30-5b3a-81d5-8008-2a395e19535d","tzknvc":"5ab5eb30-5b3a-81d5-8008-2a395e19535c","oekbj":"5ab5eb30-5b3a-81d5-8008-2a395e19535a"}}'
+      tags:
+      - Create Font Variant
+components:
+  schemas:
+    Bytes:
+      title: bytes
+      description: bytes array
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

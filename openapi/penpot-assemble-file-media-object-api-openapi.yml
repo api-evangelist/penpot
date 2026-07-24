@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Assemble File Media Object API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Assemble File Media Object
+paths:
+  assemble-file-media-object:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: assemble-file-media-object
+              type: object
+              properties:
+                sessionId:
+                  $ref: '#/components/schemas/Uuid'
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                isLocal:
+                  $ref: '#/components/schemas/Boolean'
+                name:
+                  type: string
+                  maxLength: 250
+                mtype:
+                  type: string
+                id:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - sessionId
+              - fileId
+              - isLocal
+              - name
+              - mtype
+            example: '{"sessionId":"5ab5eb30-5b3a-81d5-8008-2a395c4909ae","fileId":"5ab5eb30-5b3a-81d5-8008-2a395c4909af","isLocal":false,"name":"9Lb8MEy90wk0ZszHcv8zi6uxAZGY2a93sLDR7hb8Ma7XxUp0B8T5FcAdNW9","mtype":"HcTs05JXPeA84p72nY91uE7Q","id":"5ab5eb30-5b3a-81d5-8008-2a395c49b167"}'
+      tags:
+      - Assemble File Media Object
+components:
+  schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

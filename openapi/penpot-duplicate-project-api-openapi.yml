@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Duplicate Project API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Duplicate Project
+paths:
+  duplicate-project:
+    post:
+      description: Duplicate an entire project with all the files
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: duplicate-project
+              type: object
+              properties:
+                projectId:
+                  $ref: '#/components/schemas/Uuid'
+                name:
+                  type: string
+                  maxLength: 250
+              required:
+              - projectId
+            example: '{"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4445de"}'
+      tags:
+      - Duplicate Project
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

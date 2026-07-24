@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Link File To Library API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Link File To Library
+paths:
+  link-file-to-library:
+    post:
+      description: Link a file to a library. Returns the recursive list of libraries used by that library
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: link-file-to-library
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                libraryId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - fileId
+              - libraryId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395e0cac03","libraryId":"5ab5eb30-5b3a-81d5-8008-2a395e0cac04"}'
+      tags:
+      - Link File To Library
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

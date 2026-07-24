@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Permanently Delete Team Files API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Permanently Delete Team Files
+paths:
+  permanently-delete-team-files:
+    post:
+      description: 'Mark the specified files to be deleted immediatelly on the
+
+        specified team. The team-id on params will be used to filter and
+
+        check writable permissons on team.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: permanently-delete-team-files
+              type: object
+              properties:
+                teamId:
+                  $ref: '#/components/schemas/Uuid'
+                ids:
+                  title: set
+                  description: Set of Strings
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Uuid'
+                  uniqueItems: true
+              required:
+              - teamId
+              - ids
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395e0d528b","ids":["5ab5eb30-5b3a-81d5-8008-2a395e0d52a1","5ab5eb30-5b3a-81d5-8008-2a395e0d528f","5ab5eb30-5b3a-81d5-8008-2a395e0d5292","5ab5eb30-5b3a-81d5-8008-2a395e0d529d","5ab5eb30-5b3a-81d5-8008-2a395e0d5299","5ab5eb30-5b3a-81d5-8008-2a395e0d528d","5ab5eb30-5b3a-81d5-8008-2a395e0d5298","5ab5eb30-5b3a-81d5-8008-2a395e0d5290","5ab5eb30-5b3a-81d5-8008-2a395e0d529a","5ab5eb30-5b3a-81d5-8008-2a395e0d5291","5ab5eb30-5b3a-81d5-8008-2a395e0d529b","5ab5eb30-5b3a-81d5-8008-2a395e0d528e","5ab5eb30-5b3a-81d5-8008-2a395e0d52a0","5ab5eb30-5b3a-81d5-8008-2a395e0d529c","5ab5eb30-5b3a-81d5-8008-2a395e0d52a4","5ab5eb30-5b3a-81d5-8008-2a395e0d52a2","5ab5eb30-5b3a-81d5-8008-2a395e0d52a5","5ab5eb30-5b3a-81d5-8008-2a395e0d529e","5ab5eb30-5b3a-81d5-8008-2a395e0d5295","5ab5eb30-5b3a-81d5-8008-2a395e0d5293","5ab5eb30-5b3a-81d5-8008-2a395e0d5297","5ab5eb30-5b3a-81d5-8008-2a395e0d528c","5ab5eb30-5b3a-81d5-8008-2a395e0d529f","5ab5eb30-5b3a-81d5-8008-2a395e0d52a3","5ab5eb30-5b3a-81d5-8008-2a395e0d5294","5ab5eb30-5b3a-81d5-8008-2a395e0d5296"]}'
+      tags:
+      - Permanently Delete Team Files
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

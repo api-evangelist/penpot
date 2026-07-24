@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Mark All Threads As Read API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Mark All Threads As Read
+paths:
+  mark-all-threads-as-read:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: mark-all-threads-as-read
+              type: object
+              properties:
+                threads:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Uuid'
+              required:
+              - threads
+            example: '{"threads":["5ab5eb30-5b3a-81d5-8008-2a395c57616c","5ab5eb30-5b3a-81d5-8008-2a395c57616d","5ab5eb30-5b3a-81d5-8008-2a395c57616e","5ab5eb30-5b3a-81d5-8008-2a395c57616f","5ab5eb30-5b3a-81d5-8008-2a395c576170","5ab5eb30-5b3a-81d5-8008-2a395c576171","5ab5eb30-5b3a-81d5-8008-2a395c579689","5ab5eb30-5b3a-81d5-8008-2a395c57968a","5ab5eb30-5b3a-81d5-8008-2a395c57968b"]}'
+      tags:
+      - Mark All Threads As Read
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

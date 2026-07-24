@@ -1,0 +1,117 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get Project Files API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get Project Files
+paths:
+  get-project-files:
+    post:
+      description: Get all files for the specified project.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-project-files
+              type: object
+              properties:
+                projectId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - projectId
+            example: '{"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c49eee4"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  title: File
+                  type: object
+                  properties:
+                    id:
+                      $ref: '#/components/schemas/Uuid'
+                    features:
+                      $ref: '#/components/schemas/Features'
+                    hasMediaTrimmed:
+                      $ref: '#/components/schemas/Boolean'
+                    commentThreadSeqn:
+                      title: integer
+                      description: integer
+                      type: integer
+                      minimum: 0
+                    name:
+                      type: string
+                      maxLength: 250
+                    revn:
+                      title: integer
+                      description: integer
+                      type: integer
+                      minimum: 0
+                    vern:
+                      title: integer
+                      description: integer
+                      type: integer
+                      minimum: 0
+                    modifiedAt:
+                      $ref: '#/components/schemas/Inst'
+                    isShared:
+                      $ref: '#/components/schemas/Boolean'
+                    projectId:
+                      $ref: '#/components/schemas/Uuid'
+                    createdAt:
+                      $ref: '#/components/schemas/Inst'
+                    data:
+                      $ref: '#/components/schemas/Any'
+                  required:
+                  - id
+                  - features
+                  - hasMediaTrimmed
+                  - commentThreadSeqn
+                  - name
+                  - revn
+                  - vern
+                  - modifiedAt
+                  - isShared
+                  - projectId
+                  - createdAt
+              example: '[{"features":["fdata\/path-data","plugins\/runtime","variants\/v1","fdata\/objects-map","text-editor\/v2","render-wasm\/v1","fdata\/shape-data-type"],"hasMediaTrimmed":true,"commentThreadSeqn":1,"name":"k1M3bS5J0880otk5PcvTUnUQsGLtpbHl5Kr9EJ787IB4Q6DiYW1tvsIn4g5YSqB5QfJ22fZTR1se0jrdp4WMwaL6m1mT8Vn","revn":6647971,"modifiedAt":"2026-06-12T12:36:02.443760717Z","vern":1,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4a67bf","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4b26c6","createdAt":"2026-06-12T12:36:02.422868376Z","data":"cmsb"},{"features":["plugins\/runtime","text-editor\/v2-html-paste","text-editor-wasm\/v1"],"hasMediaTrimmed":false,"commentThreadSeqn":104599,"name":"Yy6MQUeK6zs9vJL1fe4RH6d0c89PGb7aaWc7ra4exoQJqF87xxfs1CGVh8oOc3HPgesF23y026B60pa9t923PrNA6wkfDt55U5163Ob9FCoxTh97a9Qv8pleS64iX52BoCKS6tYaX8VkjZy9dl","revn":2,"modifiedAt":"2026-06-12T12:36:02.478516386Z","vern":10396142,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4b61fb","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4bd26b","createdAt":"2026-06-12T12:36:02.475589043Z","data":4.61},{"features":["plugins\/runtime","design-tokens\/v1","styles\/v2","fdata\/objects-map","text-editor\/v2","text-editor-wasm\/v1","components\/v2","fdata\/shape-data-type"],"hasMediaTrimmed":true,"commentThreadSeqn":287,"name":"GfiiN4bfG1M6bZQ1WDtcU2UYRsKmCtx5","revn":2,"modifiedAt":"2026-06-12T12:36:02.390655239Z","vern":0,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4c603e","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4c603f","createdAt":"2026-06-12T12:36:02.425756095Z"},{"features":["plugins\/runtime","variants\/v1","layout\/grid","styles\/v2","text-editor\/v2-html-paste","fdata\/objects-map","tokens\/numeric-input","render-wasm\/v1","components\/v2"],"hasMediaTrimmed":false,"commentThreadSeqn":5862,"name":"uLcCNdcedgR4kC2J6D103El7bqTu7z3weU7svzcm3a9eKEHtpJFH4l3hu36wO3sXC8qN0hP9b8ktZN3rgCmesY63IGy2Czn4dEOP8Y3m37IS8qE2qN3G4vrMs87h4yY3rSb3i94YS09YwroPpAZu1vf6bB0K861m942xEZ11TyhFYzOWH1Ynr7GZkspiRp4ny03Gbcnu7xjsmhp2tl7v","revn":1348,"modifiedAt":"2026-06-12T12:36:02.412525106Z","vern":1,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4cbabb","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4d0823","createdAt":"2026-06-12T12:36:02.476635194Z"},{"features":["variants\/v1","layout\/grid","styles\/v2","text-editor\/v2-html-paste","fdata\/objects-map","render-wasm\/v1","components\/v2"],"hasMediaTrimmed":true,"commentThreadSeqn":25282459,"name":"LCUUHQQ6QXF5w824l184FZE7JVmY0N4Ma2wVy5cZbG64zZd9O38UcftUU75Wl0PT1Tu83RD0zGe6lb3u78IWQhx","revn":280,"modifiedAt":"2026-06-12T12:36:02.423953004Z","vern":3,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4d0824","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4d76e5","createdAt":"2026-06-12T12:36:02.405026398Z","data":"isxdr"},{"features":["plugins\/runtime","layout\/grid","styles\/v2","fdata\/pointer-map","text-editor\/v2-html-paste","render-wasm\/v1","text-editor-wasm\/v1"],"hasMediaTrimmed":false,"commentThreadSeqn":822,"name":"A4U87A6S6DaoIBL5zQ89wXD8w00r9ymWw0vPO1rWmi8FMhe6o5LRs6nb2hPM0nt8dgs0GOB88yUUgoCcx4Q3xEOFm1R24TL6k40Un4XlraG0gB82IQriIr4TNippNPoh08feop83oKvLDksoongztd3mvk2guEH5","revn":14824199,"modifiedAt":"2026-06-12T12:36:02.479108594Z","vern":15822869,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4da2ff","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4e0bcc","createdAt":"2026-06-12T12:36:02.421185312Z","data":0.0},{"features":["fdata\/path-data","plugins\/runtime","design-tokens\/v1","layout\/grid","styles\/v2","fdata\/pointer-map","text-editor\/v2-html-paste","fdata\/objects-map","text-editor\/v2","text-editor-wasm\/v1","components\/v2","fdata\/shape-data-type"],"hasMediaTrimmed":true,"commentThreadSeqn":4,"name":"0GlY","revn":1946374,"modifiedAt":"2026-06-12T12:36:02.486594270Z","vern":223677,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4e0bcd","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4e0bce","createdAt":"2026-06-12T12:36:02.412684156Z","data":"fnfarzf"},{"features":["plugins\/runtime","design-tokens\/v1","fdata\/pointer-map","text-editor\/v2-html-paste","fdata\/objects-map","tokens\/numeric-input","render-wasm\/v1","text-editor-wasm\/v1"],"hasMediaTrimmed":true,"commentThreadSeqn":31,"name":"OdT8i1SRRY8LRGh7GI0t5t1ZGRA79L9fT8R4Y8nxi6Zmix4u15313sn2z6Ri08751z14p31awKvv5D0X99DEvIf863TozU307i48tgX9MbNH4z","revn":8874666,"modifiedAt":"2026-06-12T12:36:02.429528151Z","vern":1297482,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4e473f","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4e9a22","createdAt":"2026-06-12T12:36:02.438593176Z"},{"features":["fdata\/path-data","layout\/grid","styles\/v2","fdata\/pointer-map","render-wasm\/v1","text-editor-wasm\/v1","components\/v2","fdata\/shape-data-type"],"hasMediaTrimmed":true,"commentThreadSeqn":499360211,"name":"56ZfOjssXRgklvBm2L51oNDGlPZFCf6bQ7qM4085Zw7U0yA1qumrA58cm1Y330jr3rU","revn":3363,"modifiedAt":"2026-06-12T12:36:02.395741527Z","vern":48604,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4e9a23","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4eef27","createdAt":"2026-06-12T12:36:02.433940360Z","data":"szifkj"},{"features":["styles\/v2","fdata\/objects-map","tokens\/numeric-input","render-wasm\/v1","components\/v2"],"hasMediaTrimmed":false,"commentThreadSeqn":62803072,"name":"8Ql87maaGc4NkmZfu82NA","revn":57,"modifiedAt":"2026-06-12T12:36:02.415613292Z","vern":6959904,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4f2962","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4f2963","createdAt":"2026-06-12T12:36:02.434711827Z"},{"features":["plugins\/runtime","design-tokens\/v1","styles\/v2","fdata\/pointer-map","fdata\/objects-map","tokens\/numeric-input","render-wasm\/v1"],"hasMediaTrimmed":false,"commentThreadSeqn":244126,"name":"JJ2DlZY04ANp371a7lU9bvaVwB2hfGTay98cyV3lbr7Y25QMptxj2n2jYO7X883SAoKecT0e2651mOe32a95ATAqnfhlPOUzlJx0jS99sA892Bpbn5xu5KSbQO9zcgk7B2v6VWA739l1jG0m8Wrv66HR484bX5o8I9e25t0d5RtbW2T","revn":7,"modifiedAt":"2026-06-12T12:36:02.441823701Z","vern":3891,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4f2964","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4fbb53","createdAt":"2026-06-12T12:36:02.428898137Z"},{"features":["layout\/grid","text-editor\/v2-html-paste","text-editor\/v2","tokens\/numeric-input","render-wasm\/v1","components\/v2"],"hasMediaTrimmed":false,"commentThreadSeqn":43620,"name":"l5sIOjS5uE62K","revn":5245141,"modifiedAt":"2026-06-12T12:36:02.443393749Z","vern":711,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4fbb54","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c4ff244","createdAt":"2026-06-12T12:36:02.443469268Z"},{"features":["fdata\/path-data","plugins\/runtime","layout\/grid","styles\/v2","text-editor\/v2","components\/v2"],"hasMediaTrimmed":true,"commentThreadSeqn":1488,"name":"Agb017AaUxcbvPjolTC3pzMbq5kb5g6BB94E10tyXi8uFN975XD98nHuppPPR395kD5zoemGDbpfLX0ucU8F59X5jsA4oxOMcCY8L3SBE5Rd3fKJ5U9IMm94ajmb19sb53bysSN84M8174S3fNCbfXR36hZA4O53TW0vAe65Db6ai4L49Uzh0yIZbt6b2Y7MI0KEk9Rn4Y0Dg4g6Q7E83036d66E2aG98EHoOnImjxwf69iYi0JPI","revn":129278,"modifiedAt":"2026-06-12T12:36:02.415135921Z","vern":71373,"id":"5ab5eb30-5b3a-81d5-8008-2a395c4ff245","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c50a459","createdAt":"2026-06-12T12:36:02.446207092Z"},{"features":["design-tokens\/v1","variants\/v1","layout\/grid","styles\/v2","text-editor\/v2-html-paste","tokens\/numeric-input","render-wasm\/v1","text-editor-wasm\/v1"],"hasMediaTrimmed":false,"commentThreadSeqn":13896054,"name":"01WlL3VTIf9HBb2kfjdj78dJihe444lh019NCCHGgVh2moPYta15dSY2707MV7y0A57GBDRYs8IeQl4V5Z4siI7abrp4A7vy7hx7t36LibpuKTfn61J7ID3qXAga93rg1h4vzgI03VhtG416O3P134nLvvmwaUsAPts6kywid58Ym6w28E9l6f98C","revn":42497785,"modifiedAt":"2026-06-12T12:36:02.490323938Z","vern":5605,"id":"5ab5eb30-5b3a-81d5-8008-2a395c50a45a","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c5130e4","createdAt":"2026-06-12T12:36:02.446392015Z","data":"mhpz"},{"features":["fdata\/path-data","design-tokens\/v1","variants\/v1","text-editor\/v2-html-paste","fdata\/objects-map"],"hasMediaTrimmed":true,"commentThreadSeqn":149,"name":"1G7D9IRB6F7Q7Gp6dygIP3uO6HGkdfYiNLV8c5Tol1068uWTXKh1vfy4LFxg3gA2Q","revn":271,"modifiedAt":"2026-06-12T12:36:02.443012281Z","vern":51600,"id":"5ab5eb30-5b3a-81d5-8008-2a395c5130e5","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c5187f1","createdAt":"2026-06-12T12:36:02.484072211Z"},{"features":["fdata\/path-data","plugins\/runtime","variants\/v1","layout\/grid","styles\/v2","fdata\/pointer-map","text-editor\/v2-html-paste","fdata\/objects-map","text-editor\/v2","render-wasm\/v1","text-editor-wasm\/v1","components\/v2","fdata\/shape-data-type"],"hasMediaTrimmed":false,"commentThreadSeqn":1789,"name":"g3NQMcXOBK7x9j9YIFul8eT9C29x12m2RpN1069CkXRb7rXt124etl9SaqQ3Ts958PGUOQZtqhVj7SjDHRIk02ke8iJj6a38P1jL127O0GVZ9Yd044FpH6dadsBqqFyizyoxXXu5W2Wld2WVGO9vCD5nR92Je5UdW0S7hwP454b6q97M8RVQ7tXA42r7Yubw3qZOQpoIBVLb0e","revn":3,"modifiedAt":"2026-06-12T12:36:02.412584493Z","vern":4244,"id":"5ab5eb30-5b3a-81d5-8008-2a395c5187f2","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c521745","createdAt":"2026-06-12T12:36:02.450680484Z"},{"features":["plugins\/runtime","design-tokens\/v1","variants\/v1","layout\/grid","fdata\/objects-map","tokens\/numeric-input","components\/v2","fdata\/shape-data-type"],"hasMediaTrimmed":false,"commentThreadSeqn":3655888,"name":"Pt86NW05ps90NTk3CCRdM75OXN4S2xrIPIIKjcjk8R9eNVbxa5Xw24FK68yBZd1oQKJX0Fs0HTJWIvagYj168eKGQ2c2ATEDbeNWM","revn":6,"modifiedAt":"2026-06-12T12:36:02.409281493Z","vern":1925,"id":"5ab5eb30-5b3a-81d5-8008-2a395c521746","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c52ae99","createdAt":"2026-06-12T12:36:02.439364799Z"},{"features":["fdata\/path-data","design-tokens\/v1","variants\/v1","layout\/grid","styles\/v2","fdata\/pointer-map","render-wasm\/v1"],"hasMediaTrimmed":false,"commentThreadSeqn":398437,"name":"MHFoK4YMd","revn":14268,"modifiedAt":"2026-06-12T12:36:02.449784260Z","vern":95,"id":"5ab5eb30-5b3a-81d5-8008-2a395c52ae9a","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c52ae9b","createdAt":"2026-06-12T12:36:02.478849424Z","data":-63},{"features":["fdata\/path-data","plugins\/runtime","styles\/v2","text-editor\/v2","render-wasm\/v1","fdata\/shape-data-type"],"hasMediaTrimmed":false,"commentThreadSeqn":230979,"name":"zr5LUR663271z4UIIryl3LR5Q6Knu30dcXAn5LU6","revn":32761,"modifiedAt":"2026-06-12T12:36:02.420522012Z","vern":45908,"id":"5ab5eb30-5b3a-81d5-8008-2a395c52ae9c","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c52cbc4","createdAt":"2026-06-12T12:36:02.411580990Z"},{"features":["fdata\/path-data","plugins\/runtime","design-tokens\/v1","fdata\/pointer-map","fdata\/objects-map","tokens\/numeric-input","components\/v2"],"hasMediaTrimmed":true,"commentThreadSeqn":13500309,"name":"zz6VmKno72YNpD04XgCqvyeYuTz33qn7pnAY37wegP048iyZEKW97EMWG63MhAtfzKRB34kYrGX8ieQvC73hU75L0fKVPXM03","revn":20241756,"modifiedAt":"2026-06-12T12:36:02.471375630Z","vern":429,"id":"5ab5eb30-5b3a-81d5-8008-2a395c52cbc5","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c5378e4","createdAt":"2026-06-12T12:36:02.506470538Z"},{"features":["fdata\/path-data","variants\/v1","text-editor\/v2-html-paste","text-editor\/v2","render-wasm\/v1","text-editor-wasm\/v1","fdata\/shape-data-type"],"hasMediaTrimmed":true,"commentThreadSeqn":6,"name":"8yo4h9ZT6zHxywNi1Q0bO8S0xJCu57FOiy5AiC1qq0CWPA60Mv4uqJAlHiV0489v7GbW50QOh4Gair9SyK6D6FawmI1z515jSyeRT9jq1CiC09qOAiLCD15jMlk78zBJW6A3riz1hrc3i6MB0mU0DspsZR9qjCnHMmOBhIRC7WwBSG8C3JzT0j5hBSJQ88D850xBq8","revn":51066244,"modifiedAt":"2026-06-12T12:36:02.423131135Z","vern":12288548,"id":"5ab5eb30-5b3a-81d5-8008-2a395c5378e5","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c5403a9","createdAt":"2026-06-12T12:36:02.420207599Z","data":-57},{"features":["fdata\/path-data","plugins\/runtime","design-tokens\/v1","styles\/v2","fdata\/pointer-map","text-editor\/v2","tokens\/numeric-input","render-wasm\/v1"],"hasMediaTrimmed":true,"commentThreadSeqn":30,"name":"6NJC7nj6l9ZLKP386QWRav6Q03jCe3wZ8rf89b7D81dLKqFfWRE","revn":6986,"modifiedAt":"2026-06-12T12:36:02.449946836Z","vern":499,"id":"5ab5eb30-5b3a-81d5-8008-2a395c5403aa","isShared":false,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c5468c4","createdAt":"2026-06-12T12:36:02.418053748Z"},{"features":["fdata\/path-data","styles\/v2","text-editor\/v2-html-paste","text-editor\/v2","tokens\/numeric-input","components\/v2"],"hasMediaTrimmed":false,"commentThreadSeqn":0,"name":"5JJ67C6t6N2i3eL98FaS5R41q7i7309w3hYH8qUWD9GIVMif7YMwPoD3Q8807Xfzwtdrtg4O8KuTtKXRkdO5T2h7jHy1A66l557C240N6508TArlx4beS173VeN2Hb2kK8t4reueuDyhy82R9PgX46nIP90582Qujo0qrsBn52GO1VBMb03U18T2z3QFyEKXQ7jdm8Z53apIfil0x5TpeA07rG1OqhW6Gy7s","revn":3271672,"modifiedAt":"2026-06-12T12:36:02.507169166Z","vern":1087,"id":"5ab5eb30-5b3a-81d5-8008-2a395c5468c5","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c54e7da","createdAt":"2026-06-12T12:36:02.448229194Z","data":"exry"}]'
+      tags:
+      - Get Project Files
+components:
+  schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Any:
+      description: Any Value
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    Features:
+      title: set
+      description: Set of Strings
+      type: array
+      items:
+        type: string
+      uniqueItems: true

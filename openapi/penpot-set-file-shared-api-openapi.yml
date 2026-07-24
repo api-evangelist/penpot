@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Set File Shared API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Set File Shared
+paths:
+  set-file-shared:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: set-file-shared
+              type: object
+              properties:
+                id:
+                  $ref: '#/components/schemas/Uuid'
+                isShared:
+                  $ref: '#/components/schemas/Boolean'
+              required:
+              - id
+              - isShared
+            example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c7c66dd","isShared":true}'
+      tags:
+      - Set File Shared
+components:
+  schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

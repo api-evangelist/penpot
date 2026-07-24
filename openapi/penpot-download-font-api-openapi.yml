@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Download Font API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Download Font
+paths:
+  download-font:
+    post:
+      description: Download the font file. Returns a http redirect to the asset resource uri.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: download-font
+              type: object
+              properties:
+                id:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - id
+            example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c4636c9"}'
+      tags:
+      - Download Font
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

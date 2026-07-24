@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Remove Team From Org API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Remove Team From Org
+paths:
+  remove-team-from-org:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                teamId:
+                  $ref: '#/components/schemas/Uuid'
+                organizationId:
+                  $ref: '#/components/schemas/Uuid'
+                organizationName:
+                  $ref: '#/components/schemas/Text'
+              required:
+              - teamId
+              - organizationId
+              - organizationName
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395e0f2b8c","organizationId":"5ab5eb30-5b3a-81d5-8008-2a395e0f2b8d","organizationName":"bgtvq"}'
+      tags:
+      - Remove Team From Org
+components:
+  schemas:
+    Text:
+      title: string
+      description: not whitespace string
+      type: string
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create File Object Thumbnail API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create File Object Thumbnail
+paths:
+  create-file-object-thumbnail:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-file-object-thumbnail
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                objectId:
+                  type: string
+                  maxLength: 250
+                media:
+                  title: Upload
+                  type: object
+                  properties:
+                    filename:
+                      type: string
+                    size:
+                      $ref: '#/components/schemas/Int'
+                    path:
+                      $ref: '#/components/schemas/FilesystemPath'
+                    mtype:
+                      type: string
+                    headers:
+                      type: object
+                      additionalProperties:
+                        type: string
+                  required:
+                  - filename
+                  - size
+                  - path
+                tag:
+                  type: string
+                  maxLength: 50
+              required:
+              - fileId
+              - objectId
+              - media
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c73671e","objectId":"m8C89rf4m96379ESVKms9K2G34nJPrAmAF3DA49GiJ8Upi2doHF1leXNruuXUxyt33lZg9sg3nwGR8NX85YQh4omx4B5l7v78K1lJ31cx75ZyCxo6t5G1eBsn1wG50Q28I338j99exnE5w7NlRPbQ86KtiWd7iBQrze6n7Q0H4AB7aVkk3mlbo9k7v3N1H3AKP0tc3ecsI8V77d5SesRYSnNuYO0196VL1oF3XMRY7KJUH","media":{"filename":"epGo89","size":-39961,"path":"748","headers":{"3":"m35Eu6xqOX53B0628","05PzD":"YoG2R6o7W58d3wTb6","8wz5S":"G78lr1l58","8T3KE59EOaMyB":"J8RGkiVn8n3HtcXXT7yL1iTWix37","1UDwfBZ2":"xZ9rTZGUjioqtuhUV4ZN8Scz1x5r","jOyJrQnCDu4mHO2sFnHWh1":"k","o8zBd0789ycy9QU0hNPR4X63ae":"Itn9e1ECgH2122Qx5NZf","12qnE08qu7aNGbK":"","Bs":"B6EcrOymxM6de7osAwM7PSFDEtpvsQ","7EwbV0189s4v5Riu5":"6J10x3AEs7GuLQd","69Kc4Y1g02Fe1V6k":"6C076p5qJaFNIAtni7Xh2KC0","9W2ldgh423Y25u83v":"5c6H51DqGsHOgQpwi0S","4Q9":"VZF822Ee6BhDE","BsRjY3":"LbjwDI","hAk91ZWF":"iK60Xmyum6BSZ7"}}}'
+      tags:
+      - Create File Object Thumbnail
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

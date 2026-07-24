@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get File Object Thumbnails API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get File Object Thumbnails
+paths:
+  get-file-object-thumbnails:
+    post:
+      description: Retrieve a file object thumbnails.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-file-object-thumbnails
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                tag:
+                  type: string
+                  maxLength: 50
+              required:
+              - fileId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c5c3051","tag":"60MtT4xm5PcctG9aaM5b0f9O4CqoWf435BvZ85"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+                  maxLength: 250
+              example: '{"5bxa08KhF015AL8xGJa44W9H2Nm67sbkb59k7HU00wWY2t6IfTar66gEi9hOR1F4O9O128f40HsLJFCg59FhaX52xZJKkCi76xHn0Dq9BU8M":"29y4k7q6h38kkHCa9eOy9jay5Yz7WsgRNW1HiiY07s3jV2zc798M7F9rZgx0IopZtk5e1acCqC1R56nZsUhX7HD8QiSIL90f7QP36TTS6942wJ8uIndAG93U40Mob3CMygDv6T9Z2NAWT6GvqmKYYNQ150Fnwt7iSUTi267j35wK6pq1Uh3x7Ozx45rj","XqM6D8PlXLgxkw60Fn8D5PamWUw2f4k3tq8NNTMdTeY8n0IKR705ApR8KL21vAB7psF7mBCDAXbjHM2LUHEc6vUMH3SUdRsDL50c4e2U45Csm92Nz7Ers7uh0LO0s1el65eSgM":"RB7uQ75z1Yt7B45W2HPfm8z2qiO3RT06VN3A6d8E31XSwSJvksA5I7F246PEFge4BhV3q39R4XD6jrj25Iy1vdd76zsUB0K5BCU1cW41fmobs6IN1iKp0DLLZP1IYod","8G1q20ISI09mV266wNQkM5k8v4seOkx7p6SkIHtFhn":"exr63L2eQ0j4Hbyj2C9nG3uX1CQ0v7WqUQ7vpbyC9e7hWCGo5r71HB7wuJTnb7136bpGLEVUTnJ8UMf5FUyUSFjX09PIl8dwT4f3HSH0DXx93iS25XHRs49ooEZ5oly2024WCEh6V1xI62M57M060r39Mom51Z15G0R9bNd5z17H8GXBbi3yQmrp7z2YvD7nO85g3GgH8qD4vB9o5DM","AezRYw0a3K0RIP918ors1q459wwhVe6o4Qc6NN8vDkbkO88qNFsr0WZ0sBr6CHk2n8g9H4737f4F6I1zP82BoapN2U78Kj7oy8X2N9eTX644fDo182XC52IQaLNUN0yyql668AHJHh88eKj84lQ4NOF9G345OZ18vQ1Z96Fnj3K17LLX2Wid40Y2oM9U98VusCthHZchXPi03Lb8YcXw1qa0OL23T5ZGd":"sxXEwDFckVfi7VjDUPYFEA2kw5J764vcCu1Gj0Zlz8xTN5X8bA19gk3XMX7M97XX1ZW2B1XoH21OcpmTZ2jO1Dy7Sn61TJaR6g6XItl22t2hOPdQMcnpjstqQb12XBr8r6KUOp9NujoV05O2CXv9yEEPQ3z5X","xd1XML49dpk3pW8Z48t75739M3bMffTQf3yjmjA69k1Ms2bV99rR4UAqu":"XNt01TyaW91ZcPy5rOCmein00BjC3P7KesKJFQ0o304bRgrM7z22n1DPPPkQ4f8i42b1fJq2Js18IEqCftnCtRV9wForw8UJZvj2DeY0UWe8j10kSCicqanAUQcyinavZ24O138Cj6zyR49mBQ34D9nWpF81l0D1Nq8f6zR8uhz4a6N7RqEUSW8s84I5Lza7gXQ75sxGp3A3ScyFi4jm","F67wPG976h7dkcS59RPf6g2lwNt04OIu6w8qnRid0v7JBFoW8Of0LH3y9Qda4y474VMxuU8KQRLsWKBwGrTal7CY8Er5V38ts07VwA0z26h6t26f20ATD1k623s2yODgl71IG52hM90t65FBO14U7Wxq22UG69Nf4DyQUw8QdnWH4ZlPiFW6l8Vy6R":"6VJ9x7"}'
+      tags:
+      - Get File Object Thumbnails
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

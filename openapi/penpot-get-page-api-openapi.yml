@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get Page API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get Page
+paths:
+  get-page:
+    post:
+      description: 'Retrieves the page data from file and returns it. If no page-id is
+
+        specified, the first page will be returned. If object-id is
+
+        specified, only that object and its children will be returned in the
+
+        page objects data structure.
+
+
+        If you specify the object-id, the page-id parameter becomes
+
+        mandatory.
+
+
+        Mainly used for rendering purposes on the exporter. It does not
+
+        accepts client features.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-page
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                pageId:
+                  $ref: '#/components/schemas/Uuid'
+                shareId:
+                  $ref: '#/components/schemas/Uuid'
+                objectId:
+                  anyOf:
+                  - $ref: '#/components/schemas/Uuid'
+                  - title: set
+                    description: Set of Strings
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Uuid'
+                    uniqueItems: true
+                features:
+                  $ref: '#/components/schemas/Features'
+              required:
+              - fileId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c58dca7","pageId":"5ab5eb30-5b3a-81d5-8008-2a395c58dca8","features":["fdata\/path-data","fdata\/pointer-map","tokens\/numeric-input","render-wasm\/v1","text-editor-wasm\/v1"]}'
+      tags:
+      - Get Page
+components:
+  schemas:
+    Features:
+      title: set
+      description: Set of Strings
+      type: array
+      items:
+        type: string
+      uniqueItems: true
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

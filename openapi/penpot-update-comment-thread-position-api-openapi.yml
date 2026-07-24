@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Update Comment Thread Position API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Update Comment Thread Position
+paths:
+  update-comment-thread-position:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: update-comment-thread-position
+              type: object
+              properties:
+                id:
+                  $ref: '#/components/schemas/Uuid'
+                position:
+                  $ref: '#/components/schemas/GeomPoint'
+                frameId:
+                  $ref: '#/components/schemas/Uuid'
+                shareId:
+                  $ref: '#/components/schemas/Uuid'
+                  nullable: true
+              required:
+              - id
+              - position
+              - frameId
+            example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c484ade","position":{"x":70,"y":55},"frameId":"5ab5eb30-5b3a-81d5-8008-2a395c484adf"}'
+      tags:
+      - Update Comment Thread Position
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    GeomPoint:
+      title: point
+      description: Point
+      type: string
+      format: point

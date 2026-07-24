@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get File Data For Thumbnail API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get File Data For Thumbnail
+paths:
+  get-file-data-for-thumbnail:
+    post:
+      description: 'Retrieves the data for generate the thumbnail of the file. Used
+
+        mainly for render thumbnails on dashboard.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-file-data-for-thumbnail
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - fileId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c3f3b82"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                title: PartialFile
+                type: object
+                properties:
+                  id:
+                    $ref: '#/components/schemas/Uuid'
+                  revn:
+                    $ref: '#/components/schemas/Int'
+                  page:
+                    type: object
+                    additionalProperties:
+                      $ref: '#/components/schemas/Any'
+                  stripFramesWithThumbnails:
+                    $ref: '#/components/schemas/Boolean'
+                required:
+                - id
+                - revn
+                - page
+              example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c3fef14","revn":-469,"page":{"mE.+P":"pdzb","j*4":"chyaj","_":"bjmvy","MmfXRH*":false,"+":"woqvx"}}'
+      tags:
+      - Get File Data For Thumbnail
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Any:
+      description: Any Value

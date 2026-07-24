@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Has File Libraries API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Has File Libraries
+paths:
+  has-file-libraries:
+    post:
+      description: Checks if the file has libraries. Returns a boolean
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: has-file-libraries
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - fileId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c71bcfe"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Boolean'
+              example: 'true'
+      tags:
+      - Has File Libraries
+components:
+  schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

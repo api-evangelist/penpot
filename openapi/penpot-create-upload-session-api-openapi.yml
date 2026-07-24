@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create Upload Session API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create Upload Session
+paths:
+  create-upload-session:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-upload-session
+              type: object
+              properties:
+                totalChunks:
+                  $ref: '#/components/schemas/Int'
+              required:
+              - totalChunks
+            example: '{"totalChunks":11916319}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                title: create-upload-session-result
+                type: object
+                properties:
+                  sessionId:
+                    $ref: '#/components/schemas/Uuid'
+                required:
+                - sessionId
+              example: '{"sessionId":"5ab5eb30-5b3a-81d5-8008-2a395e10bdc4"}'
+      tags:
+      - Create Upload Session
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

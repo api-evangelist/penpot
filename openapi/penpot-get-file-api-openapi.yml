@@ -1,0 +1,141 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get File API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get File
+paths:
+  get-file:
+    post:
+      description: Retrieve a file by its ID. Only authenticated users.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-file
+              type: object
+              properties:
+                features:
+                  $ref: '#/components/schemas/Features'
+                id:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - id
+            example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c74c38c"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                title: PermissionsMixin
+                type: object
+                properties:
+                  id:
+                    $ref: '#/components/schemas/Uuid'
+                  features:
+                    $ref: '#/components/schemas/Features'
+                  hasMediaTrimmed:
+                    $ref: '#/components/schemas/Boolean'
+                  commentThreadSeqn:
+                    title: integer
+                    description: integer
+                    type: integer
+                    minimum: 0
+                  name:
+                    type: string
+                    maxLength: 250
+                  revn:
+                    title: integer
+                    description: integer
+                    type: integer
+                    minimum: 0
+                  vern:
+                    title: integer
+                    description: integer
+                    type: integer
+                    minimum: 0
+                  modifiedAt:
+                    $ref: '#/components/schemas/Inst'
+                  isShared:
+                    $ref: '#/components/schemas/Boolean'
+                  projectId:
+                    $ref: '#/components/schemas/Uuid'
+                  createdAt:
+                    $ref: '#/components/schemas/Inst'
+                  data:
+                    $ref: '#/components/schemas/Any'
+                  permissions:
+                    title: Permissions
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                      isOwner:
+                        $ref: '#/components/schemas/Boolean'
+                      isAdmin:
+                        $ref: '#/components/schemas/Boolean'
+                      canEdit:
+                        $ref: '#/components/schemas/Boolean'
+                      canRead:
+                        $ref: '#/components/schemas/Boolean'
+                      isLogged:
+                        $ref: '#/components/schemas/Boolean'
+                    required:
+                    - type
+                    - isOwner
+                    - isAdmin
+                    - canEdit
+                    - canRead
+                    - isLogged
+                required:
+                - id
+                - features
+                - hasMediaTrimmed
+                - commentThreadSeqn
+                - name
+                - revn
+                - vern
+                - modifiedAt
+                - isShared
+                - projectId
+                - createdAt
+                - permissions
+              example: '{"features":["fdata\/path-data","layout\/grid","fdata\/pointer-map","text-editor\/v2-html-paste","fdata\/objects-map","text-editor\/v2","components\/v2"],"permissions":{"type":"share-link","isOwner":false,"isAdmin":false,"canEdit":true,"canRead":false,"isLogged":true},"hasMediaTrimmed":true,"commentThreadSeqn":14,"name":"Z4aaym1O65q463Yoi73VI71NYT03XBzVFF5Gv1T2pebgBAu3ZMUklX9KlNoShyq9","revn":1,"modifiedAt":"2026-06-12T12:36:02.580712595Z","vern":16,"id":"5ab5eb30-5b3a-81d5-8008-2a395c758158","isShared":true,"projectId":"5ab5eb30-5b3a-81d5-8008-2a395c758159","createdAt":"2026-06-12T12:36:02.610757115Z"}'
+      tags:
+      - Get File
+components:
+  schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Any:
+      description: Any Value
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    Features:
+      title: set
+      description: Set of Strings
+      type: array
+      items:
+        type: string
+      uniqueItems: true

@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Add Team To Organization
+paths:
+  add-team-to-organization:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                teamId:
+                  $ref: '#/components/schemas/Uuid'
+                organizationId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - teamId
+              - organizationId
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395c49b168","organizationId":"5ab5eb30-5b3a-81d5-8008-2a395c49b169"}'
+      tags:
+      - Add Team To Organization
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

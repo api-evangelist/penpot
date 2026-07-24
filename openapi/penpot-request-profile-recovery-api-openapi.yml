@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Request Profile Recovery API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Request Profile Recovery
+paths:
+  request-profile-recovery:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: request-profile-recovery
+              type: object
+              properties:
+                email:
+                  $ref: '#/components/schemas/Email'
+              required:
+              - email
+            example: '{"email":"dufm@example.net"}'
+      tags:
+      - Request Profile Recovery
+components:
+  schemas:
+    Email:
+      title: email
+      description: string with valid email address
+      type: string
+      format: email

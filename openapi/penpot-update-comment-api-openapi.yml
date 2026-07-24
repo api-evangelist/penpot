@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Update Comment API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Update Comment
+paths:
+  update-comment:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: update-comment
+              type: object
+              properties:
+                id:
+                  $ref: '#/components/schemas/Uuid'
+                content:
+                  type: string
+                  maxLength: 750
+                shareId:
+                  $ref: '#/components/schemas/Uuid'
+                  nullable: true
+                mentions:
+                  title: set
+                  description: Set of Strings
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Uuid'
+                  uniqueItems: true
+              required:
+              - id
+              - content
+            example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395e1be204","content":"17Y3Z75MufBIp8cD6Y1070gsBw43DE4KJsRfUDdOLmw6u8sKuE1sI83zB66EB8H1W2ILFZLPh1HG2nFg54151wE9zy8UGG6Q5c2dvY440rL3Z1Uye6H5kaT03UgAYCTuktblc3n3T5m9xYol7S0wV8xGmkG6A2svhO65gxLQY3q28Zi2b6AD5OwL7Wx83jlVkMo8bb21s647W1pQ5A6943l2hMO3ETKeJVfh40q70o310qyGyru53333e887b2f7j1R87W7wdpDEvlU03ZpaYDy9LRYR5ax1c4u9XHsAoC2KqX8eFf3D6edkKdHU12QBqC1vKn9d5F7Gt9wHRWDtzu96DLkAxI3higVpGj3K4T67l2m0kw0g616deN42A32Tii3aied82sJa5R2pxi783oVE68XK2CM4J55s","shareId":null,"mentions":["5ab5eb30-5b3a-81d5-8008-2a395e1c1d2a","5ab5eb30-5b3a-81d5-8008-2a395e1c1d30","5ab5eb30-5b3a-81d5-8008-2a395e1c1d31","5ab5eb30-5b3a-81d5-8008-2a395e1c1d34","5ab5eb30-5b3a-81d5-8008-2a395e1c1d3b","5ab5eb30-5b3a-81d5-8008-2a395e1c1d2c","5ab5eb30-5b3a-81d5-8008-2a395e1c1d2e","5ab5eb30-5b3a-81d5-8008-2a395e1c1d23","5ab5eb30-5b3a-81d5-8008-2a395e1c1d27","5ab5eb30-5b3a-81d5-8008-2a395e1c1d2b","5ab5eb30-5b3a-81d5-8008-2a395e1c1d24","5ab5eb30-5b3a-81d5-8008-2a395e1c1d37","5ab5eb30-5b3a-81d5-8008-2a395e1c1d2f","5ab5eb30-5b3a-81d5-8008-2a395e1c1d28","5ab5eb30-5b3a-81d5-8008-2a395e1c1d3c","5ab5eb30-5b3a-81d5-8008-2a395e1c1d25","5ab5eb30-5b3a-81d5-8008-2a395e1c1d22","5ab5eb30-5b3a-81d5-8008-2a395e1c1d3a","5ab5eb30-5b3a-81d5-8008-2a395e1c1d2d","5ab5eb30-5b3a-81d5-8008-2a395e1c1d26","5ab5eb30-5b3a-81d5-8008-2a395e1c1d38","5ab5eb30-5b3a-81d5-8008-2a395e1c1d36","5ab5eb30-5b3a-81d5-8008-2a395e1c1d39","5ab5eb30-5b3a-81d5-8008-2a395e1c1d35","5ab5eb30-5b3a-81d5-8008-2a395e1c1d29","5ab5eb30-5b3a-81d5-8008-2a395e1c1d33","5ab5eb30-5b3a-81d5-8008-2a395e1c1d32"]}'
+      tags:
+      - Update Comment
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

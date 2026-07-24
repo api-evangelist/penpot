@@ -1,0 +1,103 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Import Binfile API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Import Binfile
+paths:
+  import-binfile:
+    post:
+      description: 'Import a penpot file in a binary format. If `file-id` is provided,
+
+        an in-place import will be performed instead of creating a new file.
+
+
+        The in-place imports are only supported for binfile-v3 and when a
+
+        .penpot file only contains one penpot file.
+
+
+        The file content may be provided either as a multipart `file` upload
+
+        or as an `upload-id` referencing a completed chunked-upload session,
+
+        which allows importing files larger than the multipart size limit.
+
+        '
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+              - title: import-binfile
+                type: object
+                properties:
+                  name:
+                    anyOf:
+                    - type: string
+                      maxLength: 250
+                    - type: object
+                      additionalProperties:
+                        type: string
+                        maxLength: 250
+                  projectId:
+                    $ref: '#/components/schemas/Uuid'
+                  fileId:
+                    $ref: '#/components/schemas/Uuid'
+                  version:
+                    $ref: '#/components/schemas/Int'
+                  file:
+                    title: Upload
+                    type: object
+                    properties:
+                      filename:
+                        type: string
+                      size:
+                        $ref: '#/components/schemas/Int'
+                      path:
+                        $ref: '#/components/schemas/FilesystemPath'
+                      mtype:
+                        type: string
+                      headers:
+                        type: object
+                        additionalProperties:
+                          type: string
+                    required:
+                    - filename
+                    - size
+                    - path
+                  uploadId:
+                    $ref: '#/components/schemas/Uuid'
+                required:
+                - name
+                - projectId
+            example: '{"name":"u8q3cE0SAf2PlbfBN2C0uNyCV0dtMe7z3S7G1XrZ61q00u6B73dF4Gi32DOJBm2h06fOF1zZ2b559f66hah","projectId":"5ab5eb30-5b3a-81d5-8008-2a395e14b384","version":-882,"uploadId":"5ab5eb30-5b3a-81d5-8008-2a395e14b385"}'
+      tags:
+      - Import Binfile
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

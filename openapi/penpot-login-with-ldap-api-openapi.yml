@@ -1,0 +1,55 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Login With Ldap API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Login With Ldap
+paths:
+  login-with-ldap:
+    post:
+      description: 'Performs the authentication using LDAP backend. Only works if LDAP
+
+        is properly configured and enabled with `login-with-ldap` flag.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: login-with-ldap
+              type: object
+              properties:
+                email:
+                  $ref: '#/components/schemas/Email'
+                password:
+                  title: string
+                  description: string
+                  type: string
+                  format: string
+                invitationToken:
+                  title: string
+                  description: string
+                  type: string
+                  format: string
+              required:
+              - email
+              - password
+            example: '{"email":"oobea@example.net","password":"gjexs"}'
+      tags:
+      - Login With Ldap
+components:
+  schemas:
+    Email:
+      title: email
+      description: string with valid email address
+      type: string
+      format: email

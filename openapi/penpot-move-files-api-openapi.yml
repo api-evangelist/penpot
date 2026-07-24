@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Move Files API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Move Files
+paths:
+  move-files:
+    post:
+      description: Move a set of files from one project to other.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: move-files
+              type: object
+              properties:
+                ids:
+                  title: set
+                  description: Set of Strings
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Uuid'
+                  uniqueItems: true
+                  minItems: 1
+                projectId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - ids
+              - projectId
+            example: '{"ids":["5ab5eb30-5b3a-81d5-8008-2a395e1c788c","5ab5eb30-5b3a-81d5-8008-2a395e1c7888","5ab5eb30-5b3a-81d5-8008-2a395e1c788e","5ab5eb30-5b3a-81d5-8008-2a395e1c788b","5ab5eb30-5b3a-81d5-8008-2a395e1c7891","5ab5eb30-5b3a-81d5-8008-2a395e1c7893","5ab5eb30-5b3a-81d5-8008-2a395e1c7886","5ab5eb30-5b3a-81d5-8008-2a395e1c7887","5ab5eb30-5b3a-81d5-8008-2a395e1c7889","5ab5eb30-5b3a-81d5-8008-2a395e1c787d","5ab5eb30-5b3a-81d5-8008-2a395e1c788a","5ab5eb30-5b3a-81d5-8008-2a395e1c787f","5ab5eb30-5b3a-81d5-8008-2a395e1c7885","5ab5eb30-5b3a-81d5-8008-2a395e1c7881","5ab5eb30-5b3a-81d5-8008-2a395e1c7884","5ab5eb30-5b3a-81d5-8008-2a395e1c7879","5ab5eb30-5b3a-81d5-8008-2a395e1c7882","5ab5eb30-5b3a-81d5-8008-2a395e1c7892","5ab5eb30-5b3a-81d5-8008-2a395e1c787c","5ab5eb30-5b3a-81d5-8008-2a395e1c7894","5ab5eb30-5b3a-81d5-8008-2a395e1c7890","5ab5eb30-5b3a-81d5-8008-2a395e1c787e","5ab5eb30-5b3a-81d5-8008-2a395e1c787b","5ab5eb30-5b3a-81d5-8008-2a395e1c788f","5ab5eb30-5b3a-81d5-8008-2a395e1c7883","5ab5eb30-5b3a-81d5-8008-2a395e1c788d","5ab5eb30-5b3a-81d5-8008-2a395e1c7880","5ab5eb30-5b3a-81d5-8008-2a395e1c787a"],"projectId":"5ab5eb30-5b3a-81d5-8008-2a395e1c7895"}'
+      tags:
+      - Move Files
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

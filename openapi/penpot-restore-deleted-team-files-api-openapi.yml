@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Restore Deleted Team Files API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Restore Deleted Team Files
+paths:
+  restore-deleted-team-files:
+    post:
+      description: 'Removes the deletion mark from the specified files (and respective
+
+        projects) on the specified team.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: restore-deleted-team-files
+              type: object
+              properties:
+                teamId:
+                  $ref: '#/components/schemas/Uuid'
+                ids:
+                  title: set
+                  description: Set of Strings
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Uuid'
+                  uniqueItems: true
+              required:
+              - teamId
+              - ids
+            example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395c55b919","ids":["5ab5eb30-5b3a-81d5-8008-2a395c55b92c","5ab5eb30-5b3a-81d5-8008-2a395c55b922","5ab5eb30-5b3a-81d5-8008-2a395c55b925","5ab5eb30-5b3a-81d5-8008-2a395c55b923","5ab5eb30-5b3a-81d5-8008-2a395c55b92d","5ab5eb30-5b3a-81d5-8008-2a395c55b924","5ab5eb30-5b3a-81d5-8008-2a395c55b91b","5ab5eb30-5b3a-81d5-8008-2a395c55b921","5ab5eb30-5b3a-81d5-8008-2a395c55b929","5ab5eb30-5b3a-81d5-8008-2a395c55b91f","5ab5eb30-5b3a-81d5-8008-2a395c55b926","5ab5eb30-5b3a-81d5-8008-2a395c55b91c","5ab5eb30-5b3a-81d5-8008-2a395c55b92a","5ab5eb30-5b3a-81d5-8008-2a395c55b920","5ab5eb30-5b3a-81d5-8008-2a395c55b92b","5ab5eb30-5b3a-81d5-8008-2a395c55b928","5ab5eb30-5b3a-81d5-8008-2a395c55b91e","5ab5eb30-5b3a-81d5-8008-2a395c55b92e","5ab5eb30-5b3a-81d5-8008-2a395c55b91a","5ab5eb30-5b3a-81d5-8008-2a395c55b927","5ab5eb30-5b3a-81d5-8008-2a395c55b91d"]}'
+      tags:
+      - Restore Deleted Team Files
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

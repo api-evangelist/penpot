@@ -1,0 +1,64 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Prepare Register Profile API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Prepare Register Profile
+paths:
+  prepare-register-profile:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: prepare-register-profile
+              type: object
+              properties:
+                fullname:
+                  $ref: '#/components/schemas/Text'
+                email:
+                  $ref: '#/components/schemas/Email'
+                password:
+                  title: string
+                  description: string
+                  type: string
+                  format: string
+                createWelcomeFile:
+                  type: boolean
+                acceptNewsletterUpdates:
+                  type: boolean
+                invitationToken:
+                  title: string
+                  description: string
+                  type: string
+                  format: string
+              required:
+              - fullname
+              - email
+              - password
+            example: '{"fullname":"uoson","email":"uzuv@example.net","password":"awbqhu","invitationToken":"iuopn"}'
+      tags:
+      - Prepare Register Profile
+components:
+  schemas:
+    Text:
+      title: string
+      description: not whitespace string
+      type: string
+    Email:
+      title: email
+      description: string with valid email address
+      type: string
+      format: email

@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get File Fragment API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get File Fragment
+paths:
+  get-file-fragment:
+    post:
+      description: Retrieve a file fragment by its ID. Only authenticated users.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: get-file-fragment
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                fragmentId:
+                  $ref: '#/components/schemas/Uuid'
+                shareId:
+                  $ref: '#/components/schemas/Uuid'
+              required:
+              - fileId
+              - fragmentId
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c636297","fragmentId":"5ab5eb30-5b3a-81d5-8008-2a395c639705","shareId":"5ab5eb30-5b3a-81d5-8008-2a395c639706"}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                title: FileFragment
+                type: object
+                properties:
+                  id:
+                    $ref: '#/components/schemas/Uuid'
+                  fileId:
+                    $ref: '#/components/schemas/Uuid'
+                  createdAt:
+                    $ref: '#/components/schemas/Inst'
+                  content:
+                    $ref: '#/components/schemas/Any'
+                required:
+                - id
+                - fileId
+                - createdAt
+                - content
+              example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c639707","fileId":"5ab5eb30-5b3a-81d5-8008-2a395c639708","createdAt":"2026-06-12T12:36:02.524580603Z","content":"mwgia"}'
+      tags:
+      - Get File Fragment
+components:
+  schemas:
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    Any:
+      description: Any Value
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create File Media Object From Url API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create File Media Object From Url
+paths:
+  create-file-media-object-from-url:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-file-media-object-from-url
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                isLocal:
+                  $ref: '#/components/schemas/Boolean'
+                url:
+                  $ref: '#/components/schemas/Uri'
+                id:
+                  $ref: '#/components/schemas/Uuid'
+                name:
+                  type: string
+                  maxLength: 250
+              required:
+              - fileId
+              - isLocal
+              - url
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c75e21b","isLocal":false,"url":"http:\/\/tjyevl.net","id":"5ab5eb30-5b3a-81d5-8008-2a395c75e21c"}'
+      tags:
+      - Create File Media Object From Url
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uri:
+      title: uri
+      description: URI formatted string
+      type: string
+      format: uri

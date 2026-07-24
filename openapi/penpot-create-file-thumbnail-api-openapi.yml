@@ -1,0 +1,77 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Create File Thumbnail API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Create File Thumbnail
+paths:
+  create-file-thumbnail:
+    post:
+      description: 'Creates or updates the file thumbnail. Mainly used for paint the
+
+        grid thumbnails.'
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: create-file-thumbnail
+              type: object
+              properties:
+                fileId:
+                  $ref: '#/components/schemas/Uuid'
+                revn:
+                  $ref: '#/components/schemas/Int'
+                media:
+                  title: Upload
+                  type: object
+                  properties:
+                    filename:
+                      type: string
+                    size:
+                      $ref: '#/components/schemas/Int'
+                    path:
+                      $ref: '#/components/schemas/FilesystemPath'
+                    mtype:
+                      type: string
+                    headers:
+                      type: object
+                      additionalProperties:
+                        type: string
+                  required:
+                  - filename
+                  - size
+                  - path
+              required:
+              - fileId
+              - revn
+              - media
+            example: '{"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c597006","revn":-1,"media":{"filename":"3O","size":87732010,"path":"83hWo","mtype":"5GA69lNE95F29282Oc65805SjognE"}}'
+      tags:
+      - Create File Thumbnail
+components:
+  schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

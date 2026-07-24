@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Clone Template API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Clone Template
+paths:
+  clone-template:
+    post:
+      description: Clone into the specified project the template by its id.
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: clone-template
+              type: object
+              properties:
+                projectId:
+                  $ref: '#/components/schemas/Uuid'
+                templateId:
+                  $ref: '#/components/schemas/WordString'
+              required:
+              - projectId
+              - templateId
+            example: '{"projectId":"5ab5eb30-5b3a-81d5-8008-2a395e0faab5","templateId":"uips"}'
+      tags:
+      - Clone Template
+components:
+  schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    WordString:
+      title: string
+      description: string
+      type: string
+      format: string

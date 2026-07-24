@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Send User Feedback API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Send User Feedback
+paths:
+  send-user-feedback:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              title: send-user-feedback
+              type: object
+              properties:
+                subject:
+                  type: string
+                  maxLength: 500
+                content:
+                  type: string
+                  maxLength: 2500
+                type:
+                  type: string
+                errorHref:
+                  type: string
+                  maxLength: 2500
+                errorReport:
+                  type: string
+              required:
+              - subject
+              - content
+            example: '{"subject":"qU7lS0ZYFF429umQh9a5dQPwAZtzPxVsKKfJZ69NGp7sG26yXk7wxH6no0P53XfPrybENvn00z55zRg7tdSjJ8H5X7Zx0oMNDx5Z7csJ3339i2x5qojG7TQtB3H4esIr","content":"HgH60O43U5CM1m0cR9CgGBHu29uU20traBZs9fa2fAYMJSd43EqxNe13D09G2x9jswWug6pL6GaO9494wmM1p45FIrkSNcWqwr00IjpG3C496L00gHB3jJ4h4vraliPU8wRdai9x4Zrwj7641pb4i20T5JiocD2ifw594K2dFzG755viOXs3060q1GLuzKQ0CZn9K2V65EYDW9SkA2TJ7yt06c3Cab7w1NsE6a9XCGYOyK58EKk7ld7248RG0f440U32fgTux56TVnWJbxch6R09W5XnAwg4cJ6u8BN73pOqYGR41KUKGCHQO8Eo5i1l60akq1832WU6sLwEk84fqWnRBDN6nZaFqOb4fR5JeK52u9My52TC6X0J035xt99J2FMG26h68oVgn4APu8n9Z0oK3mLK8y3Wiov2zcwDKxsS14xk6JaA9JMcbF4tGX0X89M4k4kpY37OWbYzl9yK3dCEn3lIZViicQFlKE11CoRTEu8m9HphgiKeWv86K9Hg5XC0eviuEK9jmC1Hbe8LAPWZD9NJWx1caEaiqLU80fp7nXi0MM2n4N80a1ttFrFFlmAF5J522Nw4ZSC3VSo1hwyr72VT1ft7256108257pKOrWPiMmn9e2ADf4LyyIfXtvwVSU4YEfoI33IcqUmvd32lOCB9ornHnwWY5x12Eb0eRoWrF2hk2Y1307GRAr4Ti6s5W289leu4x2L00s6Q28kRG","type":"1G","errorHref":"Ewzvj6K1Io6tV3W5E66V5QR62DFhXWY0kC0Aqa0JFlo1g0tt1HXi55b579URqw5740KWj16AJ8fu955nvKyK1hVLWIIT7w4iGgwH4n0982DBsh2rWm0mP2NCzU3I65zRXF0RD9Gv1NeSqE29MKynEBqi4XS8J5b6eZy21cy4O84495v9C01o1Ux4dwk7JiF52Lhd95PmdBSfjCUIb9D3Hh0ZttbSuBeQ2787Kwgi0ac1st1T48Pm275EcK88HlRgtGfH9zR62YTUFdNX48y408S1U4EL1cr5i4T02EXtHw9235QChbHyirccorL0L017j8R30jfweN2G1XTdC126Z5oq07H6847s09c5Cz1kHla4qV3Ni7G7PAfZ8T8V81K7tW6H0CY3SOeInWB8rxw7fOn0wl5Wq69H97P5NoYv1x0b388ZrdjiAhRcRF85wmwH143OH0805qa7F6Td47BwDmuN9i8RXM9L2lR12dZPJdGdGWvd5MiX803jOm062fc6AaLIPN4IS57thg50vOcSEbUtS235Ku42r1YKNS52097309W98n56OK2m49a4NuD65r6Q9tL33JYbGJJmegyWwUH68952611327UK2KGSqs0N3o2mve57p6twSuuigoti05r1trff88voQr3zWbl0ibQ0WDUW8bX6v0Wq02jZuBz5COCXiGiMthcRiVR3UwHqc6F3hiY416XaIFLvt07q7E7q3QdKWcY8ISY05Nis4A3610ZIkfI603w9J7n2Loj7r4Z7I5k9roQ7J1Yl5mZH9rSPH0Q4cdfeQB37T6Yed5q2602YvR8I5r26XTN6S8ST9358BMzq5B29VnCPGS238rG6Q26QLaAN12LN72r8uR397NmT7oI83w5v4Guu4tS2BeG9L9867xfFSW17VnUkx4ZE40mB5dQKVUI9IsIb23R5OkUF7Uw25rPLrLShtC4k5xA9ZkAHQjnOL1x7Hh0Hed30MMlv93H68406c5H7S4KUpuB6mAm036Rn8r3SpczpDrQH2E1rCe637GrW1vtNm6I4sb8z94RiJ26j5BT0Krx4cu5J64ac13AAb39fDT51ND5Ev8iQ8L71h5B523h81MpuUy46936BRLhVTaVieTw1W2hXp99kHBg1lre036j0URXNcY9awduXzIX5OMZIQXViC872M7tNC62uVr7vvrrQ19yJBKBzJXnE31IGBn7wWSz79y02dCqMI0Y1049u117Kb9SM8loQ6jMt22Q2CyuKYn17Tp22cZc4cz9L556te6Ve3H3kdSf6G8bF72n59rCQnAA0e7y5vx5fkCp296HlE0TCMwKc08X844v791fajU2E5V21d7BiumkcJ6FS9p8rAWNsOt8jY5x5jWG5MWfY4WTAsQ0Nc77wG0X0C3cTIh6v38c8Ts4DYJymaa5gftBY1YOoRyQUNXZRS6DEv8TtsYtkGz8AyvUGa60v5tzU6051uo3SpT5f3yAHM6IMrXYql13OXGDIyBHEt9ZHL6Qinf15g18719zw1hz426hS0W24yf5ntmQuoK9qN9Dn39PNyVRp8NI49xsg46XMv22uPyfGtpPW7D6sMmxDrkPP58Bv3RFmt15iolB6F4TF18wrmfs3vKK0PvPDKfP876fU2wXYQVse0d0jhQ494rwfWSBeF153M3UU35e0rASx0C5Rq0vhY4OF5oUF97gx29aWr2NaFFgQHrQdsV8mZy3eua8rUqJitx9OLn7SnHunxUHk13Mnc946CW5nfn97MLzCGvMy9IN9HATZ7aIlKj3itPjhnHXgLsRHLLsV102dkCrdtigaq3W9BXafkOmj15yDzjRPDYIp7824Y6OcAr1g29WZy0qdB7J7R17yfnCSwXfNyyzO8jnABiF360IC012R4lTLwsqtppD07WRQuRMAUWJ732wWq827PUu89YqhkU193KyxIG5ulkBVyd43WGcKF023yHVT4IKp05o4zYIuOLAb92kl672lYWzY89C3pNn9w4wlAp8Zr1cW5Rmus1j40e1xUo2gl25Vu12rsd0ycimKU5qr1LwIfqSxHcd1v4NjL2j5F81cZh6MprNd624DLEIUEeLOYld3sOismWo0NQn9IKI8J3LaNML3729483k89rMXfSK7iK6U41pa7xq9S79uXrS31o3b8G5Tqc147Z73itzOACliUQiIBe3k46MWuq1qqp5c3AHa3JmmOX5xVuTt5PdxY514N7PIH6k19M8ha"}'
+      tags:
+      - Send User Feedback

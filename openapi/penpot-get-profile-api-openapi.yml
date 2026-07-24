@@ -1,0 +1,186 @@
+openapi: 3.0.0
+info:
+  version: '2.16'
+  title: Penpot RPC Add Team To Organization Get Profile API
+  description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
+  x-api-id: penpot-rpc
+  contact:
+    url: https://community.penpot.app/
+    name: Penpot Support
+  x-humanURL: https://penpot.app/integrations-api
+servers:
+- url: https://design.penpot.app/api/main/methods
+  description: MAIN API
+tags:
+- name: Get Profile
+paths:
+  get-profile:
+    post:
+      description: null
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example: '{}'
+      responses:
+        default:
+          description: A default response
+          content:
+            application/json:
+              schema:
+                title: Profile
+                type: object
+                properties:
+                  id:
+                    $ref: '#/components/schemas/Uuid'
+                  fullname:
+                    title: string
+                    description: string
+                    type: string
+                    format: string
+                  email:
+                    $ref: '#/components/schemas/Email'
+                  isActive:
+                    $ref: '#/components/schemas/Boolean'
+                  isBlocked:
+                    $ref: '#/components/schemas/Boolean'
+                  isDemo:
+                    $ref: '#/components/schemas/Boolean'
+                  isMuted:
+                    $ref: '#/components/schemas/Boolean'
+                  createdAt:
+                    $ref: '#/components/schemas/Inst'
+                  modifiedAt:
+                    $ref: '#/components/schemas/Inst'
+                  defaultProjectId:
+                    $ref: '#/components/schemas/Uuid'
+                  defaultTeamId:
+                    $ref: '#/components/schemas/Uuid'
+                  props:
+                    title: ProfileProps
+                    type: object
+                    properties:
+                      plugins:
+                        type: object
+                        properties:
+                          ids:
+                            type: array
+                            items:
+                              type: string
+                          data:
+                            type: object
+                            additionalProperties:
+                              type: object
+                              properties:
+                                pluginId:
+                                  type: string
+                                name:
+                                  type: string
+                                description:
+                                  type: string
+                                host:
+                                  type: string
+                                code:
+                                  type: string
+                                icon:
+                                  type: string
+                                permissions:
+                                  type: array
+                                  items:
+                                    type: string
+                                  uniqueItems: true
+                              required:
+                              - pluginId
+                              - name
+                              - host
+                              - code
+                              - permissions
+                        required:
+                        - ids
+                        - data
+                      renderer:
+                        title: enum
+                        type: string
+                        enum:
+                        - svg
+                        - wasm
+                      mcpEnabled:
+                        $ref: '#/components/schemas/Boolean'
+                      newsletterUpdates:
+                        $ref: '#/components/schemas/Boolean'
+                      newsletterNews:
+                        $ref: '#/components/schemas/Boolean'
+                      onboardingTeamId:
+                        $ref: '#/components/schemas/Uuid'
+                      onboardingViewed:
+                        $ref: '#/components/schemas/Boolean'
+                      v2InfoShown:
+                        $ref: '#/components/schemas/Boolean'
+                      welcomeFileId:
+                        $ref: '#/components/schemas/Boolean'
+                        nullable: true
+                      releaseNotesViewed:
+                        title: string
+                        description: not whitespace string
+                        type: string
+                      notifications:
+                        title: props-notifications
+                        type: object
+                        properties:
+                          dashboardComments:
+                            title: enum
+                            type: string
+                            enum:
+                            - all
+                            - partial
+                            - none
+                          emailComments:
+                            title: enum
+                            type: string
+                            enum:
+                            - all
+                            - partial
+                            - none
+                          emailInvites:
+                            title: enum
+                            type: string
+                            enum:
+                            - all
+                            - none
+                        required:
+                        - dashboardComments
+                        - emailComments
+                        - emailInvites
+                      workspaceVisited:
+                        $ref: '#/components/schemas/Boolean'
+                required:
+                - id
+                - fullname
+                - email
+              example: '{"email":"xzkb@example.net","isDemo":false,"fullname":"mzsvldv","modifiedAt":"2026-06-12T12:36:02.591304376Z","isActive":false,"id":"5ab5eb30-5b3a-81d5-8008-2a395c770354","isMuted":true,"defaultTeamId":"5ab5eb30-5b3a-81d5-8008-2a395c770355","createdAt":"2026-06-12T12:36:02.596271801Z","isBlocked":true}'
+      tags:
+      - Get Profile
+components:
+  schemas:
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Email:
+      title: email
+      description: string with valid email address
+      type: string
+      format: email
