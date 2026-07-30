@@ -11,7 +11,19 @@ description: >
   server for AI-assisted design-to-code workflows, making it a flexible
   integration target for modern development toolchains.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/penpot.png
 url: https://raw.githubusercontent.com/api-evangelist/penpot/refs/heads/main/apis.yml
 created: "2026-06-12"
 modified: "2026-06-12"
@@ -26,81 +38,2820 @@ tags:
   - Collaboration
   - Design Systems
 apis:
-  - name: Penpot RPC API
-    description: >
-      Penpot's internal RPC-style REST API provides programmatic access to
-      projects, files, pages, components, and design assets. Developers
-      authenticate with personal access tokens and can query the auto-generated
-      API documentation at the /api/_doc endpoint on any Penpot instance.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://penpot.app/integrations-api
-    baseURL: https://design.penpot.app/api/rpc/command/
-    tags:
-      - Design
-      - Prototyping
-      - Projects
-      - Files
-      - Components
-    properties:
-      - type: Documentation
-        url: https://help.penpot.app/technical-guide/integration/
-      - type: OpenAPI
-        url: https://design.penpot.app/api/_doc
-      - type: OpenAPI
-        url: openapi/penpot-rpc-openapi.yml
-      - type: JSONSchema
-        url: json-schema/penpot-schemas.json
-      - type: Examples
-        url: examples/penpot-request-examples.json
-      - type: Vocabulary
-        url: vocabulary/penpot-vocabulary.yml
-      - type: JSONLD
-        url: json-ld/penpot-context.jsonld
-    contact:
-      - FN: Penpot Support
-        url: https://community.penpot.app/
-
-  - name: Penpot Webhooks
-    description: >
-      Penpot supports outbound webhooks configured at the team level, delivering
-      JSON or Transit-formatted event payloads when actions occur such as file
-      creation, file updates, and new comments. All backend RPC calls marked as
-      WEBHOOK automatically trigger notifications to registered endpoints.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://help.penpot.app/technical-guide/integration/
-    baseURL: https://design.penpot.app/api/rpc/command/
-    tags:
-      - Webhooks
-      - Events
-      - Automation
-    properties:
-      - type: Documentation
-        url: https://help.penpot.app/technical-guide/integration/
-    contact:
-      - FN: Penpot Support
-        url: https://community.penpot.app/
-
-  - name: Penpot Plugin API
-    description: >
-      Penpot's Plugin API allows developers to build and publish custom
-      extensions that extend the Penpot design editor. The plugin system
-      provides extensive access to design objects and properties, enabling
-      external rendering, workflow automation, and enhanced application
-      functionality directly within the Penpot UI.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://doc.plugins.penpot.app/
-    baseURL: https://doc.plugins.penpot.app/
-    tags:
-      - Plugins
-      - Extensions
-      - Design
-    properties:
-      - type: Documentation
-        url: https://doc.plugins.penpot.app/
-    contact:
-      - FN: Penpot Support
-        url: https://community.penpot.app/
-
+- name: Penpot Webhooks
+  description: >
+    Penpot supports outbound webhooks configured at the team level, delivering JSON or Transit-formatted
+    event payloads when actions occur such as file creation, file updates, and new comments. All backend
+    RPC calls marked as WEBHOOK automatically trigger notifications to registered endpoints.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.penpot.app/technical-guide/integration/
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Webhooks
+  - Events
+  - Automation
+  properties:
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  contact:
+  - FN: Penpot Support
+    url: https://community.penpot.app/
+- name: Penpot Plugin API
+  description: >
+    Penpot's Plugin API allows developers to build and publish custom extensions that extend the Penpot
+    design editor. The plugin system provides extensive access to design objects and properties, enabling
+    external rendering, workflow automation, and enhanced application functionality directly within the
+    Penpot UI.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://doc.plugins.penpot.app/
+  baseURL: https://doc.plugins.penpot.app/
+  tags:
+  - Plugins
+  - Extensions
+  - Design
+  properties:
+  - type: Documentation
+    url: https://doc.plugins.penpot.app/
+  contact:
+  - FN: Penpot Support
+    url: https://community.penpot.app/
+- aid: penpot:penpot-add-team-to-organization-api
+  name: Penpot Add Team To Organization API
+  description: >-
+    The Add Team To Organization API from Penpot — 1 operation(s) for add team to organization.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Add Team To Organization
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-add-team-to-organization-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-assemble-file-media-object-api
+  name: Penpot Assemble File Media Object API
+  description: >-
+    The Assemble File Media Object API from Penpot — 1 operation(s) for assemble file media object.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Assemble File Media Object
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-assemble-file-media-object-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-clone-file-media-object-api
+  name: Penpot Clone File Media Object API
+  description: >-
+    The Clone File Media Object API from Penpot — 1 operation(s) for clone file media object.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Clone File Media Object
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-clone-file-media-object-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-clone-template-api
+  name: Penpot Clone Template API
+  description: The Clone Template API from Penpot — 1 operation(s) for clone template.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Clone Template
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-clone-template-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-access-token-api
+  name: Penpot Create Access Token API
+  description: The Create Access Token API from Penpot — 1 operation(s) for create access token.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Access Token
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-access-token-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-comment-api
+  name: Penpot Create Comment API
+  description: The Create Comment API from Penpot — 1 operation(s) for create comment.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Comment
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-comment-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-comment-thread-api
+  name: Penpot Create Comment Thread API
+  description: The Create Comment Thread API from Penpot — 1 operation(s) for create comment thread.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Comment Thread
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-comment-thread-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-file-api
+  name: Penpot Create File API
+  description: The Create File API from Penpot — 1 operation(s) for create file.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create File
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-file-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-file-media-object-from-url-api
+  name: Penpot Create File Media Object From Url API
+  description: >-
+    The Create File Media Object From Url API from Penpot — 1 operation(s) for create file media object
+    from url.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create File Media Object From Url
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-file-media-object-from-url-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-file-object-thumbnail-api
+  name: Penpot Create File Object Thumbnail API
+  description: >-
+    The Create File Object Thumbnail API from Penpot — 1 operation(s) for create file object thumbnail.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create File Object Thumbnail
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-file-object-thumbnail-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-file-snapshot-api
+  name: Penpot Create File Snapshot API
+  description: The Create File Snapshot API from Penpot — 1 operation(s) for create file snapshot.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create File Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-file-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-file-thumbnail-api
+  name: Penpot Create File Thumbnail API
+  description: The Create File Thumbnail API from Penpot — 1 operation(s) for create file thumbnail.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create File Thumbnail
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-file-thumbnail-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-font-variant-api
+  name: Penpot Create Font Variant API
+  description: The Create Font Variant API from Penpot — 1 operation(s) for create font variant.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Font Variant
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-font-variant-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-project-api
+  name: Penpot Create Project API
+  description: The Create Project API from Penpot — 1 operation(s) for create project.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Project
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-project-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-share-link-api
+  name: Penpot Create Share Link API
+  description: The Create Share Link API from Penpot — 1 operation(s) for create share link.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Share Link
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-share-link-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-team-access-request-api
+  name: Penpot Create Team Access Request API
+  description: >-
+    The Create Team Access Request API from Penpot — 1 operation(s) for create team access request.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Team Access Request
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-team-access-request-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-team-api
+  name: Penpot Create Team API
+  description: The Create Team API from Penpot — 1 operation(s) for create team.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Team
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-team-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-team-invitations-api
+  name: Penpot Create Team Invitations API
+  description: >-
+    The Create Team Invitations API from Penpot — 1 operation(s) for create team invitations.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Team Invitations
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-team-invitations-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-team-with-invitations-api
+  name: Penpot Create Team With Invitations API
+  description: >-
+    The Create Team With Invitations API from Penpot — 1 operation(s) for create team with invitations.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Team With Invitations
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-team-with-invitations-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-upload-session-api
+  name: Penpot Create Upload Session API
+  description: The Create Upload Session API from Penpot — 1 operation(s) for create upload session.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Upload Session
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-upload-session-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-create-webhook-api
+  name: Penpot Create Webhook API
+  description: The Create Webhook API from Penpot — 1 operation(s) for create webhook.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Create Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-create-webhook-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-access-token-api
+  name: Penpot Delete Access Token API
+  description: The Delete Access Token API from Penpot — 1 operation(s) for delete access token.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Access Token
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-access-token-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-comment-api
+  name: Penpot Delete Comment API
+  description: The Delete Comment API from Penpot — 1 operation(s) for delete comment.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Comment
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-comment-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-comment-thread-api
+  name: Penpot Delete Comment Thread API
+  description: The Delete Comment Thread API from Penpot — 1 operation(s) for delete comment thread.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Comment Thread
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-comment-thread-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-file-api
+  name: Penpot Delete File API
+  description: The Delete File API from Penpot — 1 operation(s) for delete file.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete File
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-file-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-file-object-thumbnail-api
+  name: Penpot Delete File Object Thumbnail API
+  description: >-
+    The Delete File Object Thumbnail API from Penpot — 1 operation(s) for delete file object thumbnail.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete File Object Thumbnail
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-file-object-thumbnail-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-file-snapshot-api
+  name: Penpot Delete File Snapshot API
+  description: The Delete File Snapshot API from Penpot — 1 operation(s) for delete file snapshot.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete File Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-file-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-font-api
+  name: Penpot Delete Font API
+  description: The Delete Font API from Penpot — 1 operation(s) for delete font.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Font
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-font-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-font-variant-api
+  name: Penpot Delete Font Variant API
+  description: The Delete Font Variant API from Penpot — 1 operation(s) for delete font variant.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Font Variant
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-font-variant-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-profile-photo-api
+  name: Penpot Delete Profile Photo API
+  description: The Delete Profile Photo API from Penpot — 1 operation(s) for delete profile photo.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Profile Photo
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-profile-photo-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-project-api
+  name: Penpot Delete Project API
+  description: The Delete Project API from Penpot — 1 operation(s) for delete project.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Project
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-project-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-share-link-api
+  name: Penpot Delete Share Link API
+  description: The Delete Share Link API from Penpot — 1 operation(s) for delete share link.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Share Link
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-share-link-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-team-api
+  name: Penpot Delete Team API
+  description: The Delete Team API from Penpot — 1 operation(s) for delete team.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Team
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-team-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-team-invitation-api
+  name: Penpot Delete Team Invitation API
+  description: The Delete Team Invitation API from Penpot — 1 operation(s) for delete team invitation.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Team Invitation
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-team-invitation-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-team-member-api
+  name: Penpot Delete Team Member API
+  description: The Delete Team Member API from Penpot — 1 operation(s) for delete team member.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Team Member
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-team-member-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-delete-webhook-api
+  name: Penpot Delete Webhook API
+  description: The Delete Webhook API from Penpot — 1 operation(s) for delete webhook.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Delete Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-delete-webhook-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-download-font-api
+  name: Penpot Download Font API
+  description: The Download Font API from Penpot — 1 operation(s) for download font.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Download Font
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-download-font-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-download-font-family-api
+  name: Penpot Download Font Family API
+  description: The Download Font Family API from Penpot — 1 operation(s) for download font family.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Download Font Family
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-download-font-family-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-duplicate-file-api
+  name: Penpot Duplicate File API
+  description: The Duplicate File API from Penpot — 1 operation(s) for duplicate file.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Duplicate File
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-duplicate-file-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-duplicate-project-api
+  name: Penpot Duplicate Project API
+  description: The Duplicate Project API from Penpot — 1 operation(s) for duplicate project.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Duplicate Project
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-duplicate-project-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-export-binfile-api
+  name: Penpot Export Binfile API
+  description: The Export Binfile API from Penpot — 1 operation(s) for export binfile.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Export Binfile
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-export-binfile-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-access-tokens-api
+  name: Penpot Get Access Tokens API
+  description: The Get Access Tokens API from Penpot — 1 operation(s) for get access tokens.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Access Tokens
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-access-tokens-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-all-projects-api
+  name: Penpot Get All Projects API
+  description: The Get All Projects API from Penpot — 1 operation(s) for get all projects.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get All Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-all-projects-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-comment-thread-api
+  name: Penpot Get Comment Thread API
+  description: The Get Comment Thread API from Penpot — 1 operation(s) for get comment thread.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Comment Thread
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-comment-thread-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-comment-threads-api
+  name: Penpot Get Comment Threads API
+  description: The Get Comment Threads API from Penpot — 1 operation(s) for get comment threads.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Comment Threads
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-comment-threads-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-comments-api
+  name: Penpot Get Comments API
+  description: The Get Comments API from Penpot — 1 operation(s) for get comments.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Comments
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-comments-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-current-mcp-token-api
+  name: Penpot Get Current Mcp Token API
+  description: The Get Current Mcp Token API from Penpot — 1 operation(s) for get current mcp token.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Current Mcp Token
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-current-mcp-token-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-api
+  name: Penpot Get File API
+  description: The Get File API from Penpot — 1 operation(s) for get file.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-data-for-thumbnail-api
+  name: Penpot Get File Data For Thumbnail API
+  description: >-
+    The Get File Data For Thumbnail API from Penpot — 1 operation(s) for get file data for thumbnail.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Data For Thumbnail
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-data-for-thumbnail-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-fragment-api
+  name: Penpot Get File Fragment API
+  description: The Get File Fragment API from Penpot — 1 operation(s) for get file fragment.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Fragment
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-fragment-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-info-api
+  name: Penpot Get File Info API
+  description: The Get File Info API from Penpot — 1 operation(s) for get file info.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Info
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-info-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-libraries-api
+  name: Penpot Get File Libraries API
+  description: The Get File Libraries API from Penpot — 1 operation(s) for get file libraries.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Libraries
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-libraries-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-object-thumbnails-api
+  name: Penpot Get File Object Thumbnails API
+  description: >-
+    The Get File Object Thumbnails API from Penpot — 1 operation(s) for get file object thumbnails.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Object Thumbnails
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-object-thumbnails-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-snapshot-api
+  name: Penpot Get File Snapshot API
+  description: The Get File Snapshot API from Penpot — 1 operation(s) for get file snapshot.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-snapshots-api
+  name: Penpot Get File Snapshots API
+  description: The Get File Snapshots API from Penpot — 1 operation(s) for get file snapshots.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Snapshots
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-snapshots-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-stats-api
+  name: Penpot Get File Stats API
+  description: The Get File Stats API from Penpot — 1 operation(s) for get file stats.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Stats
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-stats-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-file-summary-api
+  name: Penpot Get File Summary API
+  description: The Get File Summary API from Penpot — 1 operation(s) for get file summary.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get File Summary
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-file-summary-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-font-variants-api
+  name: Penpot Get Font Variants API
+  description: The Get Font Variants API from Penpot — 1 operation(s) for get font variants.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Font Variants
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-font-variants-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-library-file-references-api
+  name: Penpot Get Library File References API
+  description: >-
+    The Get Library File References API from Penpot — 1 operation(s) for get library file references.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Library File References
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-library-file-references-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-library-usage-api
+  name: Penpot Get Library Usage API
+  description: The Get Library Usage API from Penpot — 1 operation(s) for get library usage.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Library Usage
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-library-usage-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-nitrate-connectivity-api
+  name: Penpot Get Nitrate Connectivity API
+  description: >-
+    The Get Nitrate Connectivity API from Penpot — 1 operation(s) for get nitrate connectivity.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Nitrate Connectivity
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-nitrate-connectivity-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-owned-teams-api
+  name: Penpot Get Owned Teams API
+  description: The Get Owned Teams API from Penpot — 1 operation(s) for get owned teams.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Owned Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-owned-teams-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-page-api
+  name: Penpot Get Page API
+  description: The Get Page API from Penpot — 1 operation(s) for get page.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Page
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-page-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-profile-api
+  name: Penpot Get Profile API
+  description: The Get Profile API from Penpot — 1 operation(s) for get profile.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-profile-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-profiles-for-file-comments-api
+  name: Penpot Get Profiles For File Comments API
+  description: >-
+    The Get Profiles For File Comments API from Penpot — 1 operation(s) for get profiles for file comments.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Profiles For File Comments
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-profiles-for-file-comments-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-project-api
+  name: Penpot Get Project API
+  description: The Get Project API from Penpot — 1 operation(s) for get project.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Project
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-project-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-project-files-api
+  name: Penpot Get Project Files API
+  description: The Get Project Files API from Penpot — 1 operation(s) for get project files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Project Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-project-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-projects-api
+  name: Penpot Get Projects API
+  description: The Get Projects API from Penpot — 1 operation(s) for get projects.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-projects-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-sso-provider-api
+  name: Penpot Get Sso Provider API
+  description: The Get Sso Provider API from Penpot — 1 operation(s) for get sso provider.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Sso Provider
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-sso-provider-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-api
+  name: Penpot Get Team API
+  description: The Get Team API from Penpot — 1 operation(s) for get team.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-deleted-files-api
+  name: Penpot Get Team Deleted Files API
+  description: The Get Team Deleted Files API from Penpot — 1 operation(s) for get team deleted files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Deleted Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-deleted-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-info-api
+  name: Penpot Get Team Info API
+  description: The Get Team Info API from Penpot — 1 operation(s) for get team info.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Info
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-info-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-invitation-token-api
+  name: Penpot Get Team Invitation Token API
+  description: >-
+    The Get Team Invitation Token API from Penpot — 1 operation(s) for get team invitation token.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Invitation Token
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-invitation-token-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-invitations-api
+  name: Penpot Get Team Invitations API
+  description: The Get Team Invitations API from Penpot — 1 operation(s) for get team invitations.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Invitations
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-invitations-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-members-api
+  name: Penpot Get Team Members API
+  description: The Get Team Members API from Penpot — 1 operation(s) for get team members.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Members
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-members-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-recent-files-api
+  name: Penpot Get Team Recent Files API
+  description: The Get Team Recent Files API from Penpot — 1 operation(s) for get team recent files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Recent Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-recent-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-shared-files-api
+  name: Penpot Get Team Shared Files API
+  description: The Get Team Shared Files API from Penpot — 1 operation(s) for get team shared files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Shared Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-shared-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-stats-api
+  name: Penpot Get Team Stats API
+  description: The Get Team Stats API from Penpot — 1 operation(s) for get team stats.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Stats
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-stats-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-team-users-api
+  name: Penpot Get Team Users API
+  description: The Get Team Users API from Penpot — 1 operation(s) for get team users.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Team Users
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-team-users-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-teams-api
+  name: Penpot Get Teams API
+  description: The Get Teams API from Penpot — 1 operation(s) for get teams.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-teams-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-unread-comment-threads-api
+  name: Penpot Get Unread Comment Threads API
+  description: >-
+    The Get Unread Comment Threads API from Penpot — 1 operation(s) for get unread comment threads.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Unread Comment Threads
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-unread-comment-threads-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-view-only-bundle-api
+  name: Penpot Get View Only Bundle API
+  description: The Get View Only Bundle API from Penpot — 1 operation(s) for get view only bundle.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get View Only Bundle
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-view-only-bundle-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-get-webhooks-api
+  name: Penpot Get Webhooks API
+  description: The Get Webhooks API from Penpot — 1 operation(s) for get webhooks.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Get Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-get-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-has-file-libraries-api
+  name: Penpot Has File Libraries API
+  description: The Has File Libraries API from Penpot — 1 operation(s) for has file libraries.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Has File Libraries
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-has-file-libraries-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-ignore-file-library-sync-status-api
+  name: Penpot Ignore File Library Sync Status API
+  description: >-
+    The Ignore File Library Sync Status API from Penpot — 1 operation(s) for ignore file library sync
+    status.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Ignore File Library Sync Status
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-ignore-file-library-sync-status-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-import-binfile-api
+  name: Penpot Import Binfile API
+  description: The Import Binfile API from Penpot — 1 operation(s) for import binfile.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Import Binfile
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-import-binfile-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-leave-org-api
+  name: Penpot Leave Org API
+  description: The Leave Org API from Penpot — 1 operation(s) for leave org.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Leave Org
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-leave-org-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-leave-team-api
+  name: Penpot Leave Team API
+  description: The Leave Team API from Penpot — 1 operation(s) for leave team.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Leave Team
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-leave-team-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-link-file-to-library-api
+  name: Penpot Link File To Library API
+  description: The Link File To Library API from Penpot — 1 operation(s) for link file to library.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Link File To Library
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-link-file-to-library-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-lock-file-snapshot-api
+  name: Penpot Lock File Snapshot API
+  description: The Lock File Snapshot API from Penpot — 1 operation(s) for lock file snapshot.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Lock File Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-lock-file-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-login-with-ldap-api
+  name: Penpot Login With Ldap API
+  description: The Login With Ldap API from Penpot — 1 operation(s) for login with ldap.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Login With Ldap
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-login-with-ldap-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-login-with-password-api
+  name: Penpot Login With Password API
+  description: The Login With Password API from Penpot — 1 operation(s) for login with password.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Login With Password
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-login-with-password-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-logout-api
+  name: Penpot Logout API
+  description: The Logout API from Penpot — 1 operation(s) for logout.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Logout
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-logout-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-mark-all-threads-as-read-api
+  name: Penpot Mark All Threads As Read API
+  description: >-
+    The Mark All Threads As Read API from Penpot — 1 operation(s) for mark all threads as read.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Mark All Threads As Read
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-mark-all-threads-as-read-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-move-files-api
+  name: Penpot Move Files API
+  description: The Move Files API from Penpot — 1 operation(s) for move files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Move Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-move-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-move-project-api
+  name: Penpot Move Project API
+  description: The Move Project API from Penpot — 1 operation(s) for move project.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Move Project
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-move-project-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-permanently-delete-team-files-api
+  name: Penpot Permanently Delete Team Files API
+  description: >-
+    The Permanently Delete Team Files API from Penpot — 1 operation(s) for permanently delete team files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Permanently Delete Team Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-permanently-delete-team-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-prepare-register-profile-api
+  name: Penpot Prepare Register Profile API
+  description: >-
+    The Prepare Register Profile API from Penpot — 1 operation(s) for prepare register profile.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Prepare Register Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-prepare-register-profile-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-push-audit-events-api
+  name: Penpot Push Audit Events API
+  description: The Push Audit Events API from Penpot — 1 operation(s) for push audit events.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Push Audit Events
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-push-audit-events-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-recover-profile-api
+  name: Penpot Recover Profile API
+  description: The Recover Profile API from Penpot — 1 operation(s) for recover profile.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Recover Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-recover-profile-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-redeem-nitrate-activation-code-api
+  name: Penpot Redeem Nitrate Activation Code API
+  description: >-
+    The Redeem Nitrate Activation Code API from Penpot — 1 operation(s) for redeem nitrate activation
+    code.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Redeem Nitrate Activation Code
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-redeem-nitrate-activation-code-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-register-profile-api
+  name: Penpot Register Profile API
+  description: The Register Profile API from Penpot — 1 operation(s) for register profile.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Register Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-register-profile-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-remove-team-from-org-api
+  name: Penpot Remove Team From Org API
+  description: The Remove Team From Org API from Penpot — 1 operation(s) for remove team from org.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Remove Team From Org
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-remove-team-from-org-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-rename-file-api
+  name: Penpot Rename File API
+  description: The Rename File API from Penpot — 1 operation(s) for rename file.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Rename File
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-rename-file-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-rename-project-api
+  name: Penpot Rename Project API
+  description: The Rename Project API from Penpot — 1 operation(s) for rename project.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Rename Project
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-rename-project-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-request-email-change-api
+  name: Penpot Request Email Change API
+  description: The Request Email Change API from Penpot — 1 operation(s) for request email change.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Request Email Change
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-request-email-change-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-request-profile-recovery-api
+  name: Penpot Request Profile Recovery API
+  description: >-
+    The Request Profile Recovery API from Penpot — 1 operation(s) for request profile recovery.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Request Profile Recovery
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-request-profile-recovery-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-restore-deleted-team-files-api
+  name: Penpot Restore Deleted Team Files API
+  description: >-
+    The Restore Deleted Team Files API from Penpot — 1 operation(s) for restore deleted team files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Restore Deleted Team Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-restore-deleted-team-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-restore-file-snapshot-api
+  name: Penpot Restore File Snapshot API
+  description: The Restore File Snapshot API from Penpot — 1 operation(s) for restore file snapshot.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Restore File Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-restore-file-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-search-files-api
+  name: Penpot Search Files API
+  description: The Search Files API from Penpot — 1 operation(s) for search files.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Search Files
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-search-files-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-send-user-feedback-api
+  name: Penpot Send User Feedback API
+  description: The Send User Feedback API from Penpot — 1 operation(s) for send user feedback.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Send User Feedback
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-send-user-feedback-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-set-file-shared-api
+  name: Penpot Set File Shared API
+  description: The Set File Shared API from Penpot — 1 operation(s) for set file shared.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Set File Shared
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-set-file-shared-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-unlink-file-from-library-api
+  name: Penpot Unlink File From Library API
+  description: >-
+    The Unlink File From Library API from Penpot — 1 operation(s) for unlink file from library.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Unlink File From Library
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-unlink-file-from-library-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-unlock-file-snapshot-api
+  name: Penpot Unlock File Snapshot API
+  description: The Unlock File Snapshot API from Penpot — 1 operation(s) for unlock file snapshot.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Unlock File Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-unlock-file-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-comment-api
+  name: Penpot Update Comment API
+  description: The Update Comment API from Penpot — 1 operation(s) for update comment.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Comment
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-comment-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-comment-thread-api
+  name: Penpot Update Comment Thread API
+  description: The Update Comment Thread API from Penpot — 1 operation(s) for update comment thread.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Comment Thread
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-comment-thread-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-comment-thread-frame-api
+  name: Penpot Update Comment Thread Frame API
+  description: >-
+    The Update Comment Thread Frame API from Penpot — 1 operation(s) for update comment thread frame.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Comment Thread Frame
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-comment-thread-frame-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-comment-thread-position-api
+  name: Penpot Update Comment Thread Position API
+  description: >-
+    The Update Comment Thread Position API from Penpot — 1 operation(s) for update comment thread position.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Comment Thread Position
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-comment-thread-position-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-comment-thread-status-api
+  name: Penpot Update Comment Thread Status API
+  description: >-
+    The Update Comment Thread Status API from Penpot — 1 operation(s) for update comment thread status.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Comment Thread Status
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-comment-thread-status-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-file-api
+  name: Penpot Update File API
+  description: The Update File API from Penpot — 1 operation(s) for update file.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update File
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-file-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-file-library-sync-status-api
+  name: Penpot Update File Library Sync Status API
+  description: >-
+    The Update File Library Sync Status API from Penpot — 1 operation(s) for update file library sync
+    status.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update File Library Sync Status
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-file-library-sync-status-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-file-snapshot-api
+  name: Penpot Update File Snapshot API
+  description: The Update File Snapshot API from Penpot — 1 operation(s) for update file snapshot.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update File Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-file-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-font-api
+  name: Penpot Update Font API
+  description: The Update Font API from Penpot — 1 operation(s) for update font.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Font
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-font-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-profile-api
+  name: Penpot Update Profile API
+  description: The Update Profile API from Penpot — 1 operation(s) for update profile.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-profile-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-profile-notifications-api
+  name: Penpot Update Profile Notifications API
+  description: >-
+    The Update Profile Notifications API from Penpot — 1 operation(s) for update profile notifications.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Profile Notifications
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-profile-notifications-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-profile-password-api
+  name: Penpot Update Profile Password API
+  description: >-
+    The Update Profile Password API from Penpot — 1 operation(s) for update profile password.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Profile Password
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-profile-password-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-profile-photo-api
+  name: Penpot Update Profile Photo API
+  description: The Update Profile Photo API from Penpot — 1 operation(s) for update profile photo.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Profile Photo
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-profile-photo-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-profile-props-api
+  name: Penpot Update Profile Props API
+  description: The Update Profile Props API from Penpot — 1 operation(s) for update profile props.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Profile Props
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-profile-props-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-project-pin-api
+  name: Penpot Update Project Pin API
+  description: The Update Project Pin API from Penpot — 1 operation(s) for update project pin.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Project Pin
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-project-pin-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-team-api
+  name: Penpot Update Team API
+  description: The Update Team API from Penpot — 1 operation(s) for update team.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Team
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-team-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-team-invitation-role-api
+  name: Penpot Update Team Invitation Role API
+  description: >-
+    The Update Team Invitation Role API from Penpot — 1 operation(s) for update team invitation role.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Team Invitation Role
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-team-invitation-role-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-team-member-role-api
+  name: Penpot Update Team Member Role API
+  description: >-
+    The Update Team Member Role API from Penpot — 1 operation(s) for update team member role.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Team Member Role
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-team-member-role-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-team-photo-api
+  name: Penpot Update Team Photo API
+  description: The Update Team Photo API from Penpot — 1 operation(s) for update team photo.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Team Photo
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-team-photo-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-update-webhook-api
+  name: Penpot Update Webhook API
+  description: The Update Webhook API from Penpot — 1 operation(s) for update webhook.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Update Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-update-webhook-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-upload-chunk-api
+  name: Penpot Upload Chunk API
+  description: The Upload Chunk API from Penpot — 1 operation(s) for upload chunk.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Upload Chunk
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-upload-chunk-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-upload-file-media-object-api
+  name: Penpot Upload File Media Object API
+  description: >-
+    The Upload File Media Object API from Penpot — 1 operation(s) for upload file media object.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Upload File Media Object
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-upload-file-media-object-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
+- aid: penpot:penpot-verify-token-api
+  name: Penpot Verify Token API
+  description: The Verify Token API from Penpot — 1 operation(s) for verify token.
+  humanURL: https://penpot.app/integrations-api
+  baseURL: https://design.penpot.app/api/rpc/command/
+  tags:
+  - Verify Token
+  properties:
+  - type: OpenAPI
+    url: openapi/penpot-verify-token-api-openapi.yml
+  - type: Documentation
+    url: https://help.penpot.app/technical-guide/integration/
+  - type: JSONSchema
+    url: json-schema/penpot-schemas.json
+  - type: Examples
+    url: examples/penpot-request-examples.json
+  - type: Vocabulary
+    url: vocabulary/penpot-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/penpot-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/penpot-agentic-access.yml
