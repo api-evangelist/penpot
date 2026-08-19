@@ -27,7 +27,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/penpot.png
 url: https://raw.githubusercontent.com/api-evangelist/penpot/refs/heads/main/apis.yml
 created: "2026-06-12"
 modified: "2026-06-12"
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 tags:
   - Design
   - Prototyping
