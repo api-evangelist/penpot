@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "641e277f-3361-481b-a04c-4c7b57c1cd59",
+      "name": "Get Library Usage",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c4dcd4d0-3f2f-41ce-aa95-21fcadce8d91",
+          "name": "Gets the number of files that use the specified library.",
+          "request": {
+            "name": "Gets the number of files that use the specified library.",
+            "description": {
+              "content": "Gets the number of files that use the specified library.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-library-usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cb2fe4b8-6e92-46de-bd89-f3f9afb6d5b4",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "get-library-usage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"fileId\":\"5ab5eb30-5b3a-81d5-8008-2a395c56fd91\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"-142621\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b032fd75-44f0-446d-abce-4308c9e0b2d9",
+    "name": "Penpot RPC Add Team To Organization Get Library Usage API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

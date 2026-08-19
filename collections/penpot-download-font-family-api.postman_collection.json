@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "52bfa2d6-b2fb-4050-8f63-ef2e172504dd",
+      "name": "Download Font Family",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1520ebcf-0a3d-4737-8c86-007b4245a508",
+          "name": "Download the entire font family as a zip file. Returns the zip\nbytes on the body, without encoding it on transit or json.",
+          "request": {
+            "name": "Download the entire font family as a zip file. Returns the zip\nbytes on the body, without encoding it on transit or json.",
+            "description": {
+              "content": "Download the entire font family as a zip file. Returns the zip\nbytes on the body, without encoding it on transit or json.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "download-font-family"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fontId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8723d298-4183-4b46-9152-c09b77e2c11d",
+    "name": "Penpot RPC Add Team To Organization Download Font Family API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

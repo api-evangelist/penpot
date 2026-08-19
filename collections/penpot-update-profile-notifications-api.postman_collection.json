@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "bcd6e402-5e93-4707-89b5-e3d67666c73b",
+      "name": "Update Profile Notifications",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "74ef7b2e-3317-4083-a936-783b1e03bfeb",
+          "name": "/update-profile-notifications",
+          "request": {
+            "name": "/update-profile-notifications",
+            "description": {},
+            "url": {
+              "path": [
+                "update-profile-notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dashboardComments\": \"<string>\",\n  \"emailComments\": \"<string>\",\n  \"emailInvites\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f0958cc4-b754-4959-b909-0ff2c90affba",
+    "name": "Penpot RPC Add Team To Organization Update Profile Notifications API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

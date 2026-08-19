@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "aa1333ff-4ca9-4cbe-99cc-5ebe4b063f63",
+      "name": "Create File Object Thumbnail",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b59fc847-807f-49f4-82f8-ede1478460f9",
+          "name": "/create-file-object-thumbnail",
+          "request": {
+            "name": "/create-file-object-thumbnail",
+            "description": {},
+            "url": {
+              "path": [
+                "create-file-object-thumbnail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"objectId\": \"<string>\",\n  \"media\": {\n    \"filename\": \"<string>\",\n    \"size\": \"<integer>\",\n    \"path\": \"<unix-path>\",\n    \"mtype\": \"<string>\",\n    \"headers\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"tag\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5e10d734-713a-4fad-ada9-445a322faad1",
+    "name": "Penpot RPC Add Team To Organization Create File Object Thumbnail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

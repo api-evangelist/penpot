@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "b70843db-ad8b-4809-9b21-3d4ee94bffb9",
+      "name": "Get Team Invitations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9392fd17-e32d-460f-87c9-980b533b1636",
+          "name": "/get-team-invitations",
+          "request": {
+            "name": "/get-team-invitations",
+            "description": {},
+            "url": {
+              "path": [
+                "get-team-invitations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7bb3aff2-3c5e-4928-a0e9-458d0af5dfb1",
+    "name": "Penpot RPC Add Team To Organization Get Team Invitations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "4e0c0882-5003-4918-8638-ad9ed25337ea",
+      "name": "Get File",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d8fffb07-78ab-4670-b420-d15597d51a7e",
+          "name": "Retrieve a file by its ID. Only authenticated users.",
+          "request": {
+            "name": "Retrieve a file by its ID. Only authenticated users.",
+            "description": {
+              "content": "Retrieve a file by its ID. Only authenticated users.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-file"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a2d3b78b-ca30-404e-8b42-0e8c1d4ac5f1",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "get-file"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"id\":\"5ab5eb30-5b3a-81d5-8008-2a395c74c38c\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"features\\\":[\\\"fdata\\\\/path-data\\\",\\\"layout\\\\/grid\\\",\\\"fdata\\\\/pointer-map\\\",\\\"text-editor\\\\/v2-html-paste\\\",\\\"fdata\\\\/objects-map\\\",\\\"text-editor\\\\/v2\\\",\\\"components\\\\/v2\\\"],\\\"permissions\\\":{\\\"type\\\":\\\"share-link\\\",\\\"isOwner\\\":false,\\\"isAdmin\\\":false,\\\"canEdit\\\":true,\\\"canRead\\\":false,\\\"isLogged\\\":true},\\\"hasMediaTrimmed\\\":true,\\\"commentThreadSeqn\\\":14,\\\"name\\\":\\\"Z4aaym1O65q463Yoi73VI71NYT03XBzVFF5Gv1T2pebgBAu3ZMUklX9KlNoShyq9\\\",\\\"revn\\\":1,\\\"modifiedAt\\\":\\\"2026-06-12T12:36:02.580712595Z\\\",\\\"vern\\\":16,\\\"id\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c758158\\\",\\\"isShared\\\":true,\\\"projectId\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c758159\\\",\\\"createdAt\\\":\\\"2026-06-12T12:36:02.610757115Z\\\"}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "81cccddf-a46c-48da-a1fe-99606a006fb0",
+    "name": "Penpot RPC Add Team To Organization Get File API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

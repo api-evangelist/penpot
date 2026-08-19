@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get View Only Bundle API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get View Only Bundle",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-view-only-bundle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-view-only-bundle",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

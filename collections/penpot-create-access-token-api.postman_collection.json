@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "68f3ba1e-bdbe-417a-9392-afae0f4de158",
+      "name": "Create Access Token",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "83b6690a-8a0d-461f-b22f-1f088911fabd",
+          "name": "/create-access-token",
+          "request": {
+            "name": "/create-access-token",
+            "description": {},
+            "url": {
+              "path": [
+                "create-access-token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"expiration\": \"<duration>\",\n  \"type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9758328d-896c-43c4-96a6-7a388404fb9f",
+    "name": "Penpot RPC Add Team To Organization Create Access Token API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

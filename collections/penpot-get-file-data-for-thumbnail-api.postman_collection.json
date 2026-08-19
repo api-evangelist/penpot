@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "41b9a21c-d70f-4b8d-b0e3-748e9b3d329f",
+      "name": "Get File Data For Thumbnail",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ed68816e-c66b-4ad5-992d-19cf979f8a6f",
+          "name": "Retrieves the data for generate the thumbnail of the file. Used\nmainly for render thumbnails on dashboard.",
+          "request": {
+            "name": "Retrieves the data for generate the thumbnail of the file. Used\nmainly for render thumbnails on dashboard.",
+            "description": {
+              "content": "Retrieves the data for generate the thumbnail of the file. Used\nmainly for render thumbnails on dashboard.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-file-data-for-thumbnail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6348986f-6bc1-4686-bd8f-13d78ba8e3f3",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "get-file-data-for-thumbnail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"fileId\":\"5ab5eb30-5b3a-81d5-8008-2a395c3f3b82\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"id\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c3fef14\\\",\\\"revn\\\":-469,\\\"page\\\":{\\\"mE.+P\\\":\\\"pdzb\\\",\\\"j*4\\\":\\\"chyaj\\\",\\\"_\\\":\\\"bjmvy\\\",\\\"MmfXRH*\\\":false,\\\"+\\\":\\\"woqvx\\\"}}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e9a8ec0f-b24a-47c0-94ff-c795869877b3",
+    "name": "Penpot RPC Add Team To Organization Get File Data For Thumbnail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "item": [
+    {
+      "id": "9341d8e5-d62b-4637-8427-6b79a03f85c9",
+      "name": "Upload Chunk",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ff655dc5-774a-45e9-a171-77ab8afdad28",
+          "name": "/upload-chunk",
+          "request": {
+            "name": "/upload-chunk",
+            "description": {},
+            "url": {
+              "path": [
+                "upload-chunk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sessionId\": \"<uuid>\",\n  \"index\": \"<integer>\",\n  \"content\": {\n    \"filename\": \"<string>\",\n    \"size\": \"<integer>\",\n    \"path\": \"<unix-path>\",\n    \"mtype\": \"<string>\",\n    \"headers\": {\n      \"key_0\": \"<string>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3010303d-8625-4ae8-9b03-cfe120785234",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "upload-chunk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"sessionId\":\"5ab5eb30-5b3a-81d5-8008-2a395c720d89\",\"index\":119,\"content\":{\"filename\":\"4h53x5fm1g9nq\",\"size\":-6,\"path\":\"9LL0Fx684x6YH7reOQ\"}}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"sessionId\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c727eaf\\\",\\\"index\\\":-114}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7e33290a-668d-4b76-b1d3-40b466174a4f",
+    "name": "Penpot RPC Add Team To Organization Upload Chunk API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

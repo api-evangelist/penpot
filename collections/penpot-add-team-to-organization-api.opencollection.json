@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Add Team To Organization",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST add-team-to-organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsadd-team-to-organization",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

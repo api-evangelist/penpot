@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "f87570c0-be51-4bc9-befe-f2ab83b16529",
+      "name": "Create Webhook",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dbc1b241-9a51-4b14-b7da-7a3e5fd5d39c",
+          "name": "/create-webhook",
+          "request": {
+            "name": "/create-webhook",
+            "description": {},
+            "url": {
+              "path": [
+                "create-webhook"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"uri\": \"<uri>\",\n  \"mtype\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f7f57d2d-e141-4250-8825-e6216b1c93a5",
+    "name": "Penpot RPC Add Team To Organization Create Webhook API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

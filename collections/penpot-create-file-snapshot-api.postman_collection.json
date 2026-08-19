@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "ca2bb96e-62d3-4d13-9156-3c007032c6fa",
+      "name": "Create File Snapshot",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4987e0fb-4641-48ff-9e41-beed4d55d11a",
+          "name": "/create-file-snapshot",
+          "request": {
+            "name": "/create-file-snapshot",
+            "description": {},
+            "url": {
+              "path": [
+                "create-file-snapshot"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"label\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bb7ce56b-20db-4422-9127-9365b8b2dffc",
+    "name": "Penpot RPC Add Team To Organization Create File Snapshot API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

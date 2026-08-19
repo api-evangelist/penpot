@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Has File Libraries API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Has File Libraries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST has-file-libraries",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodshas-file-libraries",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Checks if the file has libraries. Returns a boolean"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

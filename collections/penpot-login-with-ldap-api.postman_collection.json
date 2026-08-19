@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "8580b6ba-2e69-49db-94cc-3f5b13df1bb1",
+      "name": "Login With Ldap",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a7af4ca1-cd72-4635-b888-b096eb7adbfe",
+          "name": "Performs the authentication using LDAP backend. Only works if LDAP\nis properly configured and enabled with `login-with-ldap` flag.",
+          "request": {
+            "name": "Performs the authentication using LDAP backend. Only works if LDAP\nis properly configured and enabled with `login-with-ldap` flag.",
+            "description": {
+              "content": "Performs the authentication using LDAP backend. Only works if LDAP\nis properly configured and enabled with `login-with-ldap` flag.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "login-with-ldap"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"<email>\",\n  \"password\": \"<string>\",\n  \"invitationToken\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "322a2aed-f35d-4007-ba6a-e827ce852791",
+    "name": "Penpot RPC Add Team To Organization Login With Ldap API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

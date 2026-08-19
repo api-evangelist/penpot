@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "558e649e-311f-445b-928f-5fa2bb9b8197",
+      "name": "Create Team Invitations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "abcab5ee-0d2d-4a97-a0e3-5ed0554ebaa8",
+          "name": "A rpc call that allows to send single or multiple invitations to join the team.\n\nSupports two parameter formats:\n1. emails (set) + role (single role for all emails)\n2. invitations (vector of {:email :role} maps for individual roles)",
+          "request": {
+            "name": "A rpc call that allows to send single or multiple invitations to join the team.\n\nSupports two parameter formats:\n1. emails (set) + role (single role for all emails)\n2. invitations (vector of {:email :role} maps for individual roles)",
+            "description": {
+              "content": "A rpc call that allows to send single or multiple invitations to join the team.\n\nSupports two parameter formats:\n1. emails (set) + role (single role for all emails)\n2. invitations (vector of {:email :role} maps for individual roles)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "create-team-invitations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"emails\": [\n    \"<email>\",\n    \"<email>\"\n  ],\n  \"role\": \"<string>\",\n  \"invitations\": [\n    {\n      \"email\": \"<email>\",\n      \"role\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"role\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "69ca5138-3349-4318-bd3b-125bc262cc8a",
+    "name": "Penpot RPC Add Team To Organization Create Team Invitations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

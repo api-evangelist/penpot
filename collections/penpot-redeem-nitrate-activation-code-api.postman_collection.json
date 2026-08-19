@@ -1,0 +1,120 @@
+{
+  "item": [
+    {
+      "id": "6c387362-696d-4ea1-834f-13025d08eae9",
+      "name": "Redeem Nitrate Activation Code",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b6b144c4-82fc-4f9e-a4b7-436405af2e49",
+          "name": "/redeem-nitrate-activation-code",
+          "request": {
+            "name": "/redeem-nitrate-activation-code",
+            "description": {},
+            "url": {
+              "path": [
+                "redeem-nitrate-activation-code"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"activationCode\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "65700e56-4fde-4ee5-8719-e8ec0fdda1b0",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "redeem-nitrate-activation-code"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"activationCode\":\"afad\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"cancelAt\\\":\\\"2026-06-12T12:36:04.278614142Z\\\"}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bf32e6ad-627d-45d5-8baf-1d077ac1ad88",
+    "name": "Penpot RPC Add Team To Organization Redeem Nitrate Activation Code API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

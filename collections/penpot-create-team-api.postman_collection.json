@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "01b5cc34-a9df-4e93-8a31-9940ce1b8985",
+      "name": "Create Team",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "96f02591-9ac6-4bd5-81ff-dcda648f89fa",
+          "name": "/create-team",
+          "request": {
+            "name": "/create-team",
+            "description": {},
+            "url": {
+              "path": [
+                "create-team"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<uuid>\",\n  \"organizationId\": \"<uuid>\",\n  \"isDefault\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8018bfb0-e103-49e9-9897-2ed0ce30dde9",
+    "name": "Penpot RPC Add Team To Organization Create Team API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "816851ed-c3c3-43cc-a8ca-9c245cf5e54a",
+      "name": "Search Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5ef177e7-7c86-4e5e-a2f7-b8ca011dacd5",
+          "name": "/search-files",
+          "request": {
+            "name": "/search-files",
+            "description": {},
+            "url": {
+              "path": [
+                "search-files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"searchTerm\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b9c6b0df-563c-4483-b3ca-8a9b7a969051",
+    "name": "Penpot RPC Add Team To Organization Search Files API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

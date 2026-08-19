@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "d62b4804-35ff-4f1d-ac6d-12f8c2b975db",
+      "name": "Get Access Tokens",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "089c7378-55c5-4e49-a12d-e6034beb4e0d",
+          "name": "/get-access-tokens",
+          "request": {
+            "name": "/get-access-tokens",
+            "description": {},
+            "url": {
+              "path": [
+                "get-access-tokens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ecd8eb40-b443-4b33-b1df-28ab02ebdec0",
+    "name": "Penpot RPC Add Team To Organization Get Access Tokens API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

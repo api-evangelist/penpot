@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "bba5264a-372f-4e93-9d85-7338e78cdbef",
+      "name": "Unlock File Snapshot",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cda2f2aa-7c73-45f0-8284-923430f1c1e9",
+          "name": "/unlock-file-snapshot",
+          "request": {
+            "name": "/unlock-file-snapshot",
+            "description": {},
+            "url": {
+              "path": [
+                "unlock-file-snapshot"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5ca9d7c8-ed2d-43cc-8cb3-33f967e306bf",
+    "name": "Penpot RPC Add Team To Organization Unlock File Snapshot API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

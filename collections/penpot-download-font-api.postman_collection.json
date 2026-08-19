@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "f3f5159c-bcef-4270-970c-cb79b429354e",
+      "name": "Download Font",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4b4e05ff-c662-436c-b143-61a2f396e8a8",
+          "name": "Download the font file. Returns a http redirect to the asset resource uri.",
+          "request": {
+            "name": "Download the font file. Returns a http redirect to the asset resource uri.",
+            "description": {
+              "content": "Download the font file. Returns a http redirect to the asset resource uri.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "download-font"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "85027214-aea8-4743-9045-8ab7637f7559",
+    "name": "Penpot RPC Add Team To Organization Download Font API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

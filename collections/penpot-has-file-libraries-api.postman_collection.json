@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "0fcfbee7-fa50-4a6b-9c71-231c637e50fb",
+      "name": "Has File Libraries",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0f9a3d4d-d1f4-43ff-8366-cb0f3176d6eb",
+          "name": "Checks if the file has libraries. Returns a boolean",
+          "request": {
+            "name": "Checks if the file has libraries. Returns a boolean",
+            "description": {
+              "content": "Checks if the file has libraries. Returns a boolean",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "has-file-libraries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fc6d089f-d0a4-41d6-8e5d-df1ba9a78007",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "has-file-libraries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"fileId\":\"5ab5eb30-5b3a-81d5-8008-2a395c71bcfe\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"true\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7849a375-2e63-41cc-a2b7-816505c2b4c0",
+    "name": "Penpot RPC Add Team To Organization Has File Libraries API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

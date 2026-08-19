@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "537f5f37-2dfe-42e3-bf23-8d4face3a7b5",
+      "name": "Move Project",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9f563826-52b1-4d39-8524-dcf7acb74a87",
+          "name": "Move projects between teams",
+          "request": {
+            "name": "Move projects between teams",
+            "description": {
+              "content": "Move projects between teams",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "move-project"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"projectId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "acb91a1f-e998-46c0-adef-c3a1d07d9f44",
+    "name": "Penpot RPC Add Team To Organization Move Project API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

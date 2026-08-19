@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get Profiles For File Comments API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Profiles For File Comments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-profiles-for-file-comments",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-profiles-for-file-comments",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves a list of profiles with limited set of properties of all\nparticipants on comment threads of the file."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

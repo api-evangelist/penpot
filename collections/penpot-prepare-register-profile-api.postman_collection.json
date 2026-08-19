@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "d0369a26-7762-4b1e-8e8a-3cc2b26ddd3c",
+      "name": "Prepare Register Profile",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cb05f596-20d6-4576-9e7a-7d16506e0d07",
+          "name": "/prepare-register-profile",
+          "request": {
+            "name": "/prepare-register-profile",
+            "description": {},
+            "url": {
+              "path": [
+                "prepare-register-profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullname\": \"<string>\",\n  \"email\": \"<email>\",\n  \"password\": \"<string>\",\n  \"createWelcomeFile\": \"<boolean>\",\n  \"acceptNewsletterUpdates\": \"<boolean>\",\n  \"invitationToken\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "23a03270-18af-4a74-8dfc-45f5437157f4",
+    "name": "Penpot RPC Add Team To Organization Prepare Register Profile API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

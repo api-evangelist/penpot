@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get Library File References API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Library File References",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-library-file-references",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-library-file-references",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns all the file references that use specified file (library) id."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

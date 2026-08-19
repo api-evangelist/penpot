@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "8587a007-c781-4c52-b150-bbf26db2c97a",
+      "name": "Clone Template",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ce3a9a1b-b8fd-4cb7-9325-40e923fe8b30",
+          "name": "Clone into the specified project the template by its id.",
+          "request": {
+            "name": "Clone into the specified project the template by its id.",
+            "description": {
+              "content": "Clone into the specified project the template by its id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "clone-template"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projectId\": \"<uuid>\",\n  \"templateId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "654e125b-0d9b-44f7-a849-1765e4c1e5ae",
+    "name": "Penpot RPC Add Team To Organization Clone Template API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

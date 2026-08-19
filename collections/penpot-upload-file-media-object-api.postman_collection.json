@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "4f4a4829-50a7-448b-9858-1dcb37b880a9",
+      "name": "Upload File Media Object",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "78c65ec4-2fe0-41c3-b082-1950d8375a2a",
+          "name": "/upload-file-media-object",
+          "request": {
+            "name": "/upload-file-media-object",
+            "description": {},
+            "url": {
+              "path": [
+                "upload-file-media-object"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"isLocal\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"content\": {\n    \"filename\": \"<string>\",\n    \"size\": \"<integer>\",\n    \"path\": \"<unix-path>\",\n    \"mtype\": \"<string>\",\n    \"headers\": {\n      \"key_0\": \"<string>\",\n      \"key_1\": \"<string>\"\n    }\n  },\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0788e55e-9ed5-4d6a-bad2-04ee32ec33d3",
+    "name": "Penpot RPC Add Team To Organization Upload File Media Object API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

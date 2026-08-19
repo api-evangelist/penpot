@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get File Libraries API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get File Libraries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-file-libraries",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-file-libraries",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get libraries used by the specified file."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

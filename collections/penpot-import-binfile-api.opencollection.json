@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Import Binfile API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Import Binfile",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST import-binfile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsimport-binfile",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Import a penpot file in a binary format. If `file-id` is provided,\nan in-place import will be performed instead of creating a new file.\n\nThe in-place imports are only supported for binfile-v3 and when a\n.penpot file only contains one penpot file.\n\nThe file content may be provided either as a multipart `file` upload\nor as an `upload-id` referencing a completed chunked-upload session,\nwhich allows importing files larger than the multipart size limit.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

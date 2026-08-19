@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Update Comment Thread API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Update Comment Thread",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST update-comment-thread",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsupdate-comment-thread",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

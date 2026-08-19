@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Permanently Delete Team Files API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Permanently Delete Team Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST permanently-delete-team-files",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodspermanently-delete-team-files",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Mark the specified files to be deleted immediatelly on the\nspecified team. The team-id on params will be used to filter and\ncheck writable permissons on team."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

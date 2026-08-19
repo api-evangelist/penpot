@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get File Data For Thumbnail API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get File Data For Thumbnail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-file-data-for-thumbnail",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-file-data-for-thumbnail",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves the data for generate the thumbnail of the file. Used\nmainly for render thumbnails on dashboard."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

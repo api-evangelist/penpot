@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "0fca9f1d-ef40-45ba-8b73-267dcdc12f23",
+      "name": "Register Profile",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "be7549b3-7386-4ad8-957d-9c156d9f8b35",
+          "name": "/register-profile",
+          "request": {
+            "name": "/register-profile",
+            "description": {},
+            "url": {
+              "path": [
+                "register-profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"<string>\",\n  \"acceptNewsletterUpdates\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0797d3cb-84e1-47d8-9c94-5c11b1ad3673",
+    "name": "Penpot RPC Add Team To Organization Register Profile API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

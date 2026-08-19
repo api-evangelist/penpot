@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "3c899186-90ac-45fe-a0c0-206983c68f69",
+      "name": "Remove Team From Org",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "40cc30d9-d768-4524-9f8a-6b52050c37f1",
+          "name": "/remove-team-from-org",
+          "request": {
+            "name": "/remove-team-from-org",
+            "description": {},
+            "url": {
+              "path": [
+                "remove-team-from-org"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"organizationId\": \"<uuid>\",\n  \"organizationName\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "437844d8-e843-4f8a-9b63-fe611617ca2a",
+    "name": "Penpot RPC Add Team To Organization Remove Team From Org API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

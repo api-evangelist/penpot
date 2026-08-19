@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "486b1817-b5c0-4a09-af8a-c3fdf81f817f",
+      "name": "Get File Snapshot",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "873d0fd3-d740-4771-a646-33d0f47a36ec",
+          "name": "Retrieve a file bundle with data from a specific snapshot for\nread-only preview. Does not modify any database state.",
+          "request": {
+            "name": "Retrieve a file bundle with data from a specific snapshot for\nread-only preview. Does not modify any database state.",
+            "description": {
+              "content": "Retrieve a file bundle with data from a specific snapshot for\nread-only preview. Does not modify any database state.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-file-snapshot"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"id\": \"<uuid>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b2de3dd2-883e-47ef-9b2f-1fb755c246b2",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "get-file-snapshot"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"fileId\":\"5ab5eb30-5b3a-81d5-8008-2a395c63cc25\",\"id\":\"5ab5eb30-5b3a-81d5-8008-2a395c63cc26\",\"features\":[\"fdata\\/path-data\",\"plugins\\/runtime\",\"variants\\/v1\",\"styles\\/v2\",\"text-editor\\/v2-html-paste\",\"fdata\\/shape-data-type\"]}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"features\\\":[\\\"fdata\\\\/path-data\\\",\\\"layout\\\\/grid\\\",\\\"text-editor\\\\/v2\\\",\\\"render-wasm\\\\/v1\\\",\\\"fdata\\\\/shape-data-type\\\"],\\\"permissions\\\":{\\\"type\\\":\\\"membership\\\",\\\"isOwner\\\":false,\\\"isAdmin\\\":true,\\\"canEdit\\\":false,\\\"canRead\\\":false,\\\"isLogged\\\":false},\\\"hasMediaTrimmed\\\":true,\\\"commentThreadSeqn\\\":131,\\\"name\\\":\\\"TDqL9\\\",\\\"revn\\\":1461050,\\\"modifiedAt\\\":\\\"2026-06-12T12:36:02.577477643Z\\\",\\\"vern\\\":65,\\\"id\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c64d7e9\\\",\\\"isShared\\\":true,\\\"projectId\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c64d7ea\\\",\\\"createdAt\\\":\\\"2026-06-12T12:36:02.575526078Z\\\"}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9fd5154a-39f7-4aee-8e5d-aafbd5362be3",
+    "name": "Penpot RPC Add Team To Organization Get File Snapshot API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

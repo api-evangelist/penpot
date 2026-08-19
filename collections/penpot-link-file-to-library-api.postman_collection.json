@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "2214ac54-e8d2-4081-8b6b-24c2d24f970f",
+      "name": "Link File To Library",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c4a94398-95de-4a3b-9d45-98a470e42a67",
+          "name": "Link a file to a library. Returns the recursive list of libraries used by that library",
+          "request": {
+            "name": "Link a file to a library. Returns the recursive list of libraries used by that library",
+            "description": {
+              "content": "Link a file to a library. Returns the recursive list of libraries used by that library",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "link-file-to-library"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"libraryId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6c67fff6-c929-4320-932c-bf6adba73978",
+    "name": "Penpot RPC Add Team To Organization Link File To Library API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

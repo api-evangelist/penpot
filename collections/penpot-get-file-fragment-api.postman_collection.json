@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "8b5fd674-3bab-4e60-8fba-9df8976607fa",
+      "name": "Get File Fragment",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7f40fe29-ba76-4492-8f2f-7c32093bd853",
+          "name": "Retrieve a file fragment by its ID. Only authenticated users.",
+          "request": {
+            "name": "Retrieve a file fragment by its ID. Only authenticated users.",
+            "description": {
+              "content": "Retrieve a file fragment by its ID. Only authenticated users.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-file-fragment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"fragmentId\": \"<uuid>\",\n  \"shareId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "07e7a937-2c0f-42a2-8ff2-cc1a64f9015e",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "get-file-fragment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"fileId\":\"5ab5eb30-5b3a-81d5-8008-2a395c636297\",\"fragmentId\":\"5ab5eb30-5b3a-81d5-8008-2a395c639705\",\"shareId\":\"5ab5eb30-5b3a-81d5-8008-2a395c639706\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"id\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c639707\\\",\\\"fileId\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c639708\\\",\\\"createdAt\\\":\\\"2026-06-12T12:36:02.524580603Z\\\",\\\"content\\\":\\\"mwgia\\\"}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "43d2e3ba-52a2-4d5f-ab87-2f2a92f50525",
+    "name": "Penpot RPC Add Team To Organization Get File Fragment API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get Unread Comment Threads API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Unread Comment Threads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-unread-comment-threads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-unread-comment-threads",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

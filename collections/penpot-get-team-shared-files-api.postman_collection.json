@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "54290918-7d27-40c2-afcd-ebdfe70d83bd",
+      "name": "Get Team Shared Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "22524d8a-e72e-4b23-88db-db15ceff8883",
+          "name": "Get all file (libraries) for the specified team.",
+          "request": {
+            "name": "Get all file (libraries) for the specified team.",
+            "description": {
+              "content": "Get all file (libraries) for the specified team.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-team-shared-files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fca5bfcd-4e2f-4a0c-8899-894a96436294",
+    "name": "Penpot RPC Add Team To Organization Get Team Shared Files API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

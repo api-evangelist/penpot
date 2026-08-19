@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "bfbb9d70-b925-4fc1-bb24-853812af47c4",
+      "name": "Delete File Snapshot",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a2463419-9ea9-46b3-abf7-b44ba03acc60",
+          "name": "/delete-file-snapshot",
+          "request": {
+            "name": "/delete-file-snapshot",
+            "description": {},
+            "url": {
+              "path": [
+                "delete-file-snapshot"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b4ea4117-8033-42de-a2ea-27d158eef17b",
+    "name": "Penpot RPC Add Team To Organization Delete File Snapshot API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

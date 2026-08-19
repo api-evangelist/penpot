@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Unlink File From Library API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Unlink File From Library",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST unlink-file-from-library",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsunlink-file-from-library",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

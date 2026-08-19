@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "fa4677d1-a591-462b-b159-3f887fa32e96",
+      "name": "Assemble File Media Object",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ea031eea-57ab-4ea5-a717-5b57972659a8",
+          "name": "/assemble-file-media-object",
+          "request": {
+            "name": "/assemble-file-media-object",
+            "description": {},
+            "url": {
+              "path": [
+                "assemble-file-media-object"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sessionId\": \"<uuid>\",\n  \"fileId\": \"<uuid>\",\n  \"isLocal\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"mtype\": \"<string>\",\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "211a43f0-b9e8-4dd1-bcc4-9265ed7d42cf",
+    "name": "Penpot RPC Add Team To Organization Assemble File Media Object API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

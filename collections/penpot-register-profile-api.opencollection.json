@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Register Profile API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Register Profile",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST register-profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsregister-profile",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

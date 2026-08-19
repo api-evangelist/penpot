@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "516277fb-3c51-4737-b550-4c15e956d8f1",
+      "name": "Restore Deleted Team Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "42692f76-e937-495e-9993-3da5a8f2ed7c",
+          "name": "Removes the deletion mark from the specified files (and respective\nprojects) on the specified team.",
+          "request": {
+            "name": "Removes the deletion mark from the specified files (and respective\nprojects) on the specified team.",
+            "description": {
+              "content": "Removes the deletion mark from the specified files (and respective\nprojects) on the specified team.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "restore-deleted-team-files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"ids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bd3b68d9-229b-4eed-a8a6-87fa50e2d97f",
+    "name": "Penpot RPC Add Team To Organization Restore Deleted Team Files API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get File Snapshots API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get File Snapshots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-file-snapshots",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-file-snapshots",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

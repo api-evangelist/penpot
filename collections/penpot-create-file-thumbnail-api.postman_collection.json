@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "a907b34a-dc82-48c6-a24b-62f5c7a8befd",
+      "name": "Create File Thumbnail",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cdfbcd25-fa30-4f58-9249-18012ba65e4a",
+          "name": "Creates or updates the file thumbnail. Mainly used for paint the\ngrid thumbnails.",
+          "request": {
+            "name": "Creates or updates the file thumbnail. Mainly used for paint the\ngrid thumbnails.",
+            "description": {
+              "content": "Creates or updates the file thumbnail. Mainly used for paint the\ngrid thumbnails.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "create-file-thumbnail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"revn\": \"<integer>\",\n  \"media\": {\n    \"filename\": \"<string>\",\n    \"size\": \"<integer>\",\n    \"path\": \"<unix-path>\",\n    \"mtype\": \"<string>\",\n    \"headers\": {\n      \"key_0\": \"<string>\",\n      \"key_1\": \"<string>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7a38316b-99ab-49a5-ac70-cac009759d0f",
+    "name": "Penpot RPC Add Team To Organization Create File Thumbnail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

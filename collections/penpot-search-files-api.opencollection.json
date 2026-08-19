@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Search Files API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST search-files",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodssearch-files",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

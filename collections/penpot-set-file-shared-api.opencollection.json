@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Set File Shared API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Set File Shared",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST set-file-shared",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsset-file-shared",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

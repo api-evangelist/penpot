@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Clone File Media Object API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Clone File Media Object",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST clone-file-media-object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsclone-file-media-object",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

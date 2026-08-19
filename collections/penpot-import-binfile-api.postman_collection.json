@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "6da8b019-5ec6-4232-aa3b-2280f670ca9b",
+      "name": "Import Binfile",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8546602a-7feb-44c5-b999-d1899ce5bb09",
+          "name": "Import a penpot file in a binary format. If `file-id` is provided,\nan in-place import will be performed instead of creating a new file.\n\nThe in-place imports are only supported for binfile-v3 and when a\n.penpot file only contains one penpot file.\n\nThe file content may be provided either as a multipart `file` upload\nor as an `upload-id` referencing a completed chunked-upload session,\nwhich allows importing files larger than the multipart size limit.\n",
+          "request": {
+            "name": "Import a penpot file in a binary format. If `file-id` is provided,\nan in-place import will be performed instead of creating a new file.\n\nThe in-place imports are only supported for binfile-v3 and when a\n.penpot file only contains one penpot file.\n\nThe file content may be provided either as a multipart `file` upload\nor as an `upload-id` referencing a completed chunked-upload session,\nwhich allows importing files larger than the multipart size limit.\n",
+            "description": {
+              "content": "Import a penpot file in a binary format. If `file-id` is provided,\nan in-place import will be performed instead of creating a new file.\n\nThe in-place imports are only supported for binfile-v3 and when a\n.penpot file only contains one penpot file.\n\nThe file content may be provided either as a multipart `file` upload\nor as an `upload-id` referencing a completed chunked-upload session,\nwhich allows importing files larger than the multipart size limit.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "import-binfile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"projectId\": \"<uuid>\",\n  \"fileId\": \"<uuid>\",\n  \"version\": \"<integer>\",\n  \"file\": {\n    \"filename\": \"<string>\",\n    \"size\": \"<integer>\",\n    \"path\": \"<unix-path>\",\n    \"mtype\": \"<string>\",\n    \"headers\": {\n      \"key_0\": \"<string>\",\n      \"key_1\": \"<string>\"\n    }\n  },\n  \"uploadId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e686a82a-71e5-44f8-a204-53c29550d2ba",
+    "name": "Penpot RPC Add Team To Organization Import Binfile API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

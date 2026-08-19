@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "90f850b8-feb8-4990-8969-62c30ee55e59",
+      "name": "Create Team With Invitations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "21c504bd-df0a-48a8-99db-efe829b8dac7",
+          "name": "/create-team-with-invitations",
+          "request": {
+            "name": "/create-team-with-invitations",
+            "description": {},
+            "url": {
+              "path": [
+                "create-team-with-invitations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<email>\",\n    \"<email>\"\n  ],\n  \"role\": \"<string>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "dc52e6ae-c967-47be-8f4d-4f67376c7885",
+    "name": "Penpot RPC Add Team To Organization Create Team With Invitations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

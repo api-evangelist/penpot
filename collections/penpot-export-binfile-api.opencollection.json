@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Export Binfile API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Export Binfile",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST export-binfile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsexport-binfile",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Export a penpot file in a binary format."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

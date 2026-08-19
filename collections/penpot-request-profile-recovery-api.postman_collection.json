@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "073715c7-f3ac-46d0-822e-5bbef9474573",
+      "name": "Request Profile Recovery",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9d3bd936-2c92-4741-9503-30176039092e",
+          "name": "/request-profile-recovery",
+          "request": {
+            "name": "/request-profile-recovery",
+            "description": {},
+            "url": {
+              "path": [
+                "request-profile-recovery"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"<email>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e91b024b-47ca-4f6b-8d75-8fb0cf52b4a6",
+    "name": "Penpot RPC Add Team To Organization Request Profile Recovery API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

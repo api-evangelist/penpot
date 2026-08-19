@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Login With Ldap API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Login With Ldap",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST login-with-ldap",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodslogin-with-ldap",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Performs the authentication using LDAP backend. Only works if LDAP\nis properly configured and enabled with `login-with-ldap` flag."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

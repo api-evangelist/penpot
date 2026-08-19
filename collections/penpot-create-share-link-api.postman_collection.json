@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "197928b7-ea8b-4351-a7c3-2f5f58f9dfcd",
+      "name": "Create Share Link",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "54525f22-60c7-4ea1-b3bc-c4b5d807c678",
+          "name": "Creates a share-link object.\n\nShare links are resources that allows external users access to specific\npages of a file with specific permissions (who-comment and who-inspect).",
+          "request": {
+            "name": "Creates a share-link object.\n\nShare links are resources that allows external users access to specific\npages of a file with specific permissions (who-comment and who-inspect).",
+            "description": {
+              "content": "Creates a share-link object.\n\nShare links are resources that allows external users access to specific\npages of a file with specific permissions (who-comment and who-inspect).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "create-share-link"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"whoComment\": \"<string>\",\n  \"whoInspect\": \"<string>\",\n  \"pages\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6fbdf934-a25b-4b49-b69c-e5c8d65cea35",
+    "name": "Penpot RPC Add Team To Organization Create Share Link API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

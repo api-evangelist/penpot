@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Update Team Invitation Role API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Update Team Invitation Role",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST update-team-invitation-role",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsupdate-team-invitation-role",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "2fb51df7-2d5a-477b-8157-6eb9a1fd501e",
+      "name": "Permanently Delete Team Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "07a914d8-b66d-4a48-ad1f-56f3af015326",
+          "name": "Mark the specified files to be deleted immediatelly on the\nspecified team. The team-id on params will be used to filter and\ncheck writable permissons on team.",
+          "request": {
+            "name": "Mark the specified files to be deleted immediatelly on the\nspecified team. The team-id on params will be used to filter and\ncheck writable permissons on team.",
+            "description": {
+              "content": "Mark the specified files to be deleted immediatelly on the\nspecified team. The team-id on params will be used to filter and\ncheck writable permissons on team.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "permanently-delete-team-files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"ids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0783f8e3-ba59-4a54-a441-936eac484b88",
+    "name": "Penpot RPC Add Team To Organization Permanently Delete Team Files API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

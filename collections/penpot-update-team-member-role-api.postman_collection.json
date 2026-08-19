@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "93266057-4474-4ff7-b8e5-39594cf1a3e8",
+      "name": "Update Team Member Role",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "475ff18f-bd77-4eaa-bccc-23f58a20e8af",
+          "name": "/update-team-member-role",
+          "request": {
+            "name": "/update-team-member-role",
+            "description": {},
+            "url": {
+              "path": [
+                "update-team-member-role"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"memberId\": \"<uuid>\",\n  \"role\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c58fd31f-5f98-45a5-9d69-8e52e59887ff",
+    "name": "Penpot RPC Add Team To Organization Update Team Member Role API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

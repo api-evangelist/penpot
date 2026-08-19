@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "a207e1a4-786d-4e49-8ed0-ca26c474aab8",
+      "name": "Mark All Threads As Read",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2ee840dd-1e27-41eb-ae21-cf8be2899c13",
+          "name": "/mark-all-threads-as-read",
+          "request": {
+            "name": "/mark-all-threads-as-read",
+            "description": {},
+            "url": {
+              "path": [
+                "mark-all-threads-as-read"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"threads\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c0f7ee94-8936-4fa9-8e26-99884a075d85",
+    "name": "Penpot RPC Add Team To Organization Mark All Threads As Read API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Update Team Photo API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Update Team Photo",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST update-team-photo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsupdate-team-photo",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

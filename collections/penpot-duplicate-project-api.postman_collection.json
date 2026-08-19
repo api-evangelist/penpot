@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "9b57324d-786b-48f4-afb4-6b8d38f90f25",
+      "name": "Duplicate Project",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6cc829aa-8acf-474d-b474-ce925cbfc865",
+          "name": "Duplicate an entire project with all the files",
+          "request": {
+            "name": "Duplicate an entire project with all the files",
+            "description": {
+              "content": "Duplicate an entire project with all the files",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "duplicate-project"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projectId\": \"<uuid>\",\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1a7d1e19-2c35-473c-afea-131953a4a54c",
+    "name": "Penpot RPC Add Team To Organization Duplicate Project API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "c2dc3a69-e11e-42cf-9903-dff462b3e4bd",
+      "name": "Update Webhook",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "780964bb-7833-49a9-aec4-468f881e136d",
+          "name": "/update-webhook",
+          "request": {
+            "name": "/update-webhook",
+            "description": {},
+            "url": {
+              "path": [
+                "update-webhook"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\",\n  \"uri\": \"<uri>\",\n  \"mtype\": \"<string>\",\n  \"isActive\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e283e929-e0f2-4a87-af1d-b5646933f47e",
+    "name": "Penpot RPC Add Team To Organization Update Webhook API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Restore File Snapshot API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Restore File Snapshot",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST restore-file-snapshot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsrestore-file-snapshot",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

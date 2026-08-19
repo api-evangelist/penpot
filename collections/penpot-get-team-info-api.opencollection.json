@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get Team Info API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Team Info",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-team-info",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-team-info",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve minimal team info by its ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

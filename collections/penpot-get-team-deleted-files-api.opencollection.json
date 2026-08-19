@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get Team Deleted Files API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Team Deleted Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-team-deleted-files",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-team-deleted-files",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

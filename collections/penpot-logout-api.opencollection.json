@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Logout API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Logout",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST logout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodslogout",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Clears the authentication cookie and logout the current session."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

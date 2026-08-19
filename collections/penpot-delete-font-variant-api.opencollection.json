@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Delete Font Variant API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Delete Font Variant",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST delete-font-variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsdelete-font-variant",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

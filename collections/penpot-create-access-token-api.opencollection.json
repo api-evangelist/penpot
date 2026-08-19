@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Create Access Token API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Create Access Token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST create-access-token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodscreate-access-token",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

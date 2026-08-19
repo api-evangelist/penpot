@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "da45876e-15cc-4af2-aaf2-e5716e624a97",
+      "name": "Get Current Mcp Token",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "97303fb1-43d0-4449-9cf8-123309245d04",
+          "name": "/get-current-mcp-token",
+          "request": {
+            "name": "/get-current-mcp-token",
+            "description": {},
+            "url": {
+              "path": [
+                "get-current-mcp-token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "593ffeeb-f1a9-472e-af12-08d911bcfb56",
+    "name": "Penpot RPC Add Team To Organization Get Current Mcp Token API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "97d3c6d0-d2e0-487e-9496-295c54ce0e4f",
+      "name": "Delete Font Variant",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fbc1ffab-bd38-4b33-b4d4-76c25356d7b8",
+          "name": "/delete-font-variant",
+          "request": {
+            "name": "/delete-font-variant",
+            "description": {},
+            "url": {
+              "path": [
+                "delete-font-variant"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8e46ff5e-abf7-49c7-a86e-3f6415cd4c18",
+    "name": "Penpot RPC Add Team To Organization Delete Font Variant API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

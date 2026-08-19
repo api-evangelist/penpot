@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "df610ffd-dc8f-4d86-87fe-c8866abd670c",
+      "name": "Get Team Deleted Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7bcd6803-f167-487e-af52-39d74f67fb86",
+          "name": "/get-team-deleted-files",
+          "request": {
+            "name": "/get-team-deleted-files",
+            "description": {},
+            "url": {
+              "path": [
+                "get-team-deleted-files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6717bdc9-b3eb-46ba-8ce6-8a795c256dfb",
+    "name": "Penpot RPC Add Team To Organization Get Team Deleted Files API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

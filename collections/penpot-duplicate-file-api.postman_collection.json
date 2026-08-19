@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "9804d808-ea57-4f1c-9595-8e76c18a8375",
+      "name": "Duplicate File",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "034c85cc-736e-4501-86d7-1b8d9e30c8f3",
+          "name": "Duplicate a single file in the same team.",
+          "request": {
+            "name": "Duplicate a single file in the same team.",
+            "description": {
+              "content": "Duplicate a single file in the same team.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "duplicate-file"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "68ba2bbf-29b3-42b6-895c-c622b56f4ab2",
+    "name": "Penpot RPC Add Team To Organization Duplicate File API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

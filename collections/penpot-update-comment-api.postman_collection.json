@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "e2437135-7547-4bf8-98f0-1b2a9161b2f4",
+      "name": "Update Comment",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "df581fcf-1f6a-4faa-a1eb-6710c01ee002",
+          "name": "/update-comment",
+          "request": {
+            "name": "/update-comment",
+            "description": {},
+            "url": {
+              "path": [
+                "update-comment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\",\n  \"content\": \"<string>\",\n  \"shareId\": \"<uuid>\",\n  \"mentions\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a42bf02e-4063-4c49-9e70-f0f96beb6370",
+    "name": "Penpot RPC Add Team To Organization Update Comment API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

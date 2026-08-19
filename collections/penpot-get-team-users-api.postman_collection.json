@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "f02a0496-39e8-4ae5-9153-8455822557d9",
+      "name": "Get Team Users",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c93db00-5eb9-4110-bf69-f297de1bc6b6",
+          "name": "Get team users by team-id or by file-id",
+          "request": {
+            "name": "Get team users by team-id or by file-id",
+            "description": {
+              "content": "Get team users by team-id or by file-id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-team-users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"fileId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d34f65f7-6dd8-4f30-bebc-2d012d1caa37",
+    "name": "Penpot RPC Add Team To Organization Get Team Users API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

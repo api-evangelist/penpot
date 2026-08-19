@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "bb64c3f1-3791-49a8-b3e0-8ae0c4ef7b12",
+      "name": "Delete Access Token",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "052f73db-8e71-47e4-9f78-39b62cff79fb",
+          "name": "/delete-access-token",
+          "request": {
+            "name": "/delete-access-token",
+            "description": {},
+            "url": {
+              "path": [
+                "delete-access-token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "118ac0fb-b949-4e5d-8f71-ca72f016d68b",
+    "name": "Penpot RPC Add Team To Organization Delete Access Token API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

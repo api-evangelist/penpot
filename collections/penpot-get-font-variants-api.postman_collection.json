@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "63330f9d-5460-420c-9ff1-0629b977232b",
+      "name": "Get Font Variants",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c60f331-c01e-4f8b-8ff2-4ebcc253cd5b",
+          "name": "/get-font-variants",
+          "request": {
+            "name": "/get-font-variants",
+            "description": {},
+            "url": {
+              "path": [
+                "get-font-variants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"fileId\": \"<uuid>\",\n  \"projectId\": \"<uuid>\",\n  \"shareId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "eea2a83a-6b3f-490a-a311-96633fbaf487",
+    "name": "Penpot RPC Add Team To Organization Get Font Variants API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

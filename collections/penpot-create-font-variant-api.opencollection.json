@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Create Font Variant API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Create Font Variant",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST create-font-variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodscreate-font-variant",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Upload a font variant.  Font data may be provided either as a\nTransit-encoded `:data` map (keyed by mime-type) for small fonts, or\nas an `:uploads` map (keyed by mime-type, values are upload-session\nUUIDs from the chunked-upload API) for large fonts.  Exactly one of\nthe two must be present."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

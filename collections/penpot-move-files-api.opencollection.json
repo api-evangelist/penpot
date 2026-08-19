@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Move Files API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Move Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST move-files",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsmove-files",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Move a set of files from one project to other."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

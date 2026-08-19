@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "203ecc57-5e62-4f31-8840-05ac27b953cb",
+      "name": "Create File",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "79c44063-b21e-4c0a-9f24-5fde32030a20",
+          "name": "/create-file",
+          "request": {
+            "name": "/create-file",
+            "description": {},
+            "url": {
+              "path": [
+                "create-file"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"projectId\": \"<uuid>\",\n  \"id\": \"<uuid>\",\n  \"isShared\": \"<boolean>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e88f501b-1fde-4b0d-b9a6-e837570de5c3",
+    "name": "Penpot RPC Add Team To Organization Create File API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

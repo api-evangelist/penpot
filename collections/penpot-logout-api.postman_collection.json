@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "094aa7c7-dd83-4043-8a6b-24983294ae88",
+      "name": "Logout",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8a2e99ca-afc7-4ac0-939e-625720595365",
+          "name": "Clears the authentication cookie and logout the current session.",
+          "request": {
+            "name": "Clears the authentication cookie and logout the current session.",
+            "description": {
+              "content": "Clears the authentication cookie and logout the current session.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "logout"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"profileId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1b678678-4dee-41ef-9266-f4e86cf5fa6d",
+    "name": "Penpot RPC Add Team To Organization Logout API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Mark All Threads As Read API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Mark All Threads As Read",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST mark-all-threads-as-read",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsmark-all-threads-as-read",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

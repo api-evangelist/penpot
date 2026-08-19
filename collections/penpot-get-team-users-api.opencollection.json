@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get Team Users API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Team Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-team-users",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-team-users",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get team users by team-id or by file-id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

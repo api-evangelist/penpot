@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "d9da6b21-55ba-4901-82ec-f344db9c9ec8",
+      "name": "Get File Summary",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "073efcf7-3f9e-4c24-9dc0-6ea58dc280e9",
+          "name": "Retrieve a file summary by its ID. Only authenticated users.",
+          "request": {
+            "name": "Retrieve a file summary by its ID. Only authenticated users.",
+            "description": {
+              "content": "Retrieve a file summary by its ID. Only authenticated users.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-file-summary"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7d94f92a-e605-4186-a0f3-0ddea4923b32",
+    "name": "Penpot RPC Add Team To Organization Get File Summary API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

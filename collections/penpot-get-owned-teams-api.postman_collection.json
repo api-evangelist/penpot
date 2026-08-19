@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "83dc8325-ccde-4a4f-a1a8-24e23b4ceebc",
+      "name": "Get Owned Teams",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "37c492a9-4712-41fa-ba8f-b3f85fefb821",
+          "name": "/get-owned-teams",
+          "request": {
+            "name": "/get-owned-teams",
+            "description": {},
+            "url": {
+              "path": [
+                "get-owned-teams"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fb82f21f-8cae-4f87-a378-1c65730f7d7d",
+    "name": "Penpot RPC Add Team To Organization Get Owned Teams API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

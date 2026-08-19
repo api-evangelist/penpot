@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "5d84d1d9-cdff-4836-9229-0ada2a034232",
+      "name": "Update Comment Thread Frame",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d1cb72bf-da15-425f-91f8-840d1052443f",
+          "name": "/update-comment-thread-frame",
+          "request": {
+            "name": "/update-comment-thread-frame",
+            "description": {},
+            "url": {
+              "path": [
+                "update-comment-thread-frame"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\",\n  \"frameId\": \"<uuid>\",\n  \"shareId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9c2f9709-0ca2-4bf3-b941-57c17231c966",
+    "name": "Penpot RPC Add Team To Organization Update Comment Thread Frame API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "5a37935b-4906-49fa-ae56-644b3ca2de71",
+      "name": "Leave Org",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "995c8a40-3e45-48df-a285-515da448fbf2",
+          "name": "/leave-org",
+          "request": {
+            "name": "/leave-org",
+            "description": {},
+            "url": {
+              "path": [
+                "leave-org"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\",\n  \"name\": \"<string>\",\n  \"defaultTeamId\": \"<uuid>\",\n  \"teamsToDelete\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"teamsToLeave\": [\n    {\n      \"id\": \"<uuid>\",\n      \"reassignTo\": \"<uuid>\"\n    },\n    {\n      \"id\": \"<uuid>\",\n      \"reassignTo\": \"<uuid>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b9fa4362-5d76-4f8d-b3be-533fa93966cd",
+    "name": "Penpot RPC Add Team To Organization Leave Org API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

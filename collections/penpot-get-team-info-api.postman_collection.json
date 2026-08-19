@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "a3c69680-24b5-4d72-a885-fcac43750224",
+      "name": "Get Team Info",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c0a49278-eefc-4adf-8dfe-84ef4bd51b45",
+          "name": "Retrieve minimal team info by its ID.",
+          "request": {
+            "name": "Retrieve minimal team info by its ID.",
+            "description": {
+              "content": "Retrieve minimal team info by its ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-team-info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\",\n  \"fileId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "55f5ee86-20e4-4cea-b314-d2f917deb683",
+    "name": "Penpot RPC Add Team To Organization Get Team Info API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "2b8409b4-9afe-4e56-9c9e-eebaa9bfceb9",
+      "name": "Create Font Variant",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cad175ba-cd1e-4618-ab31-28b4d9607b2e",
+          "name": "Upload a font variant.  Font data may be provided either as a\nTransit-encoded `:data` map (keyed by mime-type) for small fonts, or\nas an `:uploads` map (keyed by mime-type, values are upload-session\nUUIDs from the chunked-upload API) for large fonts.  Exactly one of\nthe two must be present.",
+          "request": {
+            "name": "Upload a font variant.  Font data may be provided either as a\nTransit-encoded `:data` map (keyed by mime-type) for small fonts, or\nas an `:uploads` map (keyed by mime-type, values are upload-session\nUUIDs from the chunked-upload API) for large fonts.  Exactly one of\nthe two must be present.",
+            "description": {
+              "content": "Upload a font variant.  Font data may be provided either as a\nTransit-encoded `:data` map (keyed by mime-type) for small fonts, or\nas an `:uploads` map (keyed by mime-type, values are upload-session\nUUIDs from the chunked-upload API) for large fonts.  Exactly one of\nthe two must be present.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "create-font-variant"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"teamId\": \"<uuid>\",\n  \"fontId\": \"<uuid>\",\n  \"fontFamily\": \"<string>\",\n  \"fontWeight\": \"<string>\",\n  \"fontStyle\": \"<string>\",\n  \"data\": {\n    \"key_0\": {},\n    \"key_1\": {}\n  },\n  \"uploads\": {\n    \"key_0\": \"<uuid>\",\n    \"key_1\": \"<uuid>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "63117c5a-fb52-4566-87b4-c1f8f9a3f25d",
+    "name": "Penpot RPC Add Team To Organization Create Font Variant API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

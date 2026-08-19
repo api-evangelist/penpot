@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "95fcb803-3b51-4374-9dd2-d2c207627594",
+      "name": "Push Audit Events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0dfa65e1-74ad-4bf7-bc4e-14023ea418d0",
+          "name": "/push-audit-events",
+          "request": {
+            "name": "/push-audit-events",
+            "description": {},
+            "url": {
+              "path": [
+                "push-audit-events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"events\": [\n    {\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"props\": {\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {},\n        \"key_3\": {}\n      },\n      \"timestamp\": \"<iso>\",\n      \"context\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"props\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"timestamp\": \"<iso>\",\n      \"context\": {\n        \"key_0\": {}\n      }\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "29d35ac3-26f3-4ab9-bad2-0f547dc0e40b",
+    "name": "Penpot RPC Add Team To Organization Push Audit Events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "item": [
+    {
+      "id": "e656d327-5593-4f5a-8ea1-3d00936f63fc",
+      "name": "Create Team Access Request",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "debca8b5-b5f9-44a8-a1a2-c3421d03e921",
+          "name": "A rpc call that allow to request for an invitations to join the team.",
+          "request": {
+            "name": "A rpc call that allow to request for an invitations to join the team.",
+            "description": {
+              "content": "A rpc call that allow to request for an invitations to join the team.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "create-team-access-request"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileId\": \"<uuid>\",\n  \"teamId\": \"<uuid>\",\n  \"isViewer\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9e3012c8-1e14-4f1e-9bde-36fb37f594b8",
+    "name": "Penpot RPC Add Team To Organization Create Team Access Request API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

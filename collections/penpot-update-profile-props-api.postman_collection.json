@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "4e08f4e5-9eb9-4676-b5a8-12ac4285da92",
+      "name": "Update Profile Props",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dfbace8a-4302-4376-9270-a81782e53515",
+          "name": "/update-profile-props",
+          "request": {
+            "name": "/update-profile-props",
+            "description": {},
+            "url": {
+              "path": [
+                "update-profile-props"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"props\": {\n    \"plugins\": {\n      \"ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"data\": {\n        \"key_0\": {\n          \"pluginId\": \"<string>\",\n          \"name\": \"<string>\",\n          \"host\": \"<string>\",\n          \"code\": \"<string>\",\n          \"permissions\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"description\": \"<string>\",\n          \"icon\": \"<string>\"\n        },\n        \"key_1\": {\n          \"pluginId\": \"<string>\",\n          \"name\": \"<string>\",\n          \"host\": \"<string>\",\n          \"code\": \"<string>\",\n          \"permissions\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"description\": \"<string>\",\n          \"icon\": \"<string>\"\n        }\n      }\n    },\n    \"renderer\": \"<string>\",\n    \"mcpEnabled\": \"<boolean>\",\n    \"newsletterUpdates\": \"<boolean>\",\n    \"newsletterNews\": \"<boolean>\",\n    \"onboardingTeamId\": \"<uuid>\",\n    \"onboardingViewed\": \"<boolean>\",\n    \"v2InfoShown\": \"<boolean>\",\n    \"welcomeFileId\": \"<boolean>\",\n    \"releaseNotesViewed\": \"<string>\",\n    \"notifications\": {\n      \"dashboardComments\": \"<string>\",\n      \"emailComments\": \"<string>\",\n      \"emailInvites\": \"<string>\"\n    },\n    \"workspaceVisited\": \"<boolean>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b7b8e2d6-c398-42de-b58f-7edbd3fa9284",
+    "name": "Penpot RPC Add Team To Organization Update Profile Props API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

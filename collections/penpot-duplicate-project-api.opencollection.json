@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Duplicate Project API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Duplicate Project",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST duplicate-project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsduplicate-project",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Duplicate an entire project with all the files"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

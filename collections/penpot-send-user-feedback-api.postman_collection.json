@@ -1,0 +1,72 @@
+{
+  "item": [
+    {
+      "id": "53ea80bf-8d0d-4222-9bbb-877d4efa11cf",
+      "name": "Send User Feedback",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5ba19d5e-7769-43c7-b6e4-b4d06fad4bcf",
+          "name": "/send-user-feedback",
+          "request": {
+            "name": "/send-user-feedback",
+            "description": {},
+            "url": {
+              "path": [
+                "send-user-feedback"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"type\": \"<string>\",\n  \"errorHref\": \"<string>\",\n  \"errorReport\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b48a2fe9-704b-4b4f-ba02-3044c9cb9ea5",
+    "name": "Penpot RPC Add Team To Organization Send User Feedback API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

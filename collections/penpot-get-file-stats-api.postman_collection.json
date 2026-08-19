@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "62b4402d-e1b3-4d30-8cf3-533aecc13f63",
+      "name": "Get File Stats",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "95f8c00e-847e-4502-9703-2b0ded9bb9b3",
+          "name": "Return aggregate statistics for a single file: page count, shape\ncounts by type, component/color/typography counts, and inbound and\noutbound library reference counts. Cheap alternative to `get-file`\nwhen only metrics are needed.",
+          "request": {
+            "name": "Return aggregate statistics for a single file: page count, shape\ncounts by type, component/color/typography counts, and inbound and\noutbound library reference counts. Cheap alternative to `get-file`\nwhen only metrics are needed.",
+            "description": {
+              "content": "Return aggregate statistics for a single file: page count, shape\ncounts by type, component/color/typography counts, and inbound and\noutbound library reference counts. Cheap alternative to `get-file`\nwhen only metrics are needed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "get-file-stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "00deafa0-c24c-4ab9-8205-58cda4010495",
+              "name": "A default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "get-file-stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"id\":\"5ab5eb30-5b3a-81d5-8008-2a395c77c4e8\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"pageCount\\\":39649,\\\"updatedAt\\\":\\\"2026-06-12T12:36:02.607049080Z\\\",\\\"shapeCounts\\\":{\\\"total\\\":8,\\\"byType\\\":{\\\"+M:z+v\\\":88941,\\\"qW!q*\\\":45022,\\\"Z1.-e\\\":35046,\\\"xDM*_\\\":3654598,\\\"ce1UdL?_\\\":0,\\\"Zxga9+8!\\\":1475687,\\\"c.\\\":3,\\\"!.K_\\\":125507,\\\"QbK.-d\\\":1590053,\\\"+a!?\\\":13,\\\"aA\\\":2,\\\"-\\\":15435876,\\\"!e+4\\\":299422,\\\"-c2P.P2x\\\":310216,\\\"Y\\\":0,\\\"?\\\":71540,\\\"E?!\\\":18204,\\\"g_x+Dep\\\":2747150,\\\"X+v\\\":5,\\\"!L+3.F\\\":304148327,\\\"fD*x\\\":2,\\\".W\\\":162,\\\"CizN\\\":63800,\\\"z9+?zO\\\":124211610,\\\"?Q+-c\\\":0,\\\"M:5H\\\":1796412,\\\"rD\\\":847,\\\"xYR2\\\":1032277,\\\"?P!MAA-k\\\":2}},\\\"fileId\\\":\\\"5ab5eb30-5b3a-81d5-8008-2a395c7809bd\\\",\\\"deletedComponentCount\\\":48367275,\\\"revn\\\":6013337,\\\"referencedByCount\\\":0,\\\"typographyCount\\\":18,\\\"componentCount\\\":1348,\\\"colorCount\\\":3,\\\"libraryCount\\\":14}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://design.penpot.app/api/main/methods",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "03ede1fd-b09e-4799-a7b2-04e906dee4c2",
+    "name": "Penpot RPC Add Team To Organization Get File Stats API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Penpot RPC-style REST API for projects, files, pages, components, and design assets.\n\nContact Support:\n Name: Penpot Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Clone Template API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Clone Template",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST clone-template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsclone-template",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Clone into the specified project the template by its id."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

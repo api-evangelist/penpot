@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Get Page API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Page",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST get-page",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsget-page",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves the page data from file and returns it. If no page-id is\nspecified, the first page will be returned. If object-id is\nspecified, only that object and its children will be returned in the\npage objects data structure.\n\nIf you specify the object-id, the page-id parameter becomes\nmandatory.\n\nMainly used for rendering purposes on the exporter. It does not\naccepts client features."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

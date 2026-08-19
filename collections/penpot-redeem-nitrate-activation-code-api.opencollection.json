@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Penpot RPC Add Team To Organization Redeem Nitrate Activation Code API",
+    "version": "2.16"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Redeem Nitrate Activation Code",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST redeem-nitrate-activation-code",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://design.penpot.app/api/main/methodsredeem-nitrate-activation-code",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
