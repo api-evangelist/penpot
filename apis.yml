@@ -31,6 +31,15 @@ specificationVersion: '0.23'
 tags:
   - Design
   - Prototyping
+  - Open-Source
+  - Self-Hosted
+  - Figma Alternative
+  - UI Design
+  - Collaboration
+  - Design Systems
+tags_raw:
+  - Design
+  - Prototyping
   - Open Source
   - Self-Hosted
   - Figma Alternative
@@ -47,6 +56,10 @@ apis:
   humanURL: https://help.penpot.app/technical-guide/integration/
   baseURL: https://design.penpot.app/api/rpc/command/
   tags:
+  - Webhook
+  - Event
+  - Automation
+  tags_raw:
   - Webhooks
   - Events
   - Automation
