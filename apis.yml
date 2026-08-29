@@ -11,6 +11,18 @@ description: >
   server for AI-assisted design-to-code workflows, making it a flexible
   integration target for modern development toolchains.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
@@ -2866,6 +2878,9 @@ apis:
   - type: JSONLD
     url: json-ld/penpot-context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/penpot-capability-edges.yml
+    name: Penpot Business Capability Map
   - type: AgenticAccess
     url: agentic-access/penpot-agentic-access.yml
   - type: DomainSecurity
