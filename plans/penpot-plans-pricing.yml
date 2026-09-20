@@ -10,6 +10,13 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: business-product
 pricing_basis: per-seat
+delivery:
+  delivery: open-core
+  method: page
+  read: '2026-09-20'
+  evidence: Cloud (We host) Self-host (You host)
+  free_edition: Professional
+  managed_tier: Unlimited
 published: true
 note: Pricing page for Penpot design platform (Cloud/Self-host toggle). Non-profit, education and open-source
   discounts available on application; 14-day free trials mentioned.
