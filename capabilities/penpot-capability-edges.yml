@@ -1,0 +1,43 @@
+slug: penpot
+provider: Penpot
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Create File
+  spec_file: penpot-create-file-api-openapi.yml
+  capability_id: BC-4200.30
+  capability_id_l1: BC-4200
+  capability_name: Software Design Management
+  confidence: 0.7
+  evidence: POST create-file; API "for projects, files, pages, components, and design assets"
+  reason: Creating a Penpot design file is the core artefact of UX/product design work in this design
+    and prototyping platform.
+- tag: Delete File
+  spec_file: penpot-delete-file-api-openapi.yml
+  capability_id: BC-4200.30
+  capability_id_l1: BC-4200
+  capability_name: Software Design Management
+  confidence: 0.7
+  evidence: POST delete-file; "manage projects, files, pages, components, and design assets"
+  reason: A Penpot file is a design document containing pages, components and design assets, so file lifecycle
+    operations realise design artefact management for software products.
+- tag: Delete Webhook
+  spec_file: penpot-delete-webhook-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.7
+  evidence: POST delete-webhook; vendor notes "the platform supports outbound webhooks for event-dri[ven]"
+    integration
+  reason: The operation manages the lifecycle of outbound webhook subscriptions exposed to integrators,
+    which is exactly Webhook & Event Subscription Management in the developer-platform capability.
