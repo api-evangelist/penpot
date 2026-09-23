@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Rename File API
+  title: Penpot RPC Rename File API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -62,14 +62,18 @@ paths:
               example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c62e089","name":"c07T0g4pp6IJbOE2iID50Al0dv8i1duEM63NJ43kP0nYF92WU9zOljoswmv42An1tdBZSiLK324D4Tan6Op28suUPA6PK3K5rf3nXv23DMzjQnQ1loZ0PY9Fz7jYyvD9wI0So7qEOMKZ2x7MP5K3E7gKoZ2YP1hjDRNi6aImu9p75dBP2e93WGP5YEIxKaWdyT5G","createdAt":"2026-06-12T12:36:02.547956981Z","modifiedAt":"2026-06-12T12:36:02.562996636Z"}'
       tags:
       - Rename File
+      summary: Create rename file
+      x-summary-source: derived
+      operationId: postRenameFile
+      x-operation-id-source: derived
 components:
   schemas:
-    Inst:
-      title: instant
-      type: string
-      format: iso
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
+    Inst:
+      title: instant
+      type: string
+      format: iso

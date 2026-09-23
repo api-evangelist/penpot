@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Redeem Nitrate Activation Code API
+  title: Penpot RPC Redeem Nitrate Activation Code API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -42,14 +42,19 @@ paths:
                 properties:
                   cancelAt:
                     title: instant
-                    type: string
+                    type:
+                    - string
+                    - 'null'
                     format: iso
-                    nullable: true
                 required:
                 - cancelAt
               example: '{"cancelAt":"2026-06-12T12:36:04.278614142Z"}'
       tags:
       - Redeem Nitrate Activation Code
+      summary: Create redeem nitrate activation code
+      x-summary-source: derived
+      operationId: postRedeemNitrateActivationCode
+      x-operation-id-source: derived
 components:
   schemas:
     Text:

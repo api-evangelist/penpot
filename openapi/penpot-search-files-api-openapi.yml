@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Search Files API
+  title: Penpot RPC Search Files API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -35,6 +35,10 @@ paths:
             example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395e1a52c3"}'
       tags:
       - Search Files
+      summary: Create search files
+      x-summary-source: derived
+      operationId: postSearchFiles
+      x-operation-id-source: derived
 components:
   schemas:
     Uuid:

@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Create Team Invitations API
+  title: Penpot RPC Create Team Invitations API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -74,6 +74,10 @@ paths:
             example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395e0e0fb0","invitations":[{"email":"dfjb@example.net","role":"admin"},{"email":"uwzl@example.net","role":"owner"},{"email":"kknc@example.net","role":"viewer"},{"email":"dabx@example.net","role":"owner"},{"email":"ahzd@example.net","role":"viewer"},{"email":"hbpaz@example.net","role":"owner"},{"email":"fcmkek@example.net","role":"editor"},{"email":"qqey@example.net","role":"viewer"},{"email":"jyblgn@example.net","role":"editor"},{"email":"ktnuu@example.net","role":"admin"},{"email":"ttigq@example.net","role":"editor"},{"email":"zafighq@example.net","role":"viewer"},{"email":"etvi@example.net","role":"editor"},{"email":"qkwng@example.net","role":"admin"},{"email":"hyhnrvc@example.net","role":"viewer"},{"email":"arnn@example.net","role":"owner"},{"email":"fscx@example.net","role":"editor"},{"email":"uvfp@example.net","role":"editor"},{"email":"vmqn@example.net","role":"viewer"},{"email":"sqqx@example.net","role":"editor"},{"email":"ukvid@example.net","role":"editor"},{"email":"hmlcv@example.net","role":"editor"},{"email":"zeki@example.net","role":"editor"},{"email":"ggawz@example.net","role":"admin"},{"email":"gcdsc@example.net","role":"viewer"},{"email":"deuw@example.net","role":"editor"},{"email":"oamehmuc@example.net","role":"owner"},{"email":"ksidj@example.net","role":"owner"},{"email":"xnye@example.net","role":"viewer"}]}'
       tags:
       - Create Team Invitations
+      summary: Create create team invitations
+      x-summary-source: derived
+      operationId: postCreateTeamInvitations
+      x-operation-id-source: derived
 components:
   schemas:
     Uuid:

@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Request Profile Recovery API
+  title: Penpot RPC Request Profile Recovery API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -33,6 +33,10 @@ paths:
             example: '{"email":"dufm@example.net"}'
       tags:
       - Request Profile Recovery
+      summary: Create request profile recovery
+      x-summary-source: derived
+      operationId: postRequestProfileRecovery
+      x-operation-id-source: derived
 components:
   schemas:
     Email:

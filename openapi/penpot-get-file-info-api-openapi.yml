@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Get File Info API
+  title: Penpot RPC Get File Info API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -35,8 +35,17 @@ paths:
             example: '{"features":["plugins\/runtime","design-tokens\/v1","variants\/v1","styles\/v2","text-editor\/v2-html-paste","text-editor\/v2","tokens\/numeric-input","render-wasm\/v1","components\/v2"],"id":"5ab5eb30-5b3a-81d5-8008-2a395e0ed4f0"}'
       tags:
       - Get File Info
+      summary: Create get file info
+      x-summary-source: derived
+      operationId: postGetFileInfo
+      x-operation-id-source: derived
 components:
   schemas:
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
     Features:
       title: set
       description: Set of Strings
@@ -44,8 +53,3 @@ components:
       items:
         type: string
       uniqueItems: true
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid

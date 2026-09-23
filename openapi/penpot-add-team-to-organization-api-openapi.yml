@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
   title: Penpot RPC Add Team To Organization API
@@ -35,6 +35,10 @@ paths:
             example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395c49b168","organizationId":"5ab5eb30-5b3a-81d5-8008-2a395c49b169"}'
       tags:
       - Add Team To Organization
+      summary: Create add team to organization
+      x-summary-source: derived
+      operationId: postAddTeamToOrganization
+      x-operation-id-source: derived
 components:
   schemas:
     Uuid:

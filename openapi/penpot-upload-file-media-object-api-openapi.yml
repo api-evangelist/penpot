@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Upload File Media Object API
+  title: Penpot RPC Upload File Media Object API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -63,6 +63,10 @@ paths:
             example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c60da80","fileId":"5ab5eb30-5b3a-81d5-8008-2a395c60da81","isLocal":true,"name":"","content":{"filename":"94P29r10XSRdD6jOt6s36W3WZm4n","size":17610424,"path":"6LM56dV8kmi1r36631CPLF6","mtype":"w8xmknGU33xL0TH1xyhPJ4B","headers":{"4585972l3a3g381s87GE6mJBV0vLPw":"h9rnK","AM3E2Px":"3ii7Y","tvV2pFal5TPc":"7cpRlUmI3oMq334V7Mmfofpz3ML1","PI4ozWq76rUKxQKKCL4N9s2":"859F16a967","NZeO":"TRH"}}}'
       tags:
       - Upload File Media Object
+      summary: Create upload file media object
+      x-summary-source: derived
+      operationId: postUploadFileMediaObject
+      x-operation-id-source: derived
 components:
   schemas:
     Int:

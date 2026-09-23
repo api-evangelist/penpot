@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Update Font API
+  title: Penpot RPC Update Font API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -42,6 +42,10 @@ paths:
             example: '{"teamId":"5ab5eb30-5b3a-81d5-8008-2a395c57ffe7","id":"5ab5eb30-5b3a-81d5-8008-2a395c583151","name":"tcpw"}'
       tags:
       - Update Font
+      summary: Create update font
+      x-summary-source: derived
+      operationId: postUpdateFont
+      x-operation-id-source: derived
 components:
   schemas:
     Uuid:

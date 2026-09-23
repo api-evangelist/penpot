@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Get File Stats API
+  title: Penpot RPC Get File Stats API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -124,14 +124,18 @@ paths:
               example: '{"pageCount":39649,"updatedAt":"2026-06-12T12:36:02.607049080Z","shapeCounts":{"total":8,"byType":{"+M:z+v":88941,"qW!q*":45022,"Z1.-e":35046,"xDM*_":3654598,"ce1UdL?_":0,"Zxga9+8!":1475687,"c.":3,"!.K_":125507,"QbK.-d":1590053,"+a!?":13,"aA":2,"-":15435876,"!e+4":299422,"-c2P.P2x":310216,"Y":0,"?":71540,"E?!":18204,"g_x+Dep":2747150,"X+v":5,"!L+3.F":304148327,"fD*x":2,".W":162,"CizN":63800,"z9+?zO":124211610,"?Q+-c":0,"M:5H":1796412,"rD":847,"xYR2":1032277,"?P!MAA-k":2}},"fileId":"5ab5eb30-5b3a-81d5-8008-2a395c7809bd","deletedComponentCount":48367275,"revn":6013337,"referencedByCount":0,"typographyCount":18,"componentCount":1348,"colorCount":3,"libraryCount":14}'
       tags:
       - Get File Stats
+      summary: Create get file stats
+      x-summary-source: derived
+      operationId: postGetFileStats
+      x-operation-id-source: derived
 components:
   schemas:
-    Inst:
-      title: instant
-      type: string
-      format: iso
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
+    Inst:
+      title: instant
+      type: string
+      format: iso

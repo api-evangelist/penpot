@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Get File Data For Thumbnail API
+  title: Penpot RPC Get File Data For Thumbnail API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -59,6 +59,10 @@ paths:
               example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395c3fef14","revn":-469,"page":{"mE.+P":"pdzb","j*4":"chyaj","_":"bjmvy","MmfXRH*":false,"+":"woqvx"}}'
       tags:
       - Get File Data For Thumbnail
+      summary: Create get file data for thumbnail
+      x-summary-source: derived
+      operationId: postGetFileDataForThumbnail
+      x-operation-id-source: derived
 components:
   schemas:
     Int:
@@ -69,10 +73,10 @@ components:
       title: boolean
       description: boolean
       type: boolean
+    Any:
+      description: Any Value
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    Any:
-      description: Any Value

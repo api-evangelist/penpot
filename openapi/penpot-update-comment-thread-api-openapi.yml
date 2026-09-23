@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Update Comment Thread API
+  title: Penpot RPC Update Comment Thread API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -32,13 +32,16 @@ paths:
                   type: boolean
                 shareId:
                   $ref: '#/components/schemas/Uuid'
-                  nullable: true
               required:
               - id
               - isResolved
             example: '{"id":"5ab5eb30-5b3a-81d5-8008-2a395e0e89e4","isResolved":false,"shareId":"5ab5eb30-5b3a-81d5-8008-2a395e0e89e5"}'
       tags:
       - Update Comment Thread
+      summary: Create update comment thread
+      x-summary-source: derived
+      operationId: postUpdateCommentThread
+      x-operation-id-source: derived
 components:
   schemas:
     Uuid:

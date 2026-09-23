@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Request Email Change API
+  title: Penpot RPC Request Email Change API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -33,6 +33,10 @@ paths:
             example: '{"email":"sunktzma@example.net"}'
       tags:
       - Request Email Change
+      summary: Create request email change
+      x-summary-source: derived
+      operationId: postRequestEmailChange
+      x-operation-id-source: derived
 components:
   schemas:
     Email:

@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: '2.16'
-  title: Penpot RPC Add Team To Organization Assemble File Media Object API
+  title: Penpot RPC Assemble File Media Object API
   description: Penpot RPC-style REST API for projects, files, pages, components, and design assets.
   x-api-id: penpot-rpc
   contact:
@@ -48,14 +48,18 @@ paths:
             example: '{"sessionId":"5ab5eb30-5b3a-81d5-8008-2a395c4909ae","fileId":"5ab5eb30-5b3a-81d5-8008-2a395c4909af","isLocal":false,"name":"9Lb8MEy90wk0ZszHcv8zi6uxAZGY2a93sLDR7hb8Ma7XxUp0B8T5FcAdNW9","mtype":"HcTs05JXPeA84p72nY91uE7Q","id":"5ab5eb30-5b3a-81d5-8008-2a395c49b167"}'
       tags:
       - Assemble File Media Object
+      summary: Create assemble file media object
+      x-summary-source: derived
+      operationId: postAssembleFileMediaObject
+      x-operation-id-source: derived
 components:
   schemas:
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
