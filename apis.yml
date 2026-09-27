@@ -43,7 +43,7 @@ specificationVersion: '0.23'
 tags:
   - Design
   - Prototyping
-  - Open-Source
+  - Open Source
   - Self-Hosted
   - Figma Alternative
   - UI Design
@@ -58,6 +58,7 @@ tags_raw:
   - UI Design
   - Collaboration
   - Design Systems
+  - Open-Source
 apis:
 - name: Penpot Webhooks
   description: >

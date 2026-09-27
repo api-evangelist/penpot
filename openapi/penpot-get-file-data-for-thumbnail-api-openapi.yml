@@ -69,10 +69,6 @@ components:
       title: integer
       description: integer
       type: integer
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
     Any:
       description: Any Value
     Uuid:
@@ -80,3 +76,7 @@ components:
       description: UUID formatted string
       type: string
       format: uuid
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean

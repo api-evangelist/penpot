@@ -53,12 +53,12 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Int:
+      title: integer
+      description: integer
+      type: integer
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    Int:
-      title: integer
-      description: integer
-      type: integer

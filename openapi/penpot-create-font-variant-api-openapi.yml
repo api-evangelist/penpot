@@ -93,11 +93,11 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Bytes:
+      title: bytes
+      description: bytes array
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    Bytes:
-      title: bytes
-      description: bytes array

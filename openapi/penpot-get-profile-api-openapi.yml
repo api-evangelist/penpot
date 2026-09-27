@@ -169,15 +169,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
     Email:
       title: email
       description: string with valid email address
@@ -187,3 +178,12 @@ components:
       title: instant
       type: string
       format: iso
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean

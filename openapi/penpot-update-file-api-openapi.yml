@@ -47744,51 +47744,16 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    GeomMatrix:
-      title: matrix
-      description: Matrix instance
-      type: string
-      format: matrix
-    Any:
-      description: Any Value
-    Features:
-      title: set
-      description: Set of Strings
-      type: array
-      items:
-        type: string
-      uniqueItems: true
-    Inst:
-      title: instant
-      type: string
-      format: iso
     Int:
       title: integer
       description: integer
       type: integer
-    SafeNumber:
-      title: number
-      description: number
-      type: number
     SafeInt:
       title: integer
       description: integer
       type: integer
       minimum: -2147483648
       maximum: 2147483647
-    Text:
-      title: string
-      description: not whitespace string
-      type: string
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
     GeomRect:
       allOf:
       - title: RectAttrs
@@ -47819,8 +47784,43 @@ components:
         - y1
         - x2
         - y2
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    Any:
+      description: Any Value
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Text:
+      title: string
+      description: not whitespace string
+      type: string
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    SafeNumber:
+      title: number
+      description: number
+      type: number
     GeomPoint:
       title: point
       description: Point
       type: string
       format: point
+    GeomMatrix:
+      title: matrix
+      description: Matrix instance
+      type: string
+      format: matrix
+    Features:
+      title: set
+      description: Set of Strings
+      type: array
+      items:
+        type: string
+      uniqueItems: true

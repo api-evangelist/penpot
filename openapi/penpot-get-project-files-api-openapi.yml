@@ -97,8 +97,21 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Inst:
+      title: instant
+      type: string
+      format: iso
     Any:
       description: Any Value
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
     Features:
       title: set
       description: Set of Strings
@@ -106,16 +119,3 @@ components:
       items:
         type: string
       uniqueItems: true
-    Inst:
-      title: instant
-      type: string
-      format: iso
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean

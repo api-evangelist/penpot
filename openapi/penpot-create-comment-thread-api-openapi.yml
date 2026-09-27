@@ -61,13 +61,13 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
     GeomPoint:
       title: point
       description: Point
       type: string
       format: point
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
