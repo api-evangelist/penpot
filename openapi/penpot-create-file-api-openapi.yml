@@ -49,6 +49,10 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
     Features:
       title: set
       description: Set of Strings
@@ -61,7 +65,3 @@ components:
       description: UUID formatted string
       type: string
       format: uuid
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean

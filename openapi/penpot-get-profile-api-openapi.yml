@@ -174,16 +174,16 @@ components:
       description: string with valid email address
       type: string
       format: email
-    Inst:
-      title: instant
-      type: string
-      format: iso
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
+    Inst:
+      title: instant
+      type: string
+      format: iso

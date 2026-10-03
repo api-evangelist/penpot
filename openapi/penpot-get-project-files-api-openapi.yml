@@ -97,12 +97,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Inst:
-      title: instant
-      type: string
-      format: iso
-    Any:
-      description: Any Value
     Boolean:
       title: boolean
       description: boolean
@@ -112,6 +106,12 @@ components:
       description: UUID formatted string
       type: string
       format: uuid
+    Any:
+      description: Any Value
+    Inst:
+      title: instant
+      type: string
+      format: iso
     Features:
       title: set
       description: Set of Strings

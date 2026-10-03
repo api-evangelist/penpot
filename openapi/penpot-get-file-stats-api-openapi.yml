@@ -130,12 +130,12 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Inst:
-      title: instant
-      type: string
-      format: iso
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
+    Inst:
+      title: instant
+      type: string
+      format: iso

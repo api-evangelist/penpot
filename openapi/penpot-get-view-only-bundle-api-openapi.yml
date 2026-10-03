@@ -43,11 +43,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
     Features:
       title: set
       description: Set of Strings
@@ -55,3 +50,8 @@ components:
       items:
         type: string
       uniqueItems: true
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

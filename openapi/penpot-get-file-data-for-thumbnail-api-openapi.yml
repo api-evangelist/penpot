@@ -65,18 +65,18 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Any:
+      description: Any Value
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
     Int:
       title: integer
       description: integer
       type: integer
-    Any:
-      description: Any Value
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean

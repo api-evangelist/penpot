@@ -66,11 +66,6 @@ components:
       description: string with valid email address
       type: string
       format: email
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
     Features:
       title: set
       description: Set of Strings
@@ -78,3 +73,8 @@ components:
       items:
         type: string
       uniqueItems: true
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

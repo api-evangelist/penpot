@@ -47744,10 +47744,14 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Int:
-      title: integer
-      description: integer
-      type: integer
+    SafeNumber:
+      title: number
+      description: number
+      type: number
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
     SafeInt:
       title: integer
       description: integer
@@ -47784,39 +47788,35 @@ components:
         - y1
         - x2
         - y2
-    Inst:
-      title: instant
-      type: string
-      format: iso
-    Any:
-      description: Any Value
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
-    Text:
-      title: string
-      description: not whitespace string
-      type: string
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    SafeNumber:
-      title: number
-      description: number
-      type: number
-    GeomPoint:
-      title: point
-      description: Point
-      type: string
-      format: point
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    Any:
+      description: Any Value
     GeomMatrix:
       title: matrix
       description: Matrix instance
       type: string
       format: matrix
+    Text:
+      title: string
+      description: not whitespace string
+      type: string
+    GeomPoint:
+      title: point
+      description: Point
+      type: string
+      format: point
+    Inst:
+      title: instant
+      type: string
+      format: iso
     Features:
       title: set
       description: Set of Strings

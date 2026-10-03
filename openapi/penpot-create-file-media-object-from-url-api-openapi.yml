@@ -55,12 +55,12 @@ components:
       description: URI formatted string
       type: string
       format: uri
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean

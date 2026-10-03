@@ -65,15 +65,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Int:
-      title: integer
-      description: integer
-      type: integer
     FilesystemPath:
       title: path
       description: filesystem path
       type: string
       format: unix-path
+    Int:
+      title: integer
+      description: integer
+      type: integer
     Uuid:
       title: uuid
       description: UUID formatted string
