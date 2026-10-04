@@ -57,12 +57,12 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Text:
+      title: string
+      description: not whitespace string
+      type: string
     Email:
       title: email
       description: string with valid email address
       type: string
       format: email
-    Text:
-      title: string
-      description: not whitespace string
-      type: string

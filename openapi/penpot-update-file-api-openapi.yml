@@ -47744,20 +47744,56 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    SafeNumber:
-      title: number
-      description: number
-      type: number
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
     SafeInt:
       title: integer
       description: integer
       type: integer
       minimum: -2147483648
       maximum: 2147483647
+    SafeNumber:
+      title: number
+      description: number
+      type: number
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid
+    GeomPoint:
+      title: point
+      description: Point
+      type: string
+      format: point
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
+    Any:
+      description: Any Value
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    Inst:
+      title: instant
+      type: string
+      format: iso
+    GeomMatrix:
+      title: matrix
+      description: Matrix instance
+      type: string
+      format: matrix
+    Text:
+      title: string
+      description: not whitespace string
+      type: string
+    Features:
+      title: set
+      description: Set of Strings
+      type: array
+      items:
+        type: string
+      uniqueItems: true
     GeomRect:
       allOf:
       - title: RectAttrs
@@ -47788,39 +47824,3 @@ components:
         - y1
         - x2
         - y2
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
-    Int:
-      title: integer
-      description: integer
-      type: integer
-    Any:
-      description: Any Value
-    GeomMatrix:
-      title: matrix
-      description: Matrix instance
-      type: string
-      format: matrix
-    Text:
-      title: string
-      description: not whitespace string
-      type: string
-    GeomPoint:
-      title: point
-      description: Point
-      type: string
-      format: point
-    Inst:
-      title: instant
-      type: string
-      format: iso
-    Features:
-      title: set
-      description: Set of Strings
-      type: array
-      items:
-        type: string
-      uniqueItems: true

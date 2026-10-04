@@ -65,12 +65,12 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Any:
-      description: Any Value
     Boolean:
       title: boolean
       description: boolean
       type: boolean
+    Any:
+      description: Any Value
     Int:
       title: integer
       description: integer

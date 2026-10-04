@@ -49,13 +49,13 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Uri:
-      title: uri
-      description: URI formatted string
-      type: string
-      format: uri
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
+    Uri:
+      title: uri
+      description: URI formatted string
+      type: string
+      format: uri

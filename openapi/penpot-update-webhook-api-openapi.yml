@@ -52,11 +52,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Uri:
-      title: uri
-      description: URI formatted string
-      type: string
-      format: uri
     Boolean:
       title: boolean
       description: boolean
@@ -66,3 +61,8 @@ components:
       description: UUID formatted string
       type: string
       format: uuid
+    Uri:
+      title: uri
+      description: URI formatted string
+      type: string
+      format: uri

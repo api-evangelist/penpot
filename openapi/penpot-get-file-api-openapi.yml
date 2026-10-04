@@ -121,10 +121,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Boolean:
-      title: boolean
-      description: boolean
-      type: boolean
     Uuid:
       title: uuid
       description: UUID formatted string
@@ -132,6 +128,10 @@ components:
       format: uuid
     Any:
       description: Any Value
+    Boolean:
+      title: boolean
+      description: boolean
+      type: boolean
     Inst:
       title: instant
       type: string

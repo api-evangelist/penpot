@@ -69,12 +69,12 @@ components:
   schemas:
     Any:
       description: Any Value
+    Inst:
+      title: instant
+      type: string
+      format: iso
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
-    Inst:
-      title: instant
-      type: string
-      format: iso

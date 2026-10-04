@@ -69,11 +69,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    FilesystemPath:
-      title: path
-      description: filesystem path
-      type: string
-      format: unix-path
     Boolean:
       title: boolean
       description: boolean
@@ -87,3 +82,8 @@ components:
       description: UUID formatted string
       type: string
       format: uuid
+    FilesystemPath:
+      title: path
+      description: filesystem path
+      type: string
+      format: unix-path
