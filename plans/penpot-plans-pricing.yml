@@ -53,3 +53,44 @@ plans:
   currency: USD
   period: year
   included_quota: Dedicated infrastructure, custom hosting, advanced security, enterprise-grade support
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - seat
+  - subscription
+  units:
+  - seat
+  plans:
+  - name: Professional
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Unlimited
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Enterprise
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Private Server
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods:
+    - year
