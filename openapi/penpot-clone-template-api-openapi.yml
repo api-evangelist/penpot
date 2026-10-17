@@ -42,13 +42,13 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Uuid:
-      title: uuid
-      description: UUID formatted string
-      type: string
-      format: uuid
     WordString:
       title: string
       description: string
       type: string
       format: string
+    Uuid:
+      title: uuid
+      description: UUID formatted string
+      type: string
+      format: uuid

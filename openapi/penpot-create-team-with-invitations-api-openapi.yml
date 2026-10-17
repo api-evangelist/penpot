@@ -68,13 +68,13 @@ components:
       items:
         type: string
       uniqueItems: true
-    Email:
-      title: email
-      description: string with valid email address
-      type: string
-      format: email
     Uuid:
       title: uuid
       description: UUID formatted string
       type: string
       format: uuid
+    Email:
+      title: email
+      description: string with valid email address
+      type: string
+      format: email

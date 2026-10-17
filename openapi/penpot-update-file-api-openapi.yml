@@ -47744,12 +47744,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    SafeInt:
-      title: integer
-      description: integer
-      type: integer
-      minimum: -2147483648
-      maximum: 2147483647
     SafeNumber:
       title: number
       description: number
@@ -47759,34 +47753,15 @@ components:
       description: UUID formatted string
       type: string
       format: uuid
-    GeomPoint:
-      title: point
-      description: Point
-      type: string
-      format: point
     Boolean:
       title: boolean
       description: boolean
       type: boolean
-    Any:
-      description: Any Value
-    Int:
-      title: integer
-      description: integer
-      type: integer
-    Inst:
-      title: instant
-      type: string
-      format: iso
     GeomMatrix:
       title: matrix
       description: Matrix instance
       type: string
       format: matrix
-    Text:
-      title: string
-      description: not whitespace string
-      type: string
     Features:
       title: set
       description: Set of Strings
@@ -47794,6 +47769,11 @@ components:
       items:
         type: string
       uniqueItems: true
+    GeomPoint:
+      title: point
+      description: Point
+      type: string
+      format: point
     GeomRect:
       allOf:
       - title: RectAttrs
@@ -47824,3 +47804,23 @@ components:
         - y1
         - x2
         - y2
+    Int:
+      title: integer
+      description: integer
+      type: integer
+    Text:
+      title: string
+      description: not whitespace string
+      type: string
+    SafeInt:
+      title: integer
+      description: integer
+      type: integer
+      minimum: -2147483648
+      maximum: 2147483647
+    Any:
+      description: Any Value
+    Inst:
+      title: instant
+      type: string
+      format: iso
