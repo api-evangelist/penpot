@@ -1,0 +1,30 @@
+generated: '2026-10-20'
+method: searched
+checked:
+- docker-hub/integrations/docker-hub-integration-edges.yml
+source:
+- docker-hub/integrations/docker-hub-integration-edges.yml
+edges:
+- partner_name: Docker Hub (docker-verified-publisher)
+  partner: docker-hub
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: docker-verified-publisher
+  evidence: https://hub.docker.com/u/penpotapp
+  mirror_of: docker-hub/integrations/docker-hub-integration-edges.yml
+  apps:
+  - penpotapp/backend
+  - penpotapp/exporter
+  - penpotapp/frontend
+  - penpotapp/devenv
+  - penpotapp/admin
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Docker Verified Publisher
+  badges:
+  - Docker Verified Publisher
